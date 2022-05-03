@@ -10,3 +10,11 @@ c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\Vistas\obj\x8
 c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\Vistas\bin\Debug\ClasesBase.dll
 c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\Vistas\bin\Debug\ClasesBase.pdb
 c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog

@@ -3,3 +3,8 @@ c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\ClasesBase\bi
 c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\ClasesBase\obj\Debug\ResolveAssemblyReference.cache
 c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\ClasesBase\obj\Debug\ClasesBase.dll
 c:\users\admin\documents\visual studio 2010\Projects\LPOOI_GRUPO_9\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\ClasesBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\ClasesBase\obj\Debug\ClasesBase.pdb
