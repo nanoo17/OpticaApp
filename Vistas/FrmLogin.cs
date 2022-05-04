@@ -17,37 +17,32 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        //funcion del boton aceptar
+        // Evento "click" del boton aceptar
         private void Aceptar_Click(object sender, EventArgs e)
        {
             Boolean bUserFound = false;
-            //creando usuarios para validar
-            Usuario oUser1 = new Usuario("nano", "123", "Mariano Rodriguez");
-            Usuario oUser2 = new Usuario("juan", "456", "Juan Perez");
+            // Creacion de usuarios
+            Usuario oUser1 = new Usuario(1, "nano", "123", "Mariano Rodriguez", 1);
+            Usuario oUser2 = new Usuario(2, "juan", "456", "Juan Perez", 2);
 
             FrmMain oFrmMain = new FrmMain();
-            if(oUser1.Usr_Nombre == txtUserName.Text && oUser1.Usr_Password == txtPassword.Text)
+
+            // Buscar si existe un usuario con los datos del formulario login
+            if(oUser1.Usu_NombreUsuario == txtUserName.Text && oUser1.Usu_Clave == txtPassword.Text)
             {
                 bUserFound = true;
             }
-            else if (oUser2.Usr_Nombre == txtUserName.Text && oUser2.Usr_Password == txtPassword.Text)
+            else if (oUser2.Usu_NombreUsuario == txtUserName.Text && oUser2.Usu_Clave == txtPassword.Text)
             {
                 bUserFound = true;
             }
+
+            // Verificar si el usuario fue encontrado
             if(bUserFound)
             {
                 MessageBox.Show("Bienvenido/a :: " + txtUserName.Text);
                 oFrmMain.Show();
-                this.FormClosing();
+                // this.FormClosing(); // TODO: genera un error, buscar que es
             }
             else
             {

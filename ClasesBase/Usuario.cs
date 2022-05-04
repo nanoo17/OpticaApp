@@ -7,41 +7,49 @@ namespace ClasesBase
 {
     public class Usuario
     {
-        //datos del usuario
-        private int usr_Id;
-        private string usr_Nombre;
-        private string usr_Password;
-   
-        private string usr_ApellidoNombre;
+        private int usu_ID;
+        private string usu_NombreUsuario;
+        private string usu_Clave;
+        private string usu_ApellidoNombre;
+        private int rol_Codigo;
 
-        public string Usr_ApellidoNombre
+        public int Usu_ID
         {
-            get { return usr_ApellidoNombre; }
-            set { usr_ApellidoNombre = value; }
-        }
-
-        public string Usr_Password
-        {
-            get { return usr_Password; }
-            set { usr_Password = value; }
+            get { return usu_ID; }
+            set { usu_ID = value; }
         }
 
-        public string Usr_Nombre
+        public string Usu_NombreUsuario
         {
-            get { return usr_Nombre; }
-            set { usr_Nombre = value; }
+            get { return usu_NombreUsuario; }
+            set { usu_NombreUsuario = value; }
         }
-        
-        public int Usr_Id
+
+        public string Usu_Clave
         {
-            get { return usr_Id; }
-            set { usr_Id = value; }
+            get { return usu_Clave; }
+            set { usu_Clave = value; }
         }
-        //constructor
-        public Usuario(string username,string password, string ApellidoNombre){
-            Usr_Nombre = username;
-            Usr_Password = password;
-            Usr_ApellidoNombre = ApellidoNombre;
+
+        public string Usu_ApellidoNombre
+        {
+            get { return usu_ApellidoNombre; }
+            set { usu_ApellidoNombre = value; }
+        }
+
+        public int Rol_Codigo
+        {
+            get { return rol_Codigo; }
+            set { rol_Codigo = value; }
+        }
+
+        public Usuario(int usu_id, string usu_nombreUsuario, string usu_clave, string usu_apellidoNombre, int rol_Codigo)
+        {
+            Usu_ID = usu_id;
+            Usu_NombreUsuario = usu_nombreUsuario;
+            Usu_Clave = usu_clave;
+            Usu_ApellidoNombre = usu_apellidoNombre;
+            Rol_Codigo = rol_Codigo;
         }
     }
 }

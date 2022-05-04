@@ -5,49 +5,49 @@ using System.Text;
 
 namespace ClasesBase
 {
-    class Cliente
+    public class Cliente
     {
         private string cli_DNI;
-
-        public string Cli_DNI
-        {
-            get { return cli_DNI; }
-            set { cli_DNI = value; }
-        }
         private string cli_Apellido;
-
-        public string Cli_Apellido
-        {
-            get { return cli_Apellido; }
-            set { cli_Apellido = value; }
-        }
         private string cli_Nombre;
-
-        public string Cli_Nombre
-        {
-            get { return cli_Nombre; }
-            set { cli_Nombre = value; }
-        }
+        private string OS_CUIT;
         private string cli_Direccion;
-
-        public string Cli_Direccion
-        {
-            get { return cli_Direccion; }
-            set { cli_Direccion = value; }
-        }
-        private string os_CUIT;
-
-        public string Os_CUIT
-        {
-            get { return os_CUIT; }
-            set { os_CUIT = value; }
-        }
         private string cli_NroCarnet;
 
         public string Cli_NroCarnet
         {
             get { return cli_NroCarnet; }
             set { cli_NroCarnet = value; }
+        }
+
+        public string Cli_Direccion
+        {
+            get { return cli_Direccion; }
+            set { cli_Direccion = value; }
+        }
+
+        public string OS_CUIT1
+        {
+            get { return OS_CUIT; }
+            set { OS_CUIT = value; }
+        }
+
+        public string Cli_DNI
+        {
+            get { return cli_DNI; }
+            set { cli_DNI = value; }
+        }
+
+        public string Cli_Apellido
+        {
+            get { return cli_Apellido; }
+            set { cli_Apellido = value; }
+        }
+
+        public string Cli_Nombre
+        {
+            get { return cli_Nombre; }
+            set { cli_Nombre = value; }
         }
     }
 }
