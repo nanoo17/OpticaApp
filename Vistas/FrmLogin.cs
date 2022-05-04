@@ -43,7 +43,6 @@ namespace Vistas
                 MessageBox.Show("Bienvenido/a :: " + txtUserName.Text);
                 oFrmMain.Show();
                 this.Hide();
-                // this.FormClosing(); // TODO: genera un error, buscar que es
             }
             else
             {
