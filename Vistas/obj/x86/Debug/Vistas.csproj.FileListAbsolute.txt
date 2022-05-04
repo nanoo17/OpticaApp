@@ -18,3 +18,7 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x8
 C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\bin\Debug\Vistas.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\bin\Debug\Vistas.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Tp1-Lpoo-2022\Vistas\bin\Debug\ClasesBase.pdb
