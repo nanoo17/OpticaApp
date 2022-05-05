@@ -14,6 +14,17 @@ namespace ClasesBase
         private string cli_Direccion;
         private string cli_NroCarnet;
 
+
+        public Cliente(string cli_Dni, string cli_apellido, string cli_nombre, string os_CUIT, string cli_direccion,string cli_nroCarnet)
+        {
+            Cli_DNI = cli_Dni;
+            Cli_Apellido = cli_apellido;
+            Cli_Nombre = cli_nombre;
+            OS_CUIT = os_CUIT;
+            Cli_Direccion = cli_direccion;
+            Cli_NroCarnet = cli_nroCarnet;
+        }
+
         public string Cli_NroCarnet
         {
             get { return cli_NroCarnet; }
