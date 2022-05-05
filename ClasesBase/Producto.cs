@@ -35,5 +35,13 @@ namespace ClasesBase
             get { return prod_Precio; }
             set { prod_Precio = value; }
         }
+
+        public Producto(string prod_codigo, string prod_categoria, string prod_descripcion, decimal prod_precio)
+        {
+            Prod_Codigo = prod_codigo;
+            Prod_Categoria = prod_categoria;
+            Prod_Descripcion = prod_descripcion;
+            Prod_Precio = prod_precio;
+        }
     }
 }
