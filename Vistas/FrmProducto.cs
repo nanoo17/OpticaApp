@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ClasesBase;
 
 namespace Vistas
 {
@@ -30,7 +31,7 @@ namespace Vistas
             // Verificar el resultado del messageBox
             if (resultado == DialogResult.No)
             {
-                MessageBox.Show("La operación fue cancelada", "Guardar producto");
+                MessageBox.Show("La operación fue cancelada", titulo);
                 return;                
             }
 
@@ -44,8 +45,15 @@ namespace Vistas
 
             // TODO: Validaciones de los campos ingresados
 
-            // TODO: Constructor de productos
-            MessageBox.Show(prodDescripcion, "Nuevo Producto");
+            // Creando el producto
+            Producto nuevoProducto = new Producto(prodCodigo, prodCategoria, prodDescripcion, prodPrecio);
+            string mensajeExito = "El producto fue guardado con éxito:"
+                + "\nCodigo: " + nuevoProducto.Prod_Codigo
+                + "\nCategoria: " + nuevoProducto.Prod_Categoria
+                + "\nDescripcion: " + nuevoProducto.Prod_Descripcion
+                + "\nPrecio: " + nuevoProducto.Prod_Precio;
+
+            MessageBox.Show(mensajeExito, titulo);
         }
     }
 }
