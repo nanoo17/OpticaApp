@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,11 +107,11 @@
             // button_Salir
             // 
             this.button_Salir.BackColor = System.Drawing.Color.Red;
-            this.button_Salir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Salir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Salir.ForeColor = System.Drawing.Color.Black;
             this.button_Salir.Location = new System.Drawing.Point(684, 27);
             this.button_Salir.Name = "button_Salir";
-            this.button_Salir.Size = new System.Drawing.Size(79, 29);
+            this.button_Salir.Size = new System.Drawing.Size(79, 31);
             this.button_Salir.TabIndex = 1;
             this.button_Salir.Text = "Salir";
             this.button_Salir.UseVisualStyleBackColor = false;
@@ -120,6 +121,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(763, 383);
             this.Controls.Add(this.button_Salir);
             this.Controls.Add(this.menuStrip1);
