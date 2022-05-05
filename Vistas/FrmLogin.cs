@@ -51,7 +51,7 @@ namespace Vistas
             {
                 MessageBox.Show("Bienvenido/a :: " + txtUserName.Text);
                 oFrmMain.Show();
-                this.Hide();
+                this.Close();
             }
             else
             {
