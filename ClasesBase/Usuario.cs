@@ -11,7 +11,7 @@ namespace ClasesBase
         private string usu_NombreUsuario;
         private string usu_Clave;
         private string usu_ApellidoNombre;
-        private int rol_Codigo;
+        private string rol;
 
         public int Usu_ID
         {
@@ -37,19 +37,19 @@ namespace ClasesBase
             set { usu_ApellidoNombre = value; }
         }
 
-        public int Rol_Codigo
+        public string Rol
         {
-            get { return rol_Codigo; }
-            set { rol_Codigo = value; }
+            get { return rol; }
+            set { rol = value; }
         }
 
-        public Usuario(int usu_id, string usu_nombreUsuario, string usu_clave, string usu_apellidoNombre, int rol_Codigo)
+        public Usuario(int usu_id, string usu_nombreUsuario, string usu_clave, string usu_apellidoNombre, string rol)
         {
             Usu_ID = usu_id;
             Usu_NombreUsuario = usu_nombreUsuario;
             Usu_Clave = usu_clave;
             Usu_ApellidoNombre = usu_apellidoNombre;
-            Rol_Codigo = rol_Codigo;
+            Rol = rol;
         }
     }
 }

@@ -20,10 +20,15 @@ namespace Vistas
         // Evento "click" del boton aceptar
         private void Aceptar_Click(object sender, EventArgs e)
        {
+            Roles rol1 = new Roles(1,"Administrador");
+            Roles rol2 = new Roles(2, "Operador");
+            Roles rol3 = new Roles(3, "Auditor");
+
             Boolean bUserFound = false;
             // Creacion de usuarios
-            Usuario oUser1 = new Usuario(1, "nano", "123", "Mariano Rodriguez", 1);
-            Usuario oUser2 = new Usuario(2, "juan", "456", "Juan Perez", 2);
+            Usuario oUser1 = new Usuario(1, "nano", "123", "Mariano Rodriguez", rol1.Rol_Descripcion);
+            Usuario oUser2 = new Usuario(2, "juan", "456", "Juan Perez", rol2.Rol_Descripcion);
+            Usuario oUser3 = new Usuario(3, "mauro", "123", "Mauro Mamani",rol3.Rol_Descripcion);
 
             FrmMain oFrmMain = new FrmMain();
 
@@ -35,6 +40,10 @@ namespace Vistas
             else if (oUser2.Usu_NombreUsuario == txtUserName.Text && oUser2.Usu_Clave == txtPassword.Text)
             {
                 bUserFound = true;
+            }
+            else if (oUser3.Usu_NombreUsuario == txtUserName.Text && oUser3.Usu_Clave == txtPassword.Text)
+            {
+            bUserFound = true;
             }
 
             // Verificar si el usuario fue encontrado
