@@ -59,8 +59,18 @@ namespace Vistas
             }
         }
 
-      
+        // Evento "mouseHover"
+        private void Aceptar_MouseHover(object sender, EventArgs e)
+        {
+            Aceptar.BackColor = Color.LightGray;
+            Aceptar.Cursor = Cursors.Hand;
+        }
 
-       
+        // Evento "mouseLeave"
+        private void Aceptar_MouseLeave(object sender, EventArgs e)
+        {
+            Aceptar.BackColor = SystemColors.ControlLightLight;
+            Aceptar.Cursor = Cursors.Arrow;
+        }
     }
 }

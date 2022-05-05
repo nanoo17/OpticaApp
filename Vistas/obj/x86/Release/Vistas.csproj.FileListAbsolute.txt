@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\bin\Release\Vistas.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\bin\Release\Vistas.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\bin\Release\ClasesBase.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\bin\Release\ClasesBase.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.FrmCliente.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.FrmMain.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.FrmLogin.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.FrmObraSocial.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.FrmProducto.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Release\Vistas.pdb

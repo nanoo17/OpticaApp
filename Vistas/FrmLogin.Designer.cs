@@ -52,6 +52,8 @@
             this.Aceptar.Text = "Aceptar";
             this.Aceptar.UseVisualStyleBackColor = false;
             this.Aceptar.Click += new System.EventHandler(this.Aceptar_Click);
+            this.Aceptar.MouseLeave += new System.EventHandler(this.Aceptar_MouseLeave);
+            this.Aceptar.MouseHover += new System.EventHandler(this.Aceptar_MouseHover);
             // 
             // label1
             // 
