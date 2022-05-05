@@ -31,3 +31,5 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Debu
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp-lpoo\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_9\Vistas\obj\x86\Debug\Vistas.FrmCliente.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_9\Vistas\obj\x86\Debug\Vistas.FrmProducto.resources
