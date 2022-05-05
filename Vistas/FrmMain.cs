@@ -45,6 +45,19 @@ namespace Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Parametros del messageBox
+            string mensaje = "¿Está seguro de salir del sistema?";
+            string titulo = "Salir del sistema";
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            MessageBoxIcon icono = MessageBoxIcon.Question;
+
+            // Mostrar messageBox de confirmación
+            DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
+
+            // Verificar el resultado del messageBox
+            if (resultado == DialogResult.No) return;
+
+            // Cerramos el sistema
             this.Close();
         }
 
