@@ -12,6 +12,14 @@ namespace ClasesBase
         private string OS_Telefono;
         private string OS_Direccion;
 
+        public ObraSocial(string os_cuit, string os_razonSocial, string os_telefono, string os_direccion)
+        {
+            OS_CUIT1 = os_cuit;
+            OS_RazonSocial1 = os_razonSocial;
+            OS_Telefono1 = os_telefono;
+            OS_Direccion1 = os_direccion;
+        }
+
         public string OS_CUIT1
         {
             get { return OS_CUIT; }
