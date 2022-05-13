@@ -42,16 +42,24 @@ namespace Vistas
             string cli_NroCarnet = textBox_nroCarnet.Text;
             Cliente cli = new Cliente(cli_DNI,cli_Apellido, cli_Nombre,OS_CUIT,cli_Direccion,cli_NroCarnet);
 
-            string mensajeExito = "El cliente fue creado con exito"
-                + "\n Nombre: " + cli.Cli_Nombre
-                + "\n Apellido: " + cli.Cli_Apellido
-                + "\n DNI: " + cli.Cli_DNI
-                + "\n Direccion: " + cli.Cli_Direccion
-                + "\n CUIT: " + cli.OS_CUIT1
-                + "\n N°Carnet: " + cli.Cli_NroCarnet;
-            MessageBox.Show(mensajeExito, titulo);
+            // Guardar al cliente en la base de datos
+            try
+            {
+                TrabajarUsuario.insertarCliente(cli);
+                string mensajeExito = "El cliente fue creado con exito"
+                    + "\n Nombre: " + cli.Cli_Nombre
+                    + "\n Apellido: " + cli.Cli_Apellido
+                    + "\n DNI: " + cli.Cli_DNI
+                    + "\n Direccion: " + cli.Cli_Direccion
+                    + "\n CUIT: " + cli.OS_CUIT1
+                    + "\n N°Carnet: " + cli.Cli_NroCarnet;
+                MessageBox.Show(mensajeExito, titulo);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error en la creacion del cliente", titulo);
+            }
+
         }
-
-
     }
 }
