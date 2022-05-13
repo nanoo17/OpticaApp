@@ -55,7 +55,7 @@ namespace Vistas
                     + "\n N°Carnet: " + cli.Cli_NroCarnet;
                 MessageBox.Show(mensajeExito, titulo);
             }
-            catch (Exception err)
+            catch (Exception)
             {
                 MessageBox.Show("Error en la creacion del cliente", titulo);
             }

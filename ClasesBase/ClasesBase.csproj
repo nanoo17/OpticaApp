@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="opticaDataSet.cs">
+      <DependentUpon>opticaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ObraSocial.cs" />

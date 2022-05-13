@@ -19,3 +19,4 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\ClasesBase\obj\Debug\Re
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\ClasesBase\obj\Debug\ClasesBase.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_9\ClasesBase\bin\Debug\ClasesBase.dll.config
