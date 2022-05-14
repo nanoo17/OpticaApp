@@ -31,6 +31,7 @@ namespace Vistas
             // Verificar el resultado del messageBox
             if (resultado == DialogResult.No)
             {
+
                 MessageBox.Show("La operación fue cancelada", titulo);
                 return;
             }
