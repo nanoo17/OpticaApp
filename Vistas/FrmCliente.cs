@@ -57,7 +57,7 @@ namespace Vistas
             }
             catch (Exception err)
             {
-                MessageBox.Show("Error en la creacion del cliente", titulo);
+                MessageBox.Show(err.ToString(), titulo);
             }
 
         }
