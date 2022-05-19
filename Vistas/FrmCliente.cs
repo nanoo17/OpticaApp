@@ -45,7 +45,7 @@ namespace Vistas
             // Guardar al cliente en la base de datos
             try
             {
-                TrabajarUsuario.insertarCliente(cli);
+                TrabajarCliente.insertarCliente(cli);
                 string mensajeExito = "El cliente fue creado con exito"
                     + "\n Nombre: " + cli.Cli_Nombre
                     + "\n Apellido: " + cli.Cli_Apellido
