@@ -109,5 +109,20 @@ namespace ClasesBase
         }
 
 
+
+        //public static DataTable buscar_usuarios(string sPattern)
+        //{
+        //    SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+        //    SqlCommand cmd = new SqlCommand();
+
+        //    cmd.CommandText = "SELECT ";
+        //    cmd.CommandText += "rol as 'Rol_Codigo',";
+
+
+        //    return dt;
+        //}
+
+
     }
 }

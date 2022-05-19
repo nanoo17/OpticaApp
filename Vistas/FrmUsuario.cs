@@ -20,8 +20,10 @@ namespace Vistas
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'opticaDataSet.Usuario' table. You can move, or remove it, as needed.
-            this.usuarioTableAdapter.Fill(this.opticaDataSet.Usuario);
+            //this.usuarioTableAdapter.Fill(this.opticaDataSet.Usuario);
             load_combo_roles();
+
+            load_usuarios();
         }
 
         private void load_combo_roles()
@@ -33,11 +35,26 @@ namespace Vistas
 
         private void button1_Guardar_Click(object sender, EventArgs e)
         {
+            Random r = new Random();
             Usuario oUsuario = new Usuario();
-            oUsuario.Rol = (int)comboBox1.SelectedValue;
+            oUsuario.Usu_ID = r.Next();
+            oUsuario.Rol =(string)comboBox1.SelectedValue;
+            oUsuario.Usu_ApellidoNombre = textBox1_ApellidoNombre.Text;
+            oUsuario.Usu_NombreUsuario = textBox4_Usuario.Text;
+            oUsuario.Usu_Clave = textBox5_Contraseña.Text;
 
+            TrabajarUsuario.insertarUsuario(oUsuario);
+
+            load_usuarios();
         }
 
+
+        private void load_usuarios()
+        {
+            dataGridView1.DataSource = TrabajarUsuario.obtenerUsuarios();
+        }
+
+        
        
 
        
