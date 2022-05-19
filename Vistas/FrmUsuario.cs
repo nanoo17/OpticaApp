@@ -19,6 +19,8 @@ namespace Vistas
 
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'opticaDataSet.Usuario' table. You can move, or remove it, as needed.
+            this.usuarioTableAdapter.Fill(this.opticaDataSet.Usuario);
             load_combo_roles();
         }
 
@@ -28,6 +30,10 @@ namespace Vistas
             comboBox1.ValueMember = "Rol_Codigo";
             comboBox1.DataSource = TrabajarUsuario.list_roles();
         }
+
+       
+
+       
 
       
     }
