@@ -49,7 +49,7 @@ namespace ClasesBase
             return dt;
         }
 
-        public static void eliminarCliente(Cliente cliente)
+        public static void eliminarCliente(string dni)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
@@ -59,7 +59,7 @@ namespace ClasesBase
             cmd.Connection = cnn;
 
             // Paramatros
-            cmd.Parameters.AddWithValue("@dni", cliente.Cli_DNI);
+            cmd.Parameters.AddWithValue("@dni", dni);
 
             // Ejecutar la query
             cnn.Open();

@@ -51,3 +51,4 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vi
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmClienteGrid.resources
