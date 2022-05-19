@@ -31,6 +31,13 @@ namespace Vistas
             comboBox1.DataSource = TrabajarUsuario.list_roles();
         }
 
+        private void button1_Guardar_Click(object sender, EventArgs e)
+        {
+            Usuario oUsuario = new Usuario();
+            oUsuario.Rol = (int)comboBox1.SelectedValue;
+
+        }
+
        
 
        
