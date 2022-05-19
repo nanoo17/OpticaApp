@@ -62,6 +62,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="opticaDataSet.xsc">
       <DependentUpon>opticaDataSet.xsd</DependentUpon>
     </None>

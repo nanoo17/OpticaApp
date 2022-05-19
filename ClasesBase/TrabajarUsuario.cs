@@ -7,8 +7,28 @@ using System.Data.SqlClient;
 
 namespace ClasesBase
 {
-    class TrabajarUsuario
+    public class TrabajarUsuario
     {
+
+
+
+        public static DataTable list_roles()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Roles";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+       
+
+
 
         public static void insertarUsuario(Usuario usuario)
         {
