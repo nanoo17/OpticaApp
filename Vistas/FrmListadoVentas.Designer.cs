@@ -39,6 +39,7 @@
             this.dataGridView_Listado.Name = "dataGridView_Listado";
             this.dataGridView_Listado.Size = new System.Drawing.Size(439, 191);
             this.dataGridView_Listado.TabIndex = 0;
+            this.dataGridView_Listado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Listado_CellContentClick);
             // 
             // FrmListadoVentas
             // 

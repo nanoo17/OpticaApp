@@ -42,10 +42,11 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_Salir = new System.Windows.Forms.Button();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarUnaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button_Salir = new System.Windows.Forms.Button();
+            this.verVentaDetalleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,24 +154,12 @@
             this.modificarClientesToolStripMenuItem.Text = "Modificar Clientes";
             this.modificarClientesToolStripMenuItem.Click += new System.EventHandler(this.modificarClientesToolStripMenuItem_Click);
             // 
-            // button_Salir
-            // 
-            this.button_Salir.BackColor = System.Drawing.Color.Red;
-            this.button_Salir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Salir.ForeColor = System.Drawing.Color.Black;
-            this.button_Salir.Location = new System.Drawing.Point(684, 27);
-            this.button_Salir.Name = "button_Salir";
-            this.button_Salir.Size = new System.Drawing.Size(79, 31);
-            this.button_Salir.TabIndex = 1;
-            this.button_Salir.Text = "Salir";
-            this.button_Salir.UseVisualStyleBackColor = false;
-            this.button_Salir.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargarUnaVentaToolStripMenuItem,
-            this.verVentasToolStripMenuItem});
+            this.verVentasToolStripMenuItem,
+            this.verVentaDetalleToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
@@ -188,6 +177,26 @@
             this.verVentasToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.verVentasToolStripMenuItem.Text = "Ver Ventas";
             this.verVentasToolStripMenuItem.Click += new System.EventHandler(this.verVentasToolStripMenuItem_Click);
+            // 
+            // button_Salir
+            // 
+            this.button_Salir.BackColor = System.Drawing.Color.Red;
+            this.button_Salir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Salir.ForeColor = System.Drawing.Color.Black;
+            this.button_Salir.Location = new System.Drawing.Point(684, 27);
+            this.button_Salir.Name = "button_Salir";
+            this.button_Salir.Size = new System.Drawing.Size(79, 31);
+            this.button_Salir.TabIndex = 1;
+            this.button_Salir.Text = "Salir";
+            this.button_Salir.UseVisualStyleBackColor = false;
+            this.button_Salir.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // verVentaDetalleToolStripMenuItem
+            // 
+            this.verVentaDetalleToolStripMenuItem.Name = "verVentaDetalleToolStripMenuItem";
+            this.verVentaDetalleToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.verVentaDetalleToolStripMenuItem.Text = "Ver Venta Detalle";
+            this.verVentaDetalleToolStripMenuItem.Click += new System.EventHandler(this.verVentaDetalleToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -228,6 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargarUnaVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verVentaDetalleToolStripMenuItem;
     }
 }
 

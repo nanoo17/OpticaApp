@@ -88,6 +88,13 @@ namespace Vistas
 
         private void verVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FrmListadoVentas oFrmListadoVentas = new FrmListadoVentas();
+            oFrmListadoVentas.Show();
+           
+        }
+
+        private void verVentaDetalleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             FrmVentaDetalle oFrmVentaDetalle = new FrmVentaDetalle();
             oFrmVentaDetalle.Show();
         }

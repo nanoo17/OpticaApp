@@ -38,49 +38,49 @@ namespace Vistas
 
 
 
-            // Parametros del messageBox
-            string mensaje = "¿Está seguro de modificar el Usuario?";
-            string titulo = "Modificar cliente";
-            MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            MessageBoxIcon icono = MessageBoxIcon.Question;
+            //// Parametros del messageBox
+            //string mensaje = "¿Está seguro de modificar el Usuario?";
+            //string titulo = "Modificar cliente";
+            //MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            //MessageBoxIcon icono = MessageBoxIcon.Question;
 
-            // Mostrar messageBox de confirmación
-            DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
+            //// Mostrar messageBox de confirmación
+            //DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
 
-            // Verificar el resultado del messageBox
-            if (resultado == DialogResult.No) return;
+            //// Verificar el resultado del messageBox
+            //if (resultado == DialogResult.No) return;
 
-            // Se hace la modificacion
+            //// Se hace la modificacion
 
-            // Creamos el obj Cliente para modificar
-            string cli_DNI = textBox_Dni.Text;
-            string cli_Apellido = textBox_Apellido.Text;
-            string cli_Nombre = textBox_Nombre.Text;
-            string OS_CUIT = textBox_Cuit.Text;
-            string cli_Direccion = textBox_Direccion.Text;
-            string cli_NroCarnet = textBox_Carnet.Text;
+            //// Creamos el obj Cliente para modificar
+            //string cli_DNI = textBox_Dni.Text;
+            //string cli_Apellido = textBox_Apellido.Text;
+            //string cli_Nombre = textBox_Nombre.Text;
+            //string OS_CUIT = textBox_Cuit.Text;
+            //string cli_Direccion = textBox_Direccion.Text;
+            //string cli_NroCarnet = textBox_Carnet.Text;
 
-            Cliente cli = new Cliente(cli_DNI, cli_Apellido, cli_Nombre, OS_CUIT, cli_Direccion, cli_NroCarnet);
+            //Cliente cli = new Cliente(cli_DNI, cli_Apellido, cli_Nombre, OS_CUIT, cli_Direccion, cli_NroCarnet);
 
-            // Guardar al cliente en la base de datos
-            try
-            {
-                TrabajarCliente.modificarCliente(cli);
-                string mensajeExito = "El cliente fue modificado con exito"
-                    + "\n Nombre: " + cli.Cli_Nombre
-                    + "\n Apellido: " + cli.Cli_Apellido
-                    + "\n DNI: " + cli.Cli_DNI
-                    + "\n Direccion: " + cli.Cli_Direccion
-                    + "\n CUIT: " + cli.OS_CUIT1
-                    + "\n N°Carnet: " + cli.Cli_NroCarnet;
-                MessageBox.Show(mensajeExito, titulo);
-                cargarClientes();
-                this.Refresh();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error en la modificacion del cliente", titulo);
-            }
+            //// Guardar al cliente en la base de datos
+            //try
+            //{
+            //    TrabajarCliente.modificarCliente(cli);
+            //    string mensajeExito = "El cliente fue modificado con exito"
+            //        + "\n Nombre: " + cli.Cli_Nombre
+            //        + "\n Apellido: " + cli.Cli_Apellido
+            //        + "\n DNI: " + cli.Cli_DNI
+            //        + "\n Direccion: " + cli.Cli_Direccion
+            //        + "\n CUIT: " + cli.OS_CUIT1
+            //        + "\n N°Carnet: " + cli.Cli_NroCarnet;
+            //    MessageBox.Show(mensajeExito, titulo);
+            //    cargarClientes();
+            //    this.Refresh();
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Error en la modificacion del cliente", titulo);
+            //}
 
 
       
