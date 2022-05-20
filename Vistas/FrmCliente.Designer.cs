@@ -39,9 +39,9 @@
             this.textBox_apellido = new System.Windows.Forms.TextBox();
             this.textBox_direccion = new System.Windows.Forms.TextBox();
             this.textBox_dni = new System.Windows.Forms.TextBox();
-            this.textBox_cuit = new System.Windows.Forms.TextBox();
             this.textBox_nroCarnet = new System.Windows.Forms.TextBox();
             this.button1_Confirmar = new System.Windows.Forms.Button();
+            this.comboBox_ObraSocial = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -83,11 +83,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 185);
+            this.label5.Location = new System.Drawing.Point(57, 184);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "CUIT";
+            this.label5.Text = "CUIT O.S.";
             // 
             // label6
             // 
@@ -136,13 +136,6 @@
             this.textBox_dni.Size = new System.Drawing.Size(100, 20);
             this.textBox_dni.TabIndex = 10;
             // 
-            // textBox_cuit
-            // 
-            this.textBox_cuit.Location = new System.Drawing.Point(134, 182);
-            this.textBox_cuit.Name = "textBox_cuit";
-            this.textBox_cuit.Size = new System.Drawing.Size(100, 20);
-            this.textBox_cuit.TabIndex = 11;
-            // 
             // textBox_nroCarnet
             // 
             this.textBox_nroCarnet.Location = new System.Drawing.Point(134, 208);
@@ -160,14 +153,22 @@
             this.button1_Confirmar.UseVisualStyleBackColor = true;
             this.button1_Confirmar.Click += new System.EventHandler(this.button1_Confirmar_Click);
             // 
+            // comboBox_ObraSocial
+            // 
+            this.comboBox_ObraSocial.FormattingEnabled = true;
+            this.comboBox_ObraSocial.Location = new System.Drawing.Point(134, 181);
+            this.comboBox_ObraSocial.Name = "comboBox_ObraSocial";
+            this.comboBox_ObraSocial.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_ObraSocial.TabIndex = 14;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 288);
+            this.Controls.Add(this.comboBox_ObraSocial);
             this.Controls.Add(this.button1_Confirmar);
             this.Controls.Add(this.textBox_nroCarnet);
-            this.Controls.Add(this.textBox_cuit);
             this.Controls.Add(this.textBox_dni);
             this.Controls.Add(this.textBox_direccion);
             this.Controls.Add(this.textBox_apellido);
@@ -181,6 +182,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,9 +201,9 @@
         private System.Windows.Forms.TextBox textBox_apellido;
         private System.Windows.Forms.TextBox textBox_direccion;
         private System.Windows.Forms.TextBox textBox_dni;
-        private System.Windows.Forms.TextBox textBox_cuit;
         private System.Windows.Forms.TextBox textBox_nroCarnet;
         private System.Windows.Forms.Button button1_Confirmar;
+        private System.Windows.Forms.ComboBox comboBox_ObraSocial;
 
     }
 }

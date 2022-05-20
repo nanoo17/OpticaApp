@@ -37,12 +37,12 @@
             this.label_carnet = new System.Windows.Forms.Label();
             this.textBox_Nombre = new System.Windows.Forms.TextBox();
             this.textBox_Direccion = new System.Windows.Forms.TextBox();
-            this.textBox_Cuit = new System.Windows.Forms.TextBox();
             this.textBox_Carnet = new System.Windows.Forms.TextBox();
             this.button_modificar = new System.Windows.Forms.Button();
             this.label_Dni = new System.Windows.Forms.Label();
             this.textBox_Dni = new System.Windows.Forms.TextBox();
             this.button_Eliminar = new System.Windows.Forms.Button();
+            this.comboBox_ObraSocial = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +92,7 @@
             // label_cuit
             // 
             this.label_cuit.AutoSize = true;
-            this.label_cuit.Location = new System.Drawing.Point(466, 147);
+            this.label_cuit.Location = new System.Drawing.Point(466, 156);
             this.label_cuit.Name = "label_cuit";
             this.label_cuit.Size = new System.Drawing.Size(43, 13);
             this.label_cuit.TabIndex = 5;
@@ -120,13 +120,6 @@
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(100, 20);
             this.textBox_Direccion.TabIndex = 8;
-            // 
-            // textBox_Cuit
-            // 
-            this.textBox_Cuit.Location = new System.Drawing.Point(547, 156);
-            this.textBox_Cuit.Name = "textBox_Cuit";
-            this.textBox_Cuit.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Cuit.TabIndex = 9;
             // 
             // textBox_Carnet
             // 
@@ -172,17 +165,25 @@
             this.button_Eliminar.UseVisualStyleBackColor = true;
             this.button_Eliminar.Click += new System.EventHandler(this.button_Eliminar_Click);
             // 
+            // comboBox_ObraSocial
+            // 
+            this.comboBox_ObraSocial.FormattingEnabled = true;
+            this.comboBox_ObraSocial.Location = new System.Drawing.Point(547, 156);
+            this.comboBox_ObraSocial.Name = "comboBox_ObraSocial";
+            this.comboBox_ObraSocial.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_ObraSocial.TabIndex = 15;
+            // 
             // FrmClienteGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 262);
+            this.Controls.Add(this.comboBox_ObraSocial);
             this.Controls.Add(this.button_Eliminar);
             this.Controls.Add(this.textBox_Dni);
             this.Controls.Add(this.label_Dni);
             this.Controls.Add(this.button_modificar);
             this.Controls.Add(this.textBox_Carnet);
-            this.Controls.Add(this.textBox_Cuit);
             this.Controls.Add(this.textBox_Direccion);
             this.Controls.Add(this.textBox_Nombre);
             this.Controls.Add(this.label_carnet);
@@ -212,11 +213,11 @@
         private System.Windows.Forms.Label label_carnet;
         private System.Windows.Forms.TextBox textBox_Nombre;
         private System.Windows.Forms.TextBox textBox_Direccion;
-        private System.Windows.Forms.TextBox textBox_Cuit;
         private System.Windows.Forms.TextBox textBox_Carnet;
         private System.Windows.Forms.Button button_modificar;
         private System.Windows.Forms.Label label_Dni;
         private System.Windows.Forms.TextBox textBox_Dni;
         private System.Windows.Forms.Button button_Eliminar;
+        private System.Windows.Forms.ComboBox comboBox_ObraSocial;
     }
 }

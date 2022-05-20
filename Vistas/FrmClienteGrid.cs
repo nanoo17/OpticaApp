@@ -21,6 +21,11 @@ namespace Vistas
         {
             // Cargar usuario a la grilla
             cargarClientes();
+            // Cargar ComboBox de obrasocial
+            DataTable dt = ClasesBase.TrabajarObraSocial.obtenerObraSocial();
+            comboBox_ObraSocial.DataSource = dt;
+            comboBox_ObraSocial.DisplayMember = "OS_RazonSocial";
+            comboBox_ObraSocial.ValueMember = "OS_CUIT";
         }
 
         private void cargarClientes()
@@ -37,7 +42,7 @@ namespace Vistas
             textBox_Nombre.Text = row.Cells[1].Value.ToString();
             textBox_Apellido.Text = row.Cells[2].Value.ToString();
             textBox_Direccion.Text = row.Cells[3].Value.ToString();
-            textBox_Cuit.Text = row.Cells[4].Value.ToString();
+            comboBox_ObraSocial.SelectedValue = row.Cells[4].Value.ToString();
             textBox_Carnet.Text = row.Cells[5].Value.ToString();
         }
 
@@ -62,7 +67,7 @@ namespace Vistas
             string cli_DNI = textBox_Dni.Text;
             string cli_Apellido = textBox_Apellido.Text;
             string cli_Nombre = textBox_Nombre.Text;
-            string OS_CUIT = textBox_Cuit.Text;
+            string OS_CUIT = comboBox_ObraSocial.SelectedValue.ToString();
             string cli_Direccion = textBox_Direccion.Text;
             string cli_NroCarnet = textBox_Carnet.Text;
 
