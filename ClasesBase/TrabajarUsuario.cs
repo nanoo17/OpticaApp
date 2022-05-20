@@ -28,8 +28,6 @@ namespace ClasesBase
         }
        
 
-
-
         public static void insertarUsuario(Usuario usuario)
         {
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
@@ -69,7 +67,7 @@ namespace ClasesBase
             return dt;
         }
 
-        public static void eliminarUsuario(string id)
+        public static void eliminarUsuario(Int32 id)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
@@ -128,19 +126,24 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable buscarUsuarioTabla(string usuario)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
-        //public static DataTable buscar_usuarios(string sPattern)
-        //{
-        //    SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario = @usuario";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
 
-        //    SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@usuario", usuario);
 
-        //    cmd.CommandText = "SELECT ";
-        //    cmd.CommandText += "rol as 'Rol_Codigo',";
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
-        //    return dt;
-        //}
+            return dt;
+        }
 
 
     }

@@ -41,7 +41,7 @@ namespace Vistas
 
             // Abrir Menu Principal
             MessageBox.Show("Bienvenido/a :: " + nombreUsuario, "Acceso Exitoso");
-            FrmMain FrmMain = new FrmMain();
+            FrmMain FrmMain = new FrmMain(rolCodigo);
             FrmMain.Show();
             this.Close();
         }
