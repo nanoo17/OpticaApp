@@ -28,7 +28,7 @@ namespace Vistas
         {
             DataTable dt = TrabajarUsuario.list_roles();
             comboBox1.DisplayMember = "Rol_Descripcion";
-            comboBox1.ValueMember = "Rol_Descripcion";
+            comboBox1.ValueMember = "Rol_Codigo";
             comboBox1.DataSource = dt;
 
             if (dt.Rows.Count == 0)
@@ -59,7 +59,7 @@ namespace Vistas
             string usu_ApellidoNombre = textBox1_ApellidoNombre.Text;
             string usu_NombreUsuario = textBox4_Usuario.Text;
             string usu_Contraseña = textBox5_Contraseña.Text;
-            string usu_Rol = comboBox1.SelectedValue.ToString();
+            int usu_Rol = Int32.Parse(comboBox1.SelectedValue.ToString());
             int usu_id = Int32.Parse(textBox1_id.Text);
             Usuario usu = new Usuario(usu_id, usu_NombreUsuario, usu_Contraseña, usu_ApellidoNombre, usu_Rol);
             // Guardar al Usuario en la base de datos
@@ -90,12 +90,15 @@ namespace Vistas
         private void dataGridView_Usuario_SelectionChanged(object sender, EventArgs e)
         {
             var row = (sender as DataGridView).CurrentRow;
-
-            textBox1_id.Text = row.Cells[0].Value.ToString();
-            textBox1_ApellidoNombre.Text = row.Cells[3].Value.ToString();
-            textBox5_Contraseña.Text = row.Cells[2].Value.ToString();
-            textBox4_Usuario.Text = row.Cells[1].Value.ToString();
-            comboBox1.SelectedValue = row.Cells[4].Value.ToString();
+            string id = row.Cells[0].Value.ToString();
+            if (id.Trim() != "")
+            {
+                textBox1_id.Text = id;
+                textBox1_ApellidoNombre.Text = row.Cells[3].Value.ToString();
+                textBox5_Contraseña.Text = row.Cells[2].Value.ToString();
+                textBox4_Usuario.Text = row.Cells[1].Value.ToString();
+                comboBox1.SelectedValue = row.Cells[4].Value.ToString();
+            }
         }
 
         private void button2_Eliminar_Click(object sender, EventArgs e)

@@ -11,27 +11,21 @@ namespace Vistas
 {
     public partial class FrmMain : Form
     {
-        public FrmMain(string rol_codigo)
+        public FrmMain(int rol_codigo)
         {
             InitializeComponent();
-            if (rol_codigo == "Administrador")
+            if (rol_codigo == 1)
             {
                 ventasToolStripMenuItem.Visible = false;
                 clientesToolStripMenuItem.Visible = false;
             }
-            if (rol_codigo == "Operador")
+            if (rol_codigo == 2)
             {
                 usuariosToolStripMenuItem.Visible = false;
                 cargarProductoToolStripMenuItem.Visible = false;
             }
            
         }
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-      
 
         private void registrarObraSocialToolStripMenuItem_Click(object sender, EventArgs e)
         {

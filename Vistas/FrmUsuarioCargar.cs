@@ -22,8 +22,9 @@ namespace Vistas
 
             Random r = new Random();
             Usuario oUsuario = new Usuario();
+
             oUsuario.Usu_ID = r.Next();
-            oUsuario.Rol = comboBox1.SelectedValue.ToString();
+            oUsuario.Rol = Int32.Parse(comboBox1.SelectedValue.ToString());
             oUsuario.Usu_ApellidoNombre = textBox1_ApellidoNombre.Text;
             oUsuario.Usu_NombreUsuario = textBox2_Usuario.Text;
             oUsuario.Usu_Clave = textBox3_Contraseña.Text;
@@ -75,7 +76,7 @@ namespace Vistas
         private void load_combo_roles()
         {
             comboBox1.DisplayMember = "Rol_Descripcion";
-            comboBox1.ValueMember = "Rol_Descripcion";
+            comboBox1.ValueMember = "Rol_Codigo";
             comboBox1.DataSource = TrabajarUsuario.list_roles();
         }
     }

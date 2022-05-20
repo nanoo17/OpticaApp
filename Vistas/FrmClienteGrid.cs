@@ -47,12 +47,17 @@ namespace Vistas
         {
             var row = (sender as DataGridView).CurrentRow;
 
-            textBox_Dni.Text = row.Cells[0].Value.ToString();
-            textBox_Nombre.Text = row.Cells[1].Value.ToString();
-            textBox_Apellido.Text = row.Cells[2].Value.ToString();
-            textBox_Direccion.Text = row.Cells[3].Value.ToString();
-            comboBox_ObraSocial.SelectedValue = row.Cells[4].Value.ToString();
-            textBox_Carnet.Text = row.Cells[5].Value.ToString();
+            string dni = row.Cells[0].Value.ToString();
+
+            if (dni.Trim() != "")
+            {
+                textBox_Dni.Text = dni;
+                textBox_Nombre.Text = row.Cells[1].Value.ToString();
+                textBox_Apellido.Text = row.Cells[2].Value.ToString();
+                textBox_Direccion.Text = row.Cells[3].Value.ToString();
+                comboBox_ObraSocial.SelectedValue = row.Cells[4].Value.ToString();
+                textBox_Carnet.Text = row.Cells[5].Value.ToString();
+            }
         }
 
         // Boton para modificar
@@ -94,12 +99,13 @@ namespace Vistas
                     + "\n CUIT: " + cli.OS_CUIT1
                     + "\n N°Carnet: " + cli.Cli_NroCarnet;
                 MessageBox.Show(mensajeExito, titulo);
+
                 cargarClientes();
-                this.Refresh();
             }
-            catch (Exception)
+            catch (Exception err)
             {
                 MessageBox.Show("Error en la modificacion del cliente", titulo);
+                MessageBox.Show(err.ToString(), titulo);
             }
         }
 
@@ -128,11 +134,12 @@ namespace Vistas
                 MessageBox.Show(mensajeExito, titulo);
 
                 // Recargar la ventana
-                FrmClienteGrid_Load(sender, e);
+                cargarClientes();
             }
-            catch (Exception)
+            catch (Exception err)
             {
                 MessageBox.Show("Error en la eliminacion del cliente", titulo);
+                MessageBox.Show(err.ToString(), titulo);
             }
         }
 
