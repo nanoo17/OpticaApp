@@ -22,5 +22,12 @@ namespace Vistas
             // Cargar ventas
             dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentas();
         }
+
+        private void dataGridView_Listado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+      
     }
 }
