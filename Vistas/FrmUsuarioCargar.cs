@@ -52,7 +52,7 @@ namespace Vistas
             try
             {
                 TrabajarUsuario.insertarUsuario(oUsuario);
-                string mensajeExito = "El cliente fue creado con exito"
+                string mensajeExito = "El usuario fue creado con exito"
                     + "\n ID: " + oUsuario.Usu_ID
                     + "\n Apellido y Nombre: " + oUsuario.Usu_ApellidoNombre
                     + "\n Nombre de Usuario: " + oUsuario.Usu_NombreUsuario;
@@ -60,6 +60,7 @@ namespace Vistas
             }
             catch (Exception err)
             {
+                MessageBox.Show("Error en la carga de usuario", titulo);
                 MessageBox.Show(err.ToString(), titulo);
             }
 

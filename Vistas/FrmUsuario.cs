@@ -75,9 +75,10 @@ namespace Vistas
                 MessageBox.Show(mensajeExito, titulo);
                 load_usuarios();
             }
-            catch (Exception)
+            catch (Exception err)
             {
                 MessageBox.Show("Error en la modificacion del cliente", titulo);
+                MessageBox.Show(err.ToString(), titulo);
             }
 
         }
