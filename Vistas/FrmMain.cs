@@ -70,13 +70,26 @@ namespace Vistas
 
         private void modificarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmClienteGrid oFrmClienteGrid = new FrmClienteGrid();
+            oFrmClienteGrid.Show();
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmUsuario oFrmUsuario = new FrmUsuario();
             oFrmUsuario.Show();
+        }
+
+        private void cargarUnaVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVenta oFrmVenta = new FrmVenta();
+            oFrmVenta.Show();
+        }
+
+        private void verVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVentaDetalle oFrmVentaDetalle = new FrmVentaDetalle();
+            oFrmVentaDetalle.Show();
         }
 
         

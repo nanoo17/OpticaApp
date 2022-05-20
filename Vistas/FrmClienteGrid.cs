@@ -80,7 +80,7 @@ namespace Vistas
                     + "\n CUIT: " + cli.OS_CUIT1
                     + "\n N°Carnet: " + cli.Cli_NroCarnet;
                 MessageBox.Show(mensajeExito, titulo);
-
+                cargarClientes();
                 this.Refresh();
             }
             catch (Exception)
@@ -112,7 +112,7 @@ namespace Vistas
                 TrabajarCliente.eliminarCliente(cli_DNI);
                 string mensajeExito = "El cliente fue eliminado con exito";
                 MessageBox.Show(mensajeExito, titulo);
-
+                cargarClientes();
                 this.Refresh();
             }
             catch (Exception)
