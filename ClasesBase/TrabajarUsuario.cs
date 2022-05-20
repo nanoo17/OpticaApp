@@ -131,11 +131,11 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario = @usuario";
+            cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario LIKE @usuario";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.Parameters.AddWithValue("@usuario", "%"+usuario+"%");
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 

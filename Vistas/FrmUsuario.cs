@@ -26,9 +26,16 @@ namespace Vistas
 
         private void load_combo_roles()
         {
+            DataTable dt = TrabajarUsuario.list_roles();
             comboBox1.DisplayMember = "Rol_Descripcion";
             comboBox1.ValueMember = "Rol_Descripcion";
-            comboBox1.DataSource = TrabajarUsuario.list_roles();
+            comboBox1.DataSource = dt;
+
+            if (dt.Rows.Count == 0)
+            {
+                button1_Guardar.Enabled = false;
+                button2_Eliminar.Enabled = false;
+            }
         }
 
         private void button1_Guardar_Click(object sender, EventArgs e)
@@ -83,11 +90,12 @@ namespace Vistas
         private void dataGridView_Usuario_SelectionChanged(object sender, EventArgs e)
         {
             var row = (sender as DataGridView).CurrentRow;
+
             textBox1_id.Text = row.Cells[0].Value.ToString();
             textBox1_ApellidoNombre.Text = row.Cells[3].Value.ToString();
             textBox5_Contraseña.Text = row.Cells[2].Value.ToString();
             textBox4_Usuario.Text = row.Cells[1].Value.ToString();
-            comboBox1.SelectedValue= row.Cells[4].Value.ToString();
+            comboBox1.SelectedValue = row.Cells[4].Value.ToString();
         }
 
         private void button2_Eliminar_Click(object sender, EventArgs e)
@@ -127,7 +135,15 @@ namespace Vistas
         private void button1_Click(object sender, EventArgs e)
         {
             string usu_Usuario = textBox1_UsuarioBuscar.Text.Trim();
-            dataGridView_Usuario.DataSource = TrabajarUsuario.buscarUsuarioTabla(usu_Usuario);
+
+            if (usu_Usuario.Trim() != "")
+            {
+                dataGridView_Usuario.DataSource = TrabajarUsuario.buscarUsuarioTabla(usu_Usuario);
+            }
+            else
+            {
+                load_usuarios();
+            }
         }
        
     }
