@@ -25,7 +25,17 @@ namespace Vistas
             comboBox_NumeroVenta.DisplayMember = "Ven_Nro";
             comboBox_NumeroVenta.ValueMember = "Ven_Nro";
 
-            dataGridView_Producto.DataSource = ClasesBase.TrabajarProducto.obtenerProductos();
+            DataTable dtProductos = ClasesBase.TrabajarProducto.obtenerProductos();
+            dataGridView_Producto.DataSource = dtProductos;
+
+            // Deshabilitar botones si no hay ventas o productos
+            if (dt.Rows.Count == 0 || dtProductos.Rows.Count == 0)
+            {
+                comboBox_NumeroVenta.Enabled = false;
+                button_Guardar.Enabled = false;
+            }
+
+            // MessageBox.Show(dtProductos.Rows[0]["Prod_Categoria"].ToString());
         }
 
         // Rellenar el precio del producto

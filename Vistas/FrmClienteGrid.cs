@@ -26,6 +26,15 @@ namespace Vistas
             comboBox_ObraSocial.DataSource = dt;
             comboBox_ObraSocial.DisplayMember = "OS_RazonSocial";
             comboBox_ObraSocial.ValueMember = "OS_CUIT";
+
+            // Deshabilitar los botones de busqueda, modificar y eliminar si no hay registros
+            DataTable dtClientes = TrabajarCliente.obtenerClientes();
+            if (dtClientes.Rows.Count == 0)
+            {
+                button_Buscar.Enabled = false;
+                button_Eliminar.Enabled = false;
+                button_modificar.Enabled = false;
+            }
         }
 
         private void cargarClientes()
@@ -117,13 +126,23 @@ namespace Vistas
                 TrabajarCliente.eliminarCliente(cli_DNI);
                 string mensajeExito = "El cliente fue eliminado con exito";
                 MessageBox.Show(mensajeExito, titulo);
-                cargarClientes();
-                this.Refresh();
+
+                // Recargar la ventana
+                FrmClienteGrid_Load(sender, e);
             }
             catch (Exception)
             {
                 MessageBox.Show("Error en la eliminacion del cliente", titulo);
             }
+        }
+
+        // Busqueda con dos campos
+        private void button_Buscar_Click(object sender, EventArgs e)
+        {
+            string dni = textBox_BuscarDni.Text.Trim();
+            string apellido = textBox_BuscarApellido.Text.Trim();
+         
+            dataGridView_Cliente.DataSource = TrabajarCliente.buscarClientes(dni, apellido);
         }
     }
 }
