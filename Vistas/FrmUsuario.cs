@@ -19,8 +19,6 @@ namespace Vistas
 
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'opticaDataSet.Usuario' table. You can move, or remove it, as needed.
-            //this.usuarioTableAdapter.Fill(this.opticaDataSet.Usuario);
             load_combo_roles();
 
             load_usuarios();
@@ -36,75 +34,101 @@ namespace Vistas
         private void button1_Guardar_Click(object sender, EventArgs e)
         {
 
+            // Parametros del messageBox
+            string mensaje = "¿Está seguro de modificar el Usuario?";
+            string titulo = "Modificar usuario";
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            MessageBoxIcon icono = MessageBoxIcon.Question;
 
+            // Mostrar messageBox de confirmación
+            DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
 
-            //// Parametros del messageBox
-            //string mensaje = "¿Está seguro de modificar el Usuario?";
-            //string titulo = "Modificar cliente";
-            //MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            //MessageBoxIcon icono = MessageBoxIcon.Question;
+            // Verificar el resultado del messageBox
+            if (resultado == DialogResult.No) return;
 
-            //// Mostrar messageBox de confirmación
-            //DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
+            // Se hace la modificacion
 
-            //// Verificar el resultado del messageBox
-            //if (resultado == DialogResult.No) return;
-
-            //// Se hace la modificacion
-
-            //// Creamos el obj Cliente para modificar
-            //string cli_DNI = textBox_Dni.Text;
-            //string cli_Apellido = textBox_Apellido.Text;
-            //string cli_Nombre = textBox_Nombre.Text;
-            //string OS_CUIT = textBox_Cuit.Text;
-            //string cli_Direccion = textBox_Direccion.Text;
-            //string cli_NroCarnet = textBox_Carnet.Text;
-
-            //Cliente cli = new Cliente(cli_DNI, cli_Apellido, cli_Nombre, OS_CUIT, cli_Direccion, cli_NroCarnet);
-
-            //// Guardar al cliente en la base de datos
-            //try
-            //{
-            //    TrabajarCliente.modificarCliente(cli);
-            //    string mensajeExito = "El cliente fue modificado con exito"
-            //        + "\n Nombre: " + cli.Cli_Nombre
-            //        + "\n Apellido: " + cli.Cli_Apellido
-            //        + "\n DNI: " + cli.Cli_DNI
-            //        + "\n Direccion: " + cli.Cli_Direccion
-            //        + "\n CUIT: " + cli.OS_CUIT1
-            //        + "\n N°Carnet: " + cli.Cli_NroCarnet;
-            //    MessageBox.Show(mensajeExito, titulo);
-            //    cargarClientes();
-            //    this.Refresh();
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Error en la modificacion del cliente", titulo);
-            //}
-
-
-      
-
-
-
-
-
-
-            load_usuarios();
+            // Creamos el obj Cliente para modificar
+            string usu_ApellidoNombre = textBox1_ApellidoNombre.Text;
+            string usu_NombreUsuario = textBox4_Usuario.Text;
+            string usu_Contraseña = textBox5_Contraseña.Text;
+            string usu_Rol = comboBox1.SelectedValue.ToString();
+            int usu_id = Int32.Parse(textBox1_id.Text);
+            Usuario usu = new Usuario(usu_id, usu_NombreUsuario, usu_Contraseña, usu_ApellidoNombre, usu_Rol);
+            // Guardar al Usuario en la base de datos
+            try
+            {
+                TrabajarUsuario.modificarUsuario(usu);
+                string mensajeExito = "El usuario fue modificado con exito"
+                     + "\n Id: " + usu.Usu_ID
+                     + "\n Usuario: " + usu.Usu_NombreUsuario
+                     + "\n Contraseña " + usu.Usu_Clave
+                     + "\n Nombre y Apellido: " + usu.Usu_ApellidoNombre
+                     + "\n Rol: " + usu.Rol;
+                MessageBox.Show(mensajeExito, titulo);
+                load_usuarios();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error en la modificacion del cliente", titulo);
+            }
 
         }
-
 
         private void load_usuarios()
         {
-            dataGridView1.DataSource = TrabajarUsuario.obtenerUsuarios();
+            dataGridView_Usuario.DataSource = TrabajarUsuario.obtenerUsuarios();
         }
 
+        private void dataGridView_Usuario_SelectionChanged(object sender, EventArgs e)
+        {
+            var row = (sender as DataGridView).CurrentRow;
+            textBox1_id.Text = row.Cells[0].Value.ToString();
+            textBox1_ApellidoNombre.Text = row.Cells[3].Value.ToString();
+            textBox5_Contraseña.Text = row.Cells[2].Value.ToString();
+            textBox4_Usuario.Text = row.Cells[1].Value.ToString();
+            comboBox1.SelectedValue= row.Cells[4].Value.ToString();
+        }
+
+        private void button2_Eliminar_Click(object sender, EventArgs e)
+        {
+            // Parametros del messageBox
+            string mensaje = "¿Está seguro de eliminar el usuario?";
+            string titulo = "Eliminar Usuario";
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            MessageBoxIcon icono = MessageBoxIcon.Question;
+
+            // Mostrar messageBox de confirmación
+            DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
+
+            // Verificar el resultado del messageBox
+            if (resultado == DialogResult.No) return;
+
+            // Eliminar cliente
+            
+            int usu_id = Int32.Parse(textBox1_id.Text);
+            try
+            {
+                TrabajarUsuario.eliminarUsuario(usu_id);
+                
+                string mensajeExito = "El usuario fue eliminado con exito";
+                MessageBox.Show(mensajeExito, titulo);
+
+                // Recargar la ventana
+                load_usuarios();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error en la eliminacion del cliente", titulo);
+            }
         
-       
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usu_Usuario = textBox1_UsuarioBuscar.Text.Trim();
+            dataGridView_Usuario.DataSource = TrabajarUsuario.buscarUsuarioTabla(usu_Usuario);
+        }
        
-
-      
     }
 }

@@ -39,18 +39,18 @@
             this.textBox4_Usuario = new System.Windows.Forms.TextBox();
             this.textBox5_Contraseña = new System.Windows.Forms.TextBox();
             this.button2_Eliminar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.usuIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuNombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuContraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuApellidoNombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rolCodigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.opticaDataSet = new Vistas.opticaDataSet();
             this.usuarioTableAdapter = new Vistas.opticaDataSetTableAdapters.UsuarioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView_Usuario = new System.Windows.Forms.DataGridView();
+            this.textBox1_id = new System.Windows.Forms.TextBox();
+            this.label1_id = new System.Windows.Forms.Label();
+            this.textBox1_UsuarioBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Usuario)).BeginInit();
             this.SuspendLayout();
             // 
             // button1_Guardar
@@ -136,52 +136,7 @@
             this.button2_Eliminar.TabIndex = 13;
             this.button2_Eliminar.Text = "Eliminar";
             this.button2_Eliminar.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.usuIDDataGridViewTextBoxColumn,
-            this.usuNombreUsuarioDataGridViewTextBoxColumn,
-            this.usuContraseñaDataGridViewTextBoxColumn,
-            this.usuApellidoNombreDataGridViewTextBoxColumn,
-            this.rolCodigoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.usuarioBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(434, 192);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // usuIDDataGridViewTextBoxColumn
-            // 
-            this.usuIDDataGridViewTextBoxColumn.DataPropertyName = "Usu_ID";
-            this.usuIDDataGridViewTextBoxColumn.HeaderText = "Usu_ID";
-            this.usuIDDataGridViewTextBoxColumn.Name = "usuIDDataGridViewTextBoxColumn";
-            // 
-            // usuNombreUsuarioDataGridViewTextBoxColumn
-            // 
-            this.usuNombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "Usu_NombreUsuario";
-            this.usuNombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Usu_NombreUsuario";
-            this.usuNombreUsuarioDataGridViewTextBoxColumn.Name = "usuNombreUsuarioDataGridViewTextBoxColumn";
-            // 
-            // usuContraseñaDataGridViewTextBoxColumn
-            // 
-            this.usuContraseñaDataGridViewTextBoxColumn.DataPropertyName = "Usu_Contraseña";
-            this.usuContraseñaDataGridViewTextBoxColumn.HeaderText = "Usu_Contraseña";
-            this.usuContraseñaDataGridViewTextBoxColumn.Name = "usuContraseñaDataGridViewTextBoxColumn";
-            // 
-            // usuApellidoNombreDataGridViewTextBoxColumn
-            // 
-            this.usuApellidoNombreDataGridViewTextBoxColumn.DataPropertyName = "Usu_ApellidoNombre";
-            this.usuApellidoNombreDataGridViewTextBoxColumn.HeaderText = "Usu_ApellidoNombre";
-            this.usuApellidoNombreDataGridViewTextBoxColumn.Name = "usuApellidoNombreDataGridViewTextBoxColumn";
-            // 
-            // rolCodigoDataGridViewTextBoxColumn
-            // 
-            this.rolCodigoDataGridViewTextBoxColumn.DataPropertyName = "Rol_Codigo";
-            this.rolCodigoDataGridViewTextBoxColumn.HeaderText = "Rol_Codigo";
-            this.rolCodigoDataGridViewTextBoxColumn.Name = "rolCodigoDataGridViewTextBoxColumn";
+            this.button2_Eliminar.Click += new System.EventHandler(this.button2_Eliminar_Click);
             // 
             // usuarioBindingSource
             // 
@@ -197,12 +152,70 @@
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridView_Usuario
+            // 
+            this.dataGridView_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Usuario.Location = new System.Drawing.Point(12, 42);
+            this.dataGridView_Usuario.Name = "dataGridView_Usuario";
+            this.dataGridView_Usuario.Size = new System.Drawing.Size(376, 194);
+            this.dataGridView_Usuario.TabIndex = 14;
+            this.dataGridView_Usuario.SelectionChanged += new System.EventHandler(this.dataGridView_Usuario_SelectionChanged);
+            // 
+            // textBox1_id
+            // 
+            this.textBox1_id.Location = new System.Drawing.Point(523, 32);
+            this.textBox1_id.Name = "textBox1_id";
+            this.textBox1_id.ReadOnly = true;
+            this.textBox1_id.Size = new System.Drawing.Size(121, 20);
+            this.textBox1_id.TabIndex = 15;
+            // 
+            // label1_id
+            // 
+            this.label1_id.AutoSize = true;
+            this.label1_id.Enabled = false;
+            this.label1_id.Location = new System.Drawing.Point(482, 37);
+            this.label1_id.Name = "label1_id";
+            this.label1_id.Size = new System.Drawing.Size(15, 13);
+            this.label1_id.TabIndex = 16;
+            this.label1_id.Text = "id";
+            // 
+            // textBox1_UsuarioBuscar
+            // 
+            this.textBox1_UsuarioBuscar.Location = new System.Drawing.Point(128, 16);
+            this.textBox1_UsuarioBuscar.Name = "textBox1_UsuarioBuscar";
+            this.textBox1_UsuarioBuscar.Size = new System.Drawing.Size(100, 20);
+            this.textBox1_UsuarioBuscar.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(79, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Usuario";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(248, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 326);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1_UsuarioBuscar);
+            this.Controls.Add(this.label1_id);
+            this.Controls.Add(this.textBox1_id);
+            this.Controls.Add(this.dataGridView_Usuario);
             this.Controls.Add(this.button2_Eliminar);
             this.Controls.Add(this.textBox5_Contraseña);
             this.Controls.Add(this.textBox4_Usuario);
@@ -216,9 +229,9 @@
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Usuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,14 +249,14 @@
         private System.Windows.Forms.TextBox textBox4_Usuario;
         private System.Windows.Forms.TextBox textBox5_Contraseña;
         private System.Windows.Forms.Button button2_Eliminar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private opticaDataSet opticaDataSet;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private opticaDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuNombreUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuContraseñaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuApellidoNombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rolCodigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView_Usuario;
+        private System.Windows.Forms.TextBox textBox1_id;
+        private System.Windows.Forms.Label label1_id;
+        private System.Windows.Forms.TextBox textBox1_UsuarioBuscar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
