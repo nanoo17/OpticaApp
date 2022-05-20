@@ -20,43 +20,30 @@ namespace Vistas
         // Evento "click" del boton aceptar
         private void Aceptar_Click(object sender, EventArgs e)
        {
-            Roles rol1 = new Roles(1,"Administrador");
-            Roles rol2 = new Roles(2, "Operador");
-            Roles rol3 = new Roles(3, "Auditor");
+            string usuario = txtUserName.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            Boolean bUserFound = false;
-            // Creacion de usuarios
-            Usuario oUser1 = new Usuario(1, "nano", "123", "Mariano Rodriguez", rol1.Rol_Descripcion);
-            Usuario oUser2 = new Usuario(2, "juan", "456", "Juan Perez", rol2.Rol_Descripcion);
-            Usuario oUser3 = new Usuario(3, "mauro", "123", "Mauro Mamani",rol3.Rol_Descripcion);
+            DataTable dtUsuarios = TrabajarUsuario.buscarUsuario(usuario, password);
 
-            FrmMain oFrmMain = new FrmMain();
-
-            // Buscar si existe un usuario con los datos del formulario login
-            if(oUser1.Usu_NombreUsuario == txtUserName.Text && oUser1.Usu_Clave == txtPassword.Text)
-            {
-                bUserFound = true;
-            }
-            else if (oUser2.Usu_NombreUsuario == txtUserName.Text && oUser2.Usu_Clave == txtPassword.Text)
-            {
-                bUserFound = true;
-            }
-            else if (oUser3.Usu_NombreUsuario == txtUserName.Text && oUser3.Usu_Clave == txtPassword.Text)
-            {
-            bUserFound = true;
+            // Si no encuentra un usuario porque no existe o los datos son incorrectos
+            if (dtUsuarios.Rows.Count == 0)
+            { 
+                MessageBox.Show("Datos de acceso incorrectos", "Acceso Incorrecto");
+                return;
             }
 
-            // Verificar si el usuario fue encontrado
-            if(bUserFound)
-            {
-                MessageBox.Show("Bienvenido/a :: " + txtUserName.Text);
-                oFrmMain.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Datos de acceso incorrectos");
-            }
+            // El usuario fue encontrado
+
+            // Validar el tipo de rol y condicionar los botones
+            string rolCodigo = dtUsuarios.Rows[0]["Rol_Codigo"].ToString();
+            string nombreUsuario = dtUsuarios.Rows[0]["Usu_NombreUsuario"].ToString();
+            MessageBox.Show(rolCodigo); // Se imprime el rol
+
+            // Abrir Menu Principal
+            MessageBox.Show("Bienvenido/a :: " + nombreUsuario, "Acceso Exitoso");
+            FrmMain FrmMain = new FrmMain();
+            FrmMain.Show();
+            this.Close();
         }
 
         // Evento "mouseHover"

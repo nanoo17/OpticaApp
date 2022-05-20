@@ -37,7 +37,7 @@ namespace Vistas
             string cli_DNI = textBox_dni.Text;
             string cli_Apellido = textBox_apellido.Text;
             string cli_Nombre = textBox_nombre.Text;
-            string OS_CUIT = textBox_cuit.Text;
+            string OS_CUIT = comboBox_ObraSocial.SelectedValue.ToString();
             string cli_Direccion = textBox_direccion.Text;
             string cli_NroCarnet = textBox_nroCarnet.Text;
             Cliente cli = new Cliente(cli_DNI,cli_Apellido, cli_Nombre,OS_CUIT,cli_Direccion,cli_NroCarnet);
@@ -60,6 +60,15 @@ namespace Vistas
                 MessageBox.Show(err.ToString(), titulo);
             }
 
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+            // Cargar ComboBox de obra social
+            DataTable dt = ClasesBase.TrabajarObraSocial.obtenerObraSocial();
+            comboBox_ObraSocial.DataSource = dt;
+            comboBox_ObraSocial.DisplayMember = "OS_RazonSocial";
+            comboBox_ObraSocial.ValueMember = "OS_CUIT";
         }
     }
 }

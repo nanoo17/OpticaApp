@@ -21,6 +21,20 @@ namespace Vistas
         {
             // Cargar usuario a la grilla
             cargarClientes();
+            // Cargar ComboBox de obrasocial
+            DataTable dt = ClasesBase.TrabajarObraSocial.obtenerObraSocial();
+            comboBox_ObraSocial.DataSource = dt;
+            comboBox_ObraSocial.DisplayMember = "OS_RazonSocial";
+            comboBox_ObraSocial.ValueMember = "OS_CUIT";
+
+            // Deshabilitar los botones de busqueda, modificar y eliminar si no hay registros
+            DataTable dtClientes = TrabajarCliente.obtenerClientes();
+            if (dtClientes.Rows.Count == 0)
+            {
+                button_Buscar.Enabled = false;
+                button_Eliminar.Enabled = false;
+                button_modificar.Enabled = false;
+            }
         }
 
         private void cargarClientes()
@@ -37,7 +51,7 @@ namespace Vistas
             textBox_Nombre.Text = row.Cells[1].Value.ToString();
             textBox_Apellido.Text = row.Cells[2].Value.ToString();
             textBox_Direccion.Text = row.Cells[3].Value.ToString();
-            textBox_Cuit.Text = row.Cells[4].Value.ToString();
+            comboBox_ObraSocial.SelectedValue = row.Cells[4].Value.ToString();
             textBox_Carnet.Text = row.Cells[5].Value.ToString();
         }
 
@@ -62,7 +76,7 @@ namespace Vistas
             string cli_DNI = textBox_Dni.Text;
             string cli_Apellido = textBox_Apellido.Text;
             string cli_Nombre = textBox_Nombre.Text;
-            string OS_CUIT = textBox_Cuit.Text;
+            string OS_CUIT = comboBox_ObraSocial.SelectedValue.ToString();
             string cli_Direccion = textBox_Direccion.Text;
             string cli_NroCarnet = textBox_Carnet.Text;
 
@@ -112,13 +126,23 @@ namespace Vistas
                 TrabajarCliente.eliminarCliente(cli_DNI);
                 string mensajeExito = "El cliente fue eliminado con exito";
                 MessageBox.Show(mensajeExito, titulo);
-                cargarClientes();
-                this.Refresh();
+
+                // Recargar la ventana
+                FrmClienteGrid_Load(sender, e);
             }
             catch (Exception)
             {
                 MessageBox.Show("Error en la eliminacion del cliente", titulo);
             }
+        }
+
+        // Busqueda con dos campos
+        private void button_Buscar_Click(object sender, EventArgs e)
+        {
+            string dni = textBox_BuscarDni.Text.Trim();
+            string apellido = textBox_BuscarApellido.Text.Trim();
+         
+            dataGridView_Cliente.DataSource = TrabajarCliente.buscarClientes(dni, apellido);
         }
     }
 }

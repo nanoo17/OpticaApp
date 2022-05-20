@@ -57,7 +57,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Venta";
+            cmd.CommandText = "SELECT Ven_Nro, Ven_Fecha, Cliente.Cli_DNI, Cliente.Cli_Nombre FROM Venta INNER JOIN Cliente ON Cliente.Cli_DNI = Venta.Cli_DNI";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 

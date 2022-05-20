@@ -89,5 +89,25 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+        public static DataTable buscarClientes(string dni, string apellido)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Cliente WHERE Cli_DNI LIKE @dni AND Cli_Apellido LIKE @apellido";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@dni", "%"+dni+"%");
+            cmd.Parameters.AddWithValue("@apellido", "%"+apellido+"%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }
