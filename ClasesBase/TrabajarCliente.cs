@@ -14,7 +14,7 @@ namespace ClasesBase
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO Cliente (Cli_DNI, Cli_Nombre, Cli_Apellido, Cli_Direccion, OS_CUIT, Cli_NroCarnet) VALUES (@dni, @nombre, @apellido, @direccion, @cuit, @nroCarnet)";
+            query.CommandText = "INSERT INTO Cliente (cli_DNI, Cli_Nombre, Cli_Apellido, Cli_Direccion, OS_CUIT, Cli_NroCarnet) VALUES (@dni, @nombre, @apellido, @direccion, @cuit, @nroCarnet)";
             query.CommandType = CommandType.Text;
             query.Connection = db;
 
@@ -54,7 +54,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM Cliente WHERE Cli_DNI = @dni";
+            cmd.CommandText = "DELETE FROM Cliente WHERE cli_DNI = @dni";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -72,7 +72,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Cliente SET Cli_Nombre = @nombre, Cli_Apellido = @apellido, Cli_Direccion = @direccion, OS_CUIT = @cuit, Cli_NroCarnet = @nroCarnet WHERE Cli_DNI = @dni";
+            cmd.CommandText = "UPDATE Cliente SET Cli_Nombre = @nombre, Cli_Apellido = @apellido, Cli_Direccion = @direccion, OS_CUIT = @cuit, Cli_NroCarnet = @nroCarnet WHERE cli_DNI = @dni";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 

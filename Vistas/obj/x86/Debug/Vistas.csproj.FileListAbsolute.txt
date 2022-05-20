@@ -53,3 +53,7 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Ge
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmClienteGrid.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_9\Vistas\obj\x86\Debug\Vistas.FrmClienteGrid.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmUsuario.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmVenta.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmVentaDetalle.resources

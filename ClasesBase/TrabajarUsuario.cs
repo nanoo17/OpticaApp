@@ -7,8 +7,28 @@ using System.Data.SqlClient;
 
 namespace ClasesBase
 {
-    class TrabajarUsuario
+    public class TrabajarUsuario
     {
+
+
+
+        public static DataTable list_roles()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Roles";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+       
+
+
 
         public static void insertarUsuario(Usuario usuario)
         {
@@ -87,6 +107,21 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+
+
+        //public static DataTable buscar_usuarios(string sPattern)
+        //{
+        //    SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+        //    SqlCommand cmd = new SqlCommand();
+
+        //    cmd.CommandText = "SELECT ";
+        //    cmd.CommandText += "rol as 'Rol_Codigo',";
+
+
+        //    return dt;
+        //}
 
 
     }

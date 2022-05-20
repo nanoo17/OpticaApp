@@ -51,5 +51,7 @@ namespace ClasesBase
             Usu_ApellidoNombre = usu_apellidoNombre;
             Rol = rol;
         }
+        public Usuario() { }
+
     }
 }

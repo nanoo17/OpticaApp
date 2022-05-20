@@ -56,12 +56,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Roles.cs" />
+    <Compile Include="TrabajarProducto.cs" />
     <Compile Include="TrabajarUsuario.cs" />
+    <Compile Include="TrabajarVenta.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="Venta.cs" />
+    <Compile Include="VentaDetalles.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="opticaDataSet.xsc">
       <DependentUpon>opticaDataSet.xsd</DependentUpon>
     </None>

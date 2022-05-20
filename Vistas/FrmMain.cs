@@ -61,6 +61,12 @@ namespace Vistas
             this.Close();
         }
 
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario oFrmUsuario = new FrmUsuario();
+            oFrmUsuario.Show();
+        }
+
         
     }
 }

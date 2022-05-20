@@ -15,7 +15,7 @@ namespace Vistas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FrmLogin fLogin = new FrmLogin();
+            Form fLogin = new FrmLogin();
             fLogin.Show();
             fLogin.FormClosed += MainForm_Closed;
             Application.Run();
