@@ -25,12 +25,6 @@ namespace Vistas
 
         }
 
-        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmCliente oFrmCliente = new FrmCliente();
-            oFrmCliente.Show();
-        }
-
         private void registrarObraSocialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmObraSocial oFrmObraSocial = new FrmObraSocial();
@@ -61,7 +55,25 @@ namespace Vistas
             this.Close();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void cargarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuarioCargar oFrmUsuarioCargar = new FrmUsuarioCargar();
+            oFrmUsuarioCargar.Show();
+        }
+
+        private void registrarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmCliente oFrmCliente = new FrmCliente();
+            oFrmCliente.Show();
+        }
+
+        private void modificarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmUsuario oFrmUsuario = new FrmUsuario();
             oFrmUsuario.Show();

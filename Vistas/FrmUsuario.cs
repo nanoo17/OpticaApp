@@ -35,17 +35,10 @@ namespace Vistas
 
         private void button1_Guardar_Click(object sender, EventArgs e)
         {
-            Random r = new Random();
-            Usuario oUsuario = new Usuario();
-            oUsuario.Usu_ID = r.Next();
-            oUsuario.Rol =comboBox1.SelectedValue.ToString();
-            oUsuario.Usu_ApellidoNombre = textBox1_ApellidoNombre.Text;
-            oUsuario.Usu_NombreUsuario = textBox4_Usuario.Text;
-            oUsuario.Usu_Clave = textBox5_Contraseña.Text;
 
-            TrabajarUsuario.insertarUsuario(oUsuario);
-
+      
             load_usuarios();
+
         }
 
 
