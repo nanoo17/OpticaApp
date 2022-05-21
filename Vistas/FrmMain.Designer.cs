@@ -40,7 +40,6 @@
             this.cargarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarUnaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -133,24 +132,16 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarClienteToolStripMenuItem1,
             this.modificarClientesToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
-            // registrarClienteToolStripMenuItem1
-            // 
-            this.registrarClienteToolStripMenuItem1.Name = "registrarClienteToolStripMenuItem1";
-            this.registrarClienteToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
-            this.registrarClienteToolStripMenuItem1.Text = "Registrar Cliente";
-            this.registrarClienteToolStripMenuItem1.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem1_Click);
-            // 
             // modificarClientesToolStripMenuItem
             // 
             this.modificarClientesToolStripMenuItem.Name = "modificarClientesToolStripMenuItem";
-            this.modificarClientesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.modificarClientesToolStripMenuItem.Text = "Ver Clientes";
+            this.modificarClientesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.modificarClientesToolStripMenuItem.Text = "Gestionar Clientes";
             this.modificarClientesToolStripMenuItem.Click += new System.EventHandler(this.modificarClientesToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
@@ -230,7 +221,6 @@
         private System.Windows.Forms.ToolStripMenuItem cargarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarClienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargarUnaVentaToolStripMenuItem;

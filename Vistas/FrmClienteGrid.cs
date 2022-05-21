@@ -22,12 +22,10 @@ namespace Vistas
             // Cargar usuario a la grilla
             cargarClientes();
             // Cargar ComboBox de obrasocial
-            DataTable dt = ClasesBase.TrabajarObraSocial.obtenerObraSocial();
-            comboBox_ObraSocial.DataSource = dt;
-            comboBox_ObraSocial.DisplayMember = "OS_RazonSocial";
-            comboBox_ObraSocial.ValueMember = "OS_CUIT";
+            cargarComboObraSocial();
         }
 
+        // Carga de clientes al grid
         private void cargarClientes()
         {
             DataTable dtClientes = TrabajarCliente.obtenerClientes();
@@ -47,12 +45,21 @@ namespace Vistas
             }
         }
 
-        // Boton para modificar
+        // Cargar el comboBox
+        private void cargarComboObraSocial()
+        {
+            DataTable dt = ClasesBase.TrabajarObraSocial.obtenerObraSocial();
+            comboBox_ObraSocial.DataSource = dt;
+            comboBox_ObraSocial.DisplayMember = "OS_RazonSocial";
+            comboBox_ObraSocial.ValueMember = "OS_CUIT";
+        }
+
+        // Boton para guardar
         private void button_modificar_Click(object sender, EventArgs e)
         {
             // Parametros del messageBox
-            string mensaje = "¿Está seguro de modificar el cliente?";
-            string titulo = "Modificar cliente";
+            string mensaje = "¿Está seguro de guardar estos datos?";
+            string titulo = "Guardar datos del cliente";
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
             MessageBoxIcon icono = MessageBoxIcon.Question;
 
@@ -61,8 +68,6 @@ namespace Vistas
 
             // Verificar el resultado del messageBox
             if (resultado == DialogResult.No) return;
-
-            // Se hace la modificacion
 
             // Creamos el obj Cliente para modificar
             string cli_DNI = textBox_Dni.Text;
@@ -74,29 +79,19 @@ namespace Vistas
 
             Cliente cli = new Cliente(cli_DNI,cli_Apellido, cli_Nombre,OS_CUIT,cli_Direccion,cli_NroCarnet);
 
-            // Guardar al cliente en la base de datos
-            try
+            // Verificar si se esta modificando o creando un nuevo cliente
+            // Si el textBox esta habilitado es porque se esta creando un cliente
+            if (textBox_Dni.Enabled)
             {
-                TrabajarCliente.modificarCliente(cli);
-                string mensajeExito = "El cliente fue modificado con exito"
-                    + "\n Nombre: " + cli.Cli_Nombre
-                    + "\n Apellido: " + cli.Cli_Apellido
-                    + "\n DNI: " + cli.Cli_DNI
-                    + "\n Direccion: " + cli.Cli_Direccion
-                    + "\n CUIT: " + cli.OS_CUIT1
-                    + "\n N°Carnet: " + cli.Cli_NroCarnet;
-                MessageBox.Show(mensajeExito, titulo);
+                guardarCliente(cli, titulo);
+                return;
+            }
 
-                cargarClientes();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Error en la modificacion del cliente", titulo);
-                MessageBox.Show(err.ToString(), titulo);
-            }
+            // En este punto se esta modificando un cliente
+            modificarCliente(cli, titulo);
         }
 
-        // Boton Eliminar Cliente
+        // Boton para eliminar
         private void button_Eliminar_Click(object sender, EventArgs e)
         {
             // Parametros del messageBox
@@ -142,6 +137,12 @@ namespace Vistas
         // Llenar el formulario cuando seleccionamos una celda
         private void dataGridView_Cliente_CurrentCellChanged(object sender, EventArgs e)
         {
+            llenarFormulario();
+        }
+
+        // 
+        private void llenarFormulario()
+        {
             if (dataGridView_Cliente.CurrentRow != null)
             {
                 DataGridViewRow currentRow = dataGridView_Cliente.CurrentRow;
@@ -153,6 +154,106 @@ namespace Vistas
                 comboBox_ObraSocial.SelectedValue = currentRow.Cells["OS_CUIT"].Value.ToString();
                 textBox_Carnet.Text = currentRow.Cells["Cli_NroCarnet"].Value.ToString();
 
+            }
+        }
+
+        // Limpiar el formulario para un nuevo cliente
+        private void button_NuevoCliente_Click(object sender, EventArgs e)
+        {
+            // Limpiar formulario
+            textBox_Dni.Text = "";
+            textBox_Nombre.Text = "";
+            textBox_Apellido.Text = "";
+            textBox_Direccion.Text = "";
+            comboBox_ObraSocial.SelectedValue = "";
+            textBox_Carnet.Text = "";
+
+            cargarComboObraSocial();
+            // Cambiar el estado de controles
+            cambiarEstadoDeControles(false);
+        }
+
+        // Boton que cancela la carga de un nuevo cliente
+        private void button_CancelarCarga_Click(object sender, EventArgs e)
+        {
+            cambiarEstadoDeControles(true);
+            llenarFormulario();
+        }
+
+        // Se habilita o deshabilitan controles segun el parametro
+        private void cambiarEstadoDeControles(bool estado)
+        {
+            // botones de búsqueda, eliminar, nuevo cliente y grid de clientes
+            button_Buscar.Enabled = estado;
+            button_Eliminar.Enabled = estado;
+            button_NuevoCliente.Enabled = estado;
+            dataGridView_Cliente.Enabled = estado;
+            textBox_BuscarDni.Enabled = estado;
+            textBox_BuscarApellido.Enabled = estado;
+
+            // Estado distinto
+            textBox_Dni.Enabled = !estado;
+            button_CancelarCarga.Visible = !estado;
+        }
+
+        // Metodo para guardar un cliente
+        private void guardarCliente(Cliente cli, string titulo)
+        {
+            try
+            {
+                // Se busca un cliente con el DNI ingresado
+                DataTable dtClienteDNI = TrabajarCliente.obtenerClientePorDNI(cli.Cli_DNI);
+
+                // Existe un cliente con ese DNI
+                if (dtClienteDNI.Rows.Count != 0) 
+                {
+                    MessageBox.Show("Un cliente con ese DNI ya está registrado", titulo);
+                    return;
+                }
+
+                TrabajarCliente.insertarCliente(cli);
+                string mensajeExito = "El cliente fue creado con exito"
+                    + "\n Nombre: " + cli.Cli_Nombre
+                    + "\n Apellido: " + cli.Cli_Apellido
+                    + "\n DNI: " + cli.Cli_DNI
+                    + "\n Direccion: " + cli.Cli_Direccion
+                    + "\n CUIT: " + cli.OS_CUIT1
+                    + "\n N°Carnet: " + cli.Cli_NroCarnet;
+                MessageBox.Show(mensajeExito, titulo);
+
+                cargarClientes();
+                // Habilitamos los controles
+                cambiarEstadoDeControles(true);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error en la creación del cliente", titulo);
+                MessageBox.Show(err.ToString(), titulo);
+            }
+        }
+
+        // Metodo para modificar un cliente
+        private void modificarCliente(Cliente cli, string titulo)
+        {
+            try
+            {
+                TrabajarCliente.modificarCliente(cli);
+                string mensajeExito = "El cliente fue modificado con exito"
+                    + "\n Nombre: " + cli.Cli_Nombre
+                    + "\n Apellido: " + cli.Cli_Apellido
+                    + "\n DNI: " + cli.Cli_DNI
+                    + "\n Direccion: " + cli.Cli_Direccion
+                    + "\n CUIT: " + cli.OS_CUIT1
+                    + "\n N°Carnet: " + cli.Cli_NroCarnet;
+                MessageBox.Show(mensajeExito, titulo);
+
+                // Se carga el grid nuevamente
+                cargarClientes();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error en la modificacion del cliente", titulo);
+                MessageBox.Show(err.ToString(), titulo);
             }
         }
     }

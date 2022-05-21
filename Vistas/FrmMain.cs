@@ -64,12 +64,6 @@ namespace Vistas
             oFrmUsuarioCargar.Show();
         }
 
-        private void registrarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FrmCliente oFrmCliente = new FrmCliente();
-            oFrmCliente.Show();
-        }
-
         private void modificarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmClienteGrid oFrmClienteGrid = new FrmClienteGrid();
