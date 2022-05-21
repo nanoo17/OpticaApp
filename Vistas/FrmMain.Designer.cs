@@ -43,7 +43,6 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarUnaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verVentaDetalleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_Salir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -139,8 +138,7 @@
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargarUnaVentaToolStripMenuItem,
-            this.verVentasToolStripMenuItem,
-            this.verVentaDetalleToolStripMenuItem});
+            this.verVentasToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
@@ -148,23 +146,16 @@
             // cargarUnaVentaToolStripMenuItem
             // 
             this.cargarUnaVentaToolStripMenuItem.Name = "cargarUnaVentaToolStripMenuItem";
-            this.cargarUnaVentaToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.cargarUnaVentaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cargarUnaVentaToolStripMenuItem.Text = "Cargar Venta";
             this.cargarUnaVentaToolStripMenuItem.Click += new System.EventHandler(this.cargarUnaVentaToolStripMenuItem_Click);
             // 
             // verVentasToolStripMenuItem
             // 
             this.verVentasToolStripMenuItem.Name = "verVentasToolStripMenuItem";
-            this.verVentasToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.verVentasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.verVentasToolStripMenuItem.Text = "Ver Ventas";
             this.verVentasToolStripMenuItem.Click += new System.EventHandler(this.verVentasToolStripMenuItem_Click);
-            // 
-            // verVentaDetalleToolStripMenuItem
-            // 
-            this.verVentaDetalleToolStripMenuItem.Name = "verVentaDetalleToolStripMenuItem";
-            this.verVentaDetalleToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.verVentaDetalleToolStripMenuItem.Text = "Cargar Detalles de Venta";
-            this.verVentaDetalleToolStripMenuItem.Click += new System.EventHandler(this.verVentaDetalleToolStripMenuItem_Click);
             // 
             // button_Salir
             // 
@@ -215,7 +206,6 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargarUnaVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verVentaDetalleToolStripMenuItem;
     }
 }
 

@@ -50,6 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_NuevoUsuario = new System.Windows.Forms.Button();
             this.button_CancelarCarga = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Usuario)).BeginInit();
@@ -229,11 +230,22 @@
             this.button_CancelarCarga.Visible = false;
             this.button_CancelarCarga.Click += new System.EventHandler(this.button_CancelarCarga_Click);
             // 
-            // FrmUsuario
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(23, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(388, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Los cambios realizados en la grilla deberán ser confirmados con el boton Guardar";
+            // 
+            // FrmGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 371);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button_CancelarCarga);
             this.Controls.Add(this.button_NuevoUsuario);
             this.Controls.Add(this.button1);
@@ -252,7 +264,7 @@
             this.Controls.Add(this.label2_Apellido);
             this.Controls.Add(this.label1_Rol);
             this.Controls.Add(this.button1_Guardar);
-            this.Name = "FrmUsuario";
+            this.Name = "FrmGestionUsuarios";
             this.Text = "FrmUsuario";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
@@ -286,5 +298,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_NuevoUsuario;
         private System.Windows.Forms.Button button_CancelarCarga;
+        private System.Windows.Forms.Label label2;
     }
 }

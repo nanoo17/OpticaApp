@@ -9,12 +9,12 @@ namespace ClasesBase
 {
     public class TrabajarVenta
     {
-        public static void insertarVenta(Venta venta)
+        public static int insertarVenta(Venta venta)
         {
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO Venta (Ven_Fecha, Cli_DNI) VALUES (@fecha, @dni)";
+            query.CommandText = "INSERT INTO Venta (Ven_Fecha, Cli_DNI) VALUES (@fecha, @dni); SELECT SCOPE_IDENTITY()";
             query.CommandType = CommandType.Text;
             query.Connection = db;
 
@@ -24,8 +24,10 @@ namespace ClasesBase
 
             // Ejecutar la query
             db.Open();
-            query.ExecuteNonQuery();
+            int modified = Convert.ToInt32(query.ExecuteScalar());
+            //query.ExecuteNonQuery();
             db.Close();
+            return modified;
         }
 
         public static void insertarVentaDetalle(VentaDetalle venta)

@@ -50,6 +50,7 @@
             this.button_Buscar = new System.Windows.Forms.Button();
             this.button_NuevoCliente = new System.Windows.Forms.Button();
             this.button_CancelarCarga = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -245,11 +246,22 @@
             this.button_CancelarCarga.Visible = false;
             this.button_CancelarCarga.Click += new System.EventHandler(this.button_CancelarCarga_Click);
             // 
-            // FrmClienteGrid
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(25, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(388, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Los cambios realizados en la grilla deberán ser confirmados con el boton Guardar";
+            // 
+            // FrmGestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 390);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_CancelarCarga);
             this.Controls.Add(this.button_NuevoCliente);
             this.Controls.Add(this.button_Buscar);
@@ -272,7 +284,7 @@
             this.Controls.Add(this.label_Apellido);
             this.Controls.Add(this.textBox_Apellido);
             this.Controls.Add(this.dataGridView_Cliente);
-            this.Name = "FrmClienteGrid";
+            this.Name = "FrmGestionClientes";
             this.Text = "FrmClienteGrid";
             this.Load += new System.EventHandler(this.FrmClienteGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cliente)).EndInit();
@@ -305,5 +317,6 @@
         private System.Windows.Forms.Button button_Buscar;
         private System.Windows.Forms.Button button_NuevoCliente;
         private System.Windows.Forms.Button button_CancelarCarga;
+        private System.Windows.Forms.Label label1;
     }
 }

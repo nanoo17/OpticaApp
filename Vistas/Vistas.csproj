@@ -88,23 +88,11 @@
     <Compile Include="FrmGestionUsuarios.Designer.cs">
       <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuarioCargar.cs">
+    <Compile Include="FrmCargarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarioCargar.Designer.cs">
-      <DependentUpon>FrmUsuarioCargar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmVenta.Designer.cs">
-      <DependentUpon>FrmVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmVentaDetalle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmVentaDetalle.Designer.cs">
-      <DependentUpon>FrmVentaDetalle.cs</DependentUpon>
+    <Compile Include="FrmCargarVenta.Designer.cs">
+      <DependentUpon>FrmCargarVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="opticaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,14 +124,8 @@
     <EmbeddedResource Include="FrmGestionUsuarios.resx">
       <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarioCargar.resx">
-      <DependentUpon>FrmUsuarioCargar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmVenta.resx">
-      <DependentUpon>FrmVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmVentaDetalle.resx">
-      <DependentUpon>FrmVentaDetalle.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCargarVenta.resx">
+      <DependentUpon>FrmCargarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

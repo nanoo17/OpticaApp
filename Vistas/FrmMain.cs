@@ -71,25 +71,15 @@ namespace Vistas
 
         private void cargarUnaVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmVenta oFrmVenta = new FrmVenta();
+            FrmCargarVenta oFrmVenta = new FrmCargarVenta();
             oFrmVenta.Show();
         }
 
         private void verVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmListadoVentas oFrmListadoVentas = new FrmListadoVentas();
-            oFrmListadoVentas.Show();
-           
+            Form oFrmListado = new FrmListadoVentas();
+            oFrmListado.Show();
         }
-
-        private void verVentaDetalleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmVentaDetalle oFrmVentaDetalle = new FrmVentaDetalle();
-            oFrmVentaDetalle.Show();
-        }
-
-     
-
         
     }
 }
