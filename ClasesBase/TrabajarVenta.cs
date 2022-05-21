@@ -9,24 +9,25 @@ namespace ClasesBase
 {
     public class TrabajarVenta
     {
-        public static void insertarVenta(Venta venta)
+        public static int insertarVenta(Venta venta)
         {
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO Venta (Ven_Nro, Ven_Fecha, Cli_DNI) VALUES (@nro, @fecha, @dni)";
+            query.CommandText = "INSERT INTO Venta (Ven_Fecha, Cli_DNI) VALUES (@fecha, @dni); SELECT SCOPE_IDENTITY()";
             query.CommandType = CommandType.Text;
             query.Connection = db;
 
             // Paramatros
-            query.Parameters.AddWithValue("@nro", venta.Ven_Nro);
             query.Parameters.AddWithValue("@fecha", venta.Ven_Fecha);
             query.Parameters.AddWithValue("@dni", venta.Cli_DNI);
 
             // Ejecutar la query
             db.Open();
-            query.ExecuteNonQuery();
+            int modified = Convert.ToInt32(query.ExecuteScalar());
+            //query.ExecuteNonQuery();
             db.Close();
+            return modified;
         }
 
         public static void insertarVentaDetalle(VentaDetalle venta)
@@ -34,12 +35,11 @@ namespace ClasesBase
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO VentaDetalle (Det_Nro, Ven_Nro, Prod_Codigo, Det_Precio, Det_Cantidad, Det_Total) VALUES (@Dnro, @Vnro, @PCodigo, @precio, @cantidad, @total)";
+            query.CommandText = "INSERT INTO VentaDetalle (Ven_Nro, Prod_Codigo, Det_Precio, Det_Cantidad, Det_Total) VALUES (@Vnro, @PCodigo, @precio, @cantidad, @total)";
             query.CommandType = CommandType.Text;
             query.Connection = db;
 
             // Paramatros
-            query.Parameters.AddWithValue("@Dnro", venta.Det_Nro);
             query.Parameters.AddWithValue("@Vnro", venta.Ven_Nro);
             query.Parameters.AddWithValue("@PCodigo", venta.Prod_Codigo);
             query.Parameters.AddWithValue("@precio", venta.Det_Precio);

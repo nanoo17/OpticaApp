@@ -33,12 +33,11 @@ namespace ClasesBase
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO Usuario (Usu_ID,Usu_NombreUsuario,Usu_Contraseña,Usu_ApellidoNombre,Rol_Codigo) VALUES (@id, @usuario,@contraseña, @apellidoNombre, @rol)";
+            query.CommandText = "INSERT INTO Usuario (Usu_NombreUsuario,Usu_Contraseña,Usu_ApellidoNombre,Rol_Codigo) VALUES (@usuario,@contraseña, @apellidoNombre, @rol)";
             query.CommandType = CommandType.Text;
             query.Connection = db;
 
             // Paramatros
-            query.Parameters.AddWithValue("@id", usuario.Usu_ID);
             query.Parameters.AddWithValue("@usuario", usuario.Usu_NombreUsuario);
             query.Parameters.AddWithValue("@contraseña", usuario.Usu_Clave);
             query.Parameters.AddWithValue("@apellidoNombre", usuario.Usu_ApellidoNombre);
@@ -90,7 +89,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Usuario SET Usu_ID = @id,Usu_NombreUsuario = @usuario,Usu_Contraseña = @contraseña,Usu_ApellidoNombre = @apellidoNombre,Rol_Codigo = @rol WHERE Usu_ID = @id";
+            cmd.CommandText = "UPDATE Usuario SET Usu_NombreUsuario = @usuario,Usu_Contraseña = @contraseña,Usu_ApellidoNombre = @apellidoNombre,Rol_Codigo = @rol WHERE Usu_ID = @id";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -131,6 +130,25 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario LIKE @usuario";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@usuario", "%"+usuario+"%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable obtenerUsuarioPorNombreUsuario(string usuario)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario = @usuario";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
@@ -144,7 +162,5 @@ namespace ClasesBase
 
             return dt;
         }
-
-
     }
 }

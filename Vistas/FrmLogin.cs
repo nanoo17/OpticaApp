@@ -35,9 +35,8 @@ namespace Vistas
             // El usuario fue encontrado
 
             // Validar el tipo de rol y condicionar los botones
-            string rolCodigo = dtUsuarios.Rows[0]["Rol_Codigo"].ToString();
+            int rolCodigo = Int32.Parse(dtUsuarios.Rows[0]["Rol_Codigo"].ToString());
             string nombreUsuario = dtUsuarios.Rows[0]["Usu_NombreUsuario"].ToString();
-            MessageBox.Show(rolCodigo); // Se imprime el rol
 
             // Abrir Menu Principal
             MessageBox.Show("Bienvenido/a :: " + nombreUsuario, "Acceso Exitoso");

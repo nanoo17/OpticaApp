@@ -11,27 +11,21 @@ namespace Vistas
 {
     public partial class FrmMain : Form
     {
-        public FrmMain(string rol_codigo)
+        public FrmMain(int rol_codigo)
         {
             InitializeComponent();
-            if (rol_codigo == "Administrador")
+            if (rol_codigo == 1)
             {
                 ventasToolStripMenuItem.Visible = false;
                 clientesToolStripMenuItem.Visible = false;
             }
-            if (rol_codigo == "Operador")
+            if (rol_codigo == 2)
             {
                 usuariosToolStripMenuItem.Visible = false;
                 cargarProductoToolStripMenuItem.Visible = false;
             }
            
         }
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-      
 
         private void registrarObraSocialToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -63,52 +57,29 @@ namespace Vistas
             this.Close();
         }
 
-
-        private void cargarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmUsuarioCargar oFrmUsuarioCargar = new FrmUsuarioCargar();
-            oFrmUsuarioCargar.Show();
-        }
-
-        private void registrarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FrmCliente oFrmCliente = new FrmCliente();
-            oFrmCliente.Show();
-        }
-
         private void modificarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmClienteGrid oFrmClienteGrid = new FrmClienteGrid();
+            FrmGestionClientes oFrmClienteGrid = new FrmGestionClientes();
             oFrmClienteGrid.Show();
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmUsuario oFrmUsuario = new FrmUsuario();
+            FrmGestionUsuarios oFrmUsuario = new FrmGestionUsuarios();
             oFrmUsuario.Show();
         }
 
         private void cargarUnaVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmVenta oFrmVenta = new FrmVenta();
+            FrmCargarVenta oFrmVenta = new FrmCargarVenta();
             oFrmVenta.Show();
         }
 
         private void verVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmListadoVentas oFrmListadoVentas = new FrmListadoVentas();
-            oFrmListadoVentas.Show();
-           
+            Form oFrmListado = new FrmListadoVentas();
+            oFrmListado.Show();
         }
-
-        private void verVentaDetalleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmVentaDetalle oFrmVentaDetalle = new FrmVentaDetalle();
-            oFrmVentaDetalle.Show();
-        }
-
-     
-
         
     }
 }

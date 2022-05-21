@@ -43,7 +43,6 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\bin\Debug\Vistas
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\bin\Debug\ClasesBase.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\bin\Debug\ClasesBase.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmCliente.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmObraSocial.resources
@@ -51,11 +50,9 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vi
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmClienteGrid.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_9\Vistas\obj\x86\Debug\Vistas.FrmClienteGrid.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmUsuario.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\bin\Debug\Vistas.exe.config
-C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmVenta.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmVentaDetalle.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmUsuarioCargar.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmListadoVentas.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmGestionClientes.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmGestionUsuarios.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmCargarVenta.resources
