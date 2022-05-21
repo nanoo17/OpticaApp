@@ -61,13 +61,15 @@ namespace Vistas
             string usu_Contraseña = textBox5_Contraseña.Text;
             int usu_Rol = Int32.Parse(comboBox1.SelectedValue.ToString());
             int usu_id = Int32.Parse(textBox1_id.Text);
-            Usuario usu = new Usuario(usu_id, usu_NombreUsuario, usu_Contraseña, usu_ApellidoNombre, usu_Rol);
+
+            Usuario usu = new Usuario(usu_NombreUsuario, usu_Contraseña, usu_ApellidoNombre, usu_Rol);
+            usu.Usu_ID = usu_id;
+
             // Guardar al Usuario en la base de datos
             try
             {
                 TrabajarUsuario.modificarUsuario(usu);
                 string mensajeExito = "El usuario fue modificado con exito"
-                     + "\n Id: " + usu.Usu_ID
                      + "\n Usuario: " + usu.Usu_NombreUsuario
                      + "\n Contraseña " + usu.Usu_Clave
                      + "\n Nombre y Apellido: " + usu.Usu_ApellidoNombre
@@ -83,9 +85,23 @@ namespace Vistas
 
         }
 
+        // Cargar los usuario al grid
         private void load_usuarios()
         {
-            dataGridView_Usuario.DataSource = TrabajarUsuario.obtenerUsuarios();
+            DataTable dtUsuario = TrabajarUsuario.obtenerUsuarios();
+            dataGridView_Usuario.DataSource = dtUsuario;
+
+            // Deshabilitar las columnas sensibles
+            dataGridView_Usuario.Columns[0].ReadOnly = true; // ID
+            dataGridView_Usuario.Columns[4].ReadOnly = true; // Rol
+
+            // Deshabilitar los botones de busqueda, modificar y eliminar si no hay registros
+            if (dtUsuario.Rows.Count == 0)
+            {
+                button1_Guardar.Enabled = false;
+                button2_Eliminar.Enabled = false;
+                button1.Enabled = false;
+            }
         }
 
         private void button2_Eliminar_Click(object sender, EventArgs e)

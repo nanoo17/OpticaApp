@@ -30,9 +30,7 @@
         {
             this.comboBox_NumeroVenta = new System.Windows.Forms.ComboBox();
             this.label_NumeroVenta = new System.Windows.Forms.Label();
-            this.label_DetalleNumero = new System.Windows.Forms.Label();
             this.label_Precio = new System.Windows.Forms.Label();
-            this.textBox_DetalleNumero = new System.Windows.Forms.TextBox();
             this.textBox_Precio = new System.Windows.Forms.TextBox();
             this.label_Cantidad = new System.Windows.Forms.Label();
             this.textBox_Cantidad = new System.Windows.Forms.TextBox();
@@ -48,7 +46,7 @@
             // comboBox_NumeroVenta
             // 
             this.comboBox_NumeroVenta.FormattingEnabled = true;
-            this.comboBox_NumeroVenta.Location = new System.Drawing.Point(513, 56);
+            this.comboBox_NumeroVenta.Location = new System.Drawing.Point(512, 40);
             this.comboBox_NumeroVenta.Name = "comboBox_NumeroVenta";
             this.comboBox_NumeroVenta.Size = new System.Drawing.Size(100, 21);
             this.comboBox_NumeroVenta.TabIndex = 0;
@@ -56,41 +54,25 @@
             // label_NumeroVenta
             // 
             this.label_NumeroVenta.AutoSize = true;
-            this.label_NumeroVenta.Location = new System.Drawing.Point(402, 59);
+            this.label_NumeroVenta.Location = new System.Drawing.Point(401, 43);
             this.label_NumeroVenta.Name = "label_NumeroVenta";
             this.label_NumeroVenta.Size = new System.Drawing.Size(90, 13);
             this.label_NumeroVenta.TabIndex = 1;
             this.label_NumeroVenta.Text = "Numero de Venta";
             // 
-            // label_DetalleNumero
-            // 
-            this.label_DetalleNumero.AutoSize = true;
-            this.label_DetalleNumero.Location = new System.Drawing.Point(402, 31);
-            this.label_DetalleNumero.Name = "label_DetalleNumero";
-            this.label_DetalleNumero.Size = new System.Drawing.Size(80, 13);
-            this.label_DetalleNumero.TabIndex = 2;
-            this.label_DetalleNumero.Text = "Numero Detalle";
-            // 
             // label_Precio
             // 
             this.label_Precio.AutoSize = true;
-            this.label_Precio.Location = new System.Drawing.Point(402, 112);
+            this.label_Precio.Location = new System.Drawing.Point(401, 96);
             this.label_Precio.Name = "label_Precio";
             this.label_Precio.Size = new System.Drawing.Size(37, 13);
             this.label_Precio.TabIndex = 4;
             this.label_Precio.Text = "Precio";
             // 
-            // textBox_DetalleNumero
-            // 
-            this.textBox_DetalleNumero.Location = new System.Drawing.Point(513, 24);
-            this.textBox_DetalleNumero.Name = "textBox_DetalleNumero";
-            this.textBox_DetalleNumero.Size = new System.Drawing.Size(100, 20);
-            this.textBox_DetalleNumero.TabIndex = 5;
-            // 
             // textBox_Precio
             // 
             this.textBox_Precio.Enabled = false;
-            this.textBox_Precio.Location = new System.Drawing.Point(513, 112);
+            this.textBox_Precio.Location = new System.Drawing.Point(512, 96);
             this.textBox_Precio.Name = "textBox_Precio";
             this.textBox_Precio.Size = new System.Drawing.Size(100, 20);
             this.textBox_Precio.TabIndex = 6;
@@ -98,7 +80,7 @@
             // label_Cantidad
             // 
             this.label_Cantidad.AutoSize = true;
-            this.label_Cantidad.Location = new System.Drawing.Point(402, 141);
+            this.label_Cantidad.Location = new System.Drawing.Point(401, 125);
             this.label_Cantidad.Name = "label_Cantidad";
             this.label_Cantidad.Size = new System.Drawing.Size(49, 13);
             this.label_Cantidad.TabIndex = 8;
@@ -106,7 +88,7 @@
             // 
             // textBox_Cantidad
             // 
-            this.textBox_Cantidad.Location = new System.Drawing.Point(513, 141);
+            this.textBox_Cantidad.Location = new System.Drawing.Point(512, 125);
             this.textBox_Cantidad.Name = "textBox_Cantidad";
             this.textBox_Cantidad.Size = new System.Drawing.Size(100, 20);
             this.textBox_Cantidad.TabIndex = 9;
@@ -116,7 +98,7 @@
             // textBox_Total
             // 
             this.textBox_Total.Enabled = false;
-            this.textBox_Total.Location = new System.Drawing.Point(513, 177);
+            this.textBox_Total.Location = new System.Drawing.Point(512, 161);
             this.textBox_Total.Name = "textBox_Total";
             this.textBox_Total.Size = new System.Drawing.Size(100, 20);
             this.textBox_Total.TabIndex = 10;
@@ -124,7 +106,7 @@
             // label_Total
             // 
             this.label_Total.AutoSize = true;
-            this.label_Total.Location = new System.Drawing.Point(402, 177);
+            this.label_Total.Location = new System.Drawing.Point(401, 161);
             this.label_Total.Name = "label_Total";
             this.label_Total.Size = new System.Drawing.Size(31, 13);
             this.label_Total.TabIndex = 11;
@@ -132,7 +114,7 @@
             // 
             // button_Guardar
             // 
-            this.button_Guardar.Location = new System.Drawing.Point(405, 227);
+            this.button_Guardar.Location = new System.Drawing.Point(404, 211);
             this.button_Guardar.Name = "button_Guardar";
             this.button_Guardar.Size = new System.Drawing.Size(75, 23);
             this.button_Guardar.TabIndex = 12;
@@ -147,6 +129,7 @@
             this.dataGridView_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Producto.Location = new System.Drawing.Point(12, 24);
             this.dataGridView_Producto.Name = "dataGridView_Producto";
+            this.dataGridView_Producto.ReadOnly = true;
             this.dataGridView_Producto.Size = new System.Drawing.Size(360, 226);
             this.dataGridView_Producto.TabIndex = 13;
             this.dataGridView_Producto.CurrentCellChanged += new System.EventHandler(this.dataGridView_Producto_CurrentCellChanged);
@@ -154,7 +137,7 @@
             // label_CodigoProd
             // 
             this.label_CodigoProd.AutoSize = true;
-            this.label_CodigoProd.Location = new System.Drawing.Point(402, 86);
+            this.label_CodigoProd.Location = new System.Drawing.Point(401, 70);
             this.label_CodigoProd.Name = "label_CodigoProd";
             this.label_CodigoProd.Size = new System.Drawing.Size(86, 13);
             this.label_CodigoProd.TabIndex = 14;
@@ -163,7 +146,7 @@
             // textBox_CodigoProd
             // 
             this.textBox_CodigoProd.Enabled = false;
-            this.textBox_CodigoProd.Location = new System.Drawing.Point(513, 86);
+            this.textBox_CodigoProd.Location = new System.Drawing.Point(512, 70);
             this.textBox_CodigoProd.Name = "textBox_CodigoProd";
             this.textBox_CodigoProd.Size = new System.Drawing.Size(100, 20);
             this.textBox_CodigoProd.TabIndex = 15;
@@ -182,9 +165,7 @@
             this.Controls.Add(this.textBox_Cantidad);
             this.Controls.Add(this.label_Cantidad);
             this.Controls.Add(this.textBox_Precio);
-            this.Controls.Add(this.textBox_DetalleNumero);
             this.Controls.Add(this.label_Precio);
-            this.Controls.Add(this.label_DetalleNumero);
             this.Controls.Add(this.label_NumeroVenta);
             this.Controls.Add(this.comboBox_NumeroVenta);
             this.Name = "FrmVentaDetalle";
@@ -200,9 +181,7 @@
 
         private System.Windows.Forms.ComboBox comboBox_NumeroVenta;
         private System.Windows.Forms.Label label_NumeroVenta;
-        private System.Windows.Forms.Label label_DetalleNumero;
         private System.Windows.Forms.Label label_Precio;
-        private System.Windows.Forms.TextBox textBox_DetalleNumero;
         private System.Windows.Forms.TextBox textBox_Precio;
         private System.Windows.Forms.Label label_Cantidad;
         private System.Windows.Forms.TextBox textBox_Cantidad;

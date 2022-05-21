@@ -41,30 +41,18 @@ namespace Vistas
             if (resultado == DialogResult.No) return;
 
             // Guardar la venta
-            int numeroVenta;
             string clienteDNI = comboBox_Cliente.SelectedValue.ToString();
             DateTime fechaVenta = dateTimePicker_FechaVenta.Value;
 
-            // Verificar que el numeroVenta es un int
-            try
-            {
-                numeroVenta = Int32.Parse(textBox_NumeroVenta.Text);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("El numero de venta no es un valor entero", titulo);
-                return;
-            }
-
             // Crear obj venta
-            Venta nuevaVenta = new Venta(numeroVenta, fechaVenta, clienteDNI);
+            Venta nuevaVenta = new Venta(fechaVenta, clienteDNI);
 
             // Almacenar la venta en la base de datos
             try
             {
                 TrabajarVenta.insertarVenta(nuevaVenta);
+
                 string mensajeExito = "La venta fue guardada con exito"
-                   + "\nNro venta: " + nuevaVenta.Ven_Nro
                    + "\nFecha de Venta: " + nuevaVenta.Ven_Fecha
                    + "\nDNI del cliente: " + nuevaVenta.Cli_DNI;
                 MessageBox.Show(mensajeExito, titulo);

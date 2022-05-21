@@ -29,9 +29,8 @@ namespace ClasesBase
             set { cli_DNI = value; }
         }
 
-        public Venta(int venta, DateTime fecha, string dni)
+        public Venta(DateTime fecha, string dni)
         {
-            Ven_Nro = venta;
             Ven_Fecha = fecha;
             Cli_DNI = dni;
         }

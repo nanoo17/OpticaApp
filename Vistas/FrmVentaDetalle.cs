@@ -79,7 +79,6 @@ namespace Vistas
             VentaDetalle nuevaVentaDetalle = new VentaDetalle();
 
             // Campos
-            int numeroDetalle;
             int numeroVenta;
             string prodCodigo = textBox_CodigoProd.Text;
             decimal precio = Decimal.Parse(textBox_Precio.Text);
@@ -89,7 +88,6 @@ namespace Vistas
             // Verificar que los campos sean int o decimal
             try
             {
-                numeroDetalle = Int32.Parse(textBox_DetalleNumero.Text);
                 numeroVenta = Int32.Parse(comboBox_NumeroVenta.SelectedValue.ToString());
             }
             catch (Exception)
@@ -99,7 +97,6 @@ namespace Vistas
             }
 
             // Llenar el obj
-            nuevaVentaDetalle.Det_Nro = numeroDetalle;
             nuevaVentaDetalle.Ven_Nro = numeroVenta;
             nuevaVentaDetalle.Prod_Codigo = prodCodigo;
             nuevaVentaDetalle.Det_Precio = precio;
@@ -111,7 +108,6 @@ namespace Vistas
             {
                 TrabajarVenta.insertarVentaDetalle(nuevaVentaDetalle);
                 string mensajeExito = "Los detalles de la venta fueron guardados con exito"
-                 + "\nNro Detalle de Venta: " + nuevaVentaDetalle.Det_Nro
                  + "\nNro Venta: " + nuevaVentaDetalle.Ven_Nro
                  + "\nNro Producto: " + nuevaVentaDetalle.Prod_Codigo
                  + "\nPrecio: " + nuevaVentaDetalle.Det_Precio
@@ -134,7 +130,7 @@ namespace Vistas
                 DataGridViewRow currentRow = dataGridView_Producto.CurrentRow;
 
                 textBox_CodigoProd.Text = currentRow.Cells["Prod_Codigo"].Value.ToString();
-                textBox_Precio.Text = currentRow.Cells["Prod_Descripcion"].Value.ToString();
+                textBox_Precio.Text = currentRow.Cells["Prod_Precio"].Value.ToString();
             }
         }
     }

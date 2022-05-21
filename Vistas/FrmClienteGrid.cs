@@ -26,20 +26,25 @@ namespace Vistas
             comboBox_ObraSocial.DataSource = dt;
             comboBox_ObraSocial.DisplayMember = "OS_RazonSocial";
             comboBox_ObraSocial.ValueMember = "OS_CUIT";
+        }
+
+        private void cargarClientes()
+        {
+            DataTable dtClientes = TrabajarCliente.obtenerClientes();
+
+            dataGridView_Cliente.DataSource = dtClientes;
+
+            // Deshabilitar las columnas sensibles
+            dataGridView_Cliente.Columns[0].ReadOnly = true; // ID
+            dataGridView_Cliente.Columns[4].ReadOnly = true; // Obra Social
 
             // Deshabilitar los botones de busqueda, modificar y eliminar si no hay registros
-            DataTable dtClientes = TrabajarCliente.obtenerClientes();
             if (dtClientes.Rows.Count == 0)
             {
                 button_Buscar.Enabled = false;
                 button_Eliminar.Enabled = false;
                 button_modificar.Enabled = false;
             }
-        }
-
-        private void cargarClientes()
-        {
-            dataGridView_Cliente.DataSource = TrabajarCliente.obtenerClientes();
         }
 
         // Boton para modificar

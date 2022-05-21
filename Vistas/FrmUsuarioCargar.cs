@@ -19,11 +19,8 @@ namespace Vistas
 
         private void button1_guardar_Click(object sender, EventArgs e)
         {
-
-            Random r = new Random();
             Usuario oUsuario = new Usuario();
 
-            oUsuario.Usu_ID = r.Next();
             oUsuario.Rol = Int32.Parse(comboBox1.SelectedValue.ToString());
             oUsuario.Usu_ApellidoNombre = textBox1_ApellidoNombre.Text;
             oUsuario.Usu_NombreUsuario = textBox2_Usuario.Text;
@@ -40,20 +37,12 @@ namespace Vistas
             DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
 
             // Verificar el resultado del messageBox
-            if (resultado == DialogResult.No)
-            {
-                MessageBox.Show("La operación fue cancelada", titulo);
-                return;
-
-            }
-
-
+            if (resultado == DialogResult.No) return;
 
             try
             {
                 TrabajarUsuario.insertarUsuario(oUsuario);
                 string mensajeExito = "El usuario fue creado con exito"
-                    + "\n ID: " + oUsuario.Usu_ID
                     + "\n Apellido y Nombre: " + oUsuario.Usu_ApellidoNombre
                     + "\n Nombre de Usuario: " + oUsuario.Usu_NombreUsuario;
                 MessageBox.Show(mensajeExito, titulo);
@@ -63,10 +52,6 @@ namespace Vistas
                 MessageBox.Show("Error en la carga de usuario", titulo);
                 MessageBox.Show(err.ToString(), titulo);
             }
-
-
-
-            
         }
 
         private void FrmUsuarioCargar_Load(object sender, EventArgs e)

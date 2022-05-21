@@ -7,11 +7,11 @@ namespace ClasesBase
 {
     public class Usuario
     {
-        private int usu_ID;
         private string usu_NombreUsuario;
         private string usu_Clave;
         private string usu_ApellidoNombre;
         private int rol;
+        private int usu_ID;
 
         public int Usu_ID
         {
@@ -43,9 +43,8 @@ namespace ClasesBase
             set { rol = value; }
         }
 
-        public Usuario(int usu_id, string usu_nombreUsuario, string usu_clave, string usu_apellidoNombre, int rol)
+        public Usuario(string usu_nombreUsuario, string usu_clave, string usu_apellidoNombre, int rol)
         {
-            Usu_ID = usu_id;
             Usu_NombreUsuario = usu_nombreUsuario;
             Usu_Clave = usu_clave;
             Usu_ApellidoNombre = usu_apellidoNombre;
