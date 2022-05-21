@@ -88,20 +88,6 @@ namespace Vistas
             dataGridView_Usuario.DataSource = TrabajarUsuario.obtenerUsuarios();
         }
 
-        private void dataGridView_Usuario_SelectionChanged(object sender, EventArgs e)
-        {
-            var row = (sender as DataGridView).CurrentRow;
-            string id = row.Cells[0].Value.ToString();
-            if (id.Trim() != "")
-            {
-                textBox1_id.Text = id;
-                textBox1_ApellidoNombre.Text = row.Cells[3].Value.ToString();
-                textBox5_Contraseña.Text = row.Cells[2].Value.ToString();
-                textBox4_Usuario.Text = row.Cells[1].Value.ToString();
-                comboBox1.SelectedValue = row.Cells[4].Value.ToString();
-            }
-        }
-
         private void button2_Eliminar_Click(object sender, EventArgs e)
         {
             // Parametros del messageBox
@@ -147,6 +133,20 @@ namespace Vistas
             else
             {
                 load_usuarios();
+            }
+        }
+
+        private void dataGridView_Usuario_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_Usuario.CurrentRow != null)
+            {
+                DataGridViewRow currentRow = dataGridView_Usuario.CurrentRow;
+
+                textBox1_id.Text = currentRow.Cells["Usu_ID"].Value.ToString();
+                textBox4_Usuario.Text = currentRow.Cells["Usu_NombreUsuario"].Value.ToString();
+                textBox5_Contraseña.Text = currentRow.Cells["Usu_Contraseña"].Value.ToString();
+                textBox1_ApellidoNombre.Text = currentRow.Cells["Usu_ApellidoNombre"].Value.ToString();
+                comboBox1.SelectedValue = currentRow.Cells["Rol_Codigo"].Value.ToString();
             }
         }
        

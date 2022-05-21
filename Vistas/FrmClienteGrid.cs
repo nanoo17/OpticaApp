@@ -42,24 +42,6 @@ namespace Vistas
             dataGridView_Cliente.DataSource = TrabajarCliente.obtenerClientes();
         }
 
-        // Llenar el formulario cuando hacemos click en un row
-        private void dataGridView_Cliente_SelectionChanged(object sender, EventArgs e)
-        {
-            var row = (sender as DataGridView).CurrentRow;
-
-            string dni = row.Cells[0].Value.ToString();
-
-            if (dni.Trim() != "")
-            {
-                textBox_Dni.Text = dni;
-                textBox_Nombre.Text = row.Cells[1].Value.ToString();
-                textBox_Apellido.Text = row.Cells[2].Value.ToString();
-                textBox_Direccion.Text = row.Cells[3].Value.ToString();
-                comboBox_ObraSocial.SelectedValue = row.Cells[4].Value.ToString();
-                textBox_Carnet.Text = row.Cells[5].Value.ToString();
-            }
-        }
-
         // Boton para modificar
         private void button_modificar_Click(object sender, EventArgs e)
         {
@@ -150,6 +132,23 @@ namespace Vistas
             string apellido = textBox_BuscarApellido.Text.Trim();
          
             dataGridView_Cliente.DataSource = TrabajarCliente.buscarClientes(dni, apellido);
+        }
+
+        // Llenar el formulario cuando seleccionamos una celda
+        private void dataGridView_Cliente_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_Cliente.CurrentRow != null)
+            {
+                DataGridViewRow currentRow = dataGridView_Cliente.CurrentRow;
+
+                textBox_Dni.Text = currentRow.Cells["Cli_DNI"].Value.ToString();
+                textBox_Nombre.Text = currentRow.Cells["Cli_Nombre"].Value.ToString();
+                textBox_Apellido.Text = currentRow.Cells["Cli_Apellido"].Value.ToString();
+                textBox_Direccion.Text = currentRow.Cells["Cli_Direccion"].Value.ToString();
+                comboBox_ObraSocial.SelectedValue = currentRow.Cells["OS_CUIT"].Value.ToString();
+                textBox_Carnet.Text = currentRow.Cells["Cli_NroCarnet"].Value.ToString();
+
+            }
         }
     }
 }

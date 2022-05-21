@@ -53,12 +53,14 @@
             // 
             // dataGridView_Cliente
             // 
+            this.dataGridView_Cliente.AllowUserToAddRows = false;
+            this.dataGridView_Cliente.AllowUserToDeleteRows = false;
             this.dataGridView_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Cliente.Location = new System.Drawing.Point(15, 87);
             this.dataGridView_Cliente.Name = "dataGridView_Cliente";
             this.dataGridView_Cliente.Size = new System.Drawing.Size(409, 195);
             this.dataGridView_Cliente.TabIndex = 0;
-            this.dataGridView_Cliente.SelectionChanged += new System.EventHandler(this.dataGridView_Cliente_SelectionChanged);
+            this.dataGridView_Cliente.CurrentCellChanged += new System.EventHandler(this.dataGridView_Cliente_CurrentCellChanged);
             // 
             // textBox_Apellido
             // 

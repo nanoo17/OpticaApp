@@ -50,7 +50,7 @@
             this.comboBox_NumeroVenta.FormattingEnabled = true;
             this.comboBox_NumeroVenta.Location = new System.Drawing.Point(513, 56);
             this.comboBox_NumeroVenta.Name = "comboBox_NumeroVenta";
-            this.comboBox_NumeroVenta.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_NumeroVenta.Size = new System.Drawing.Size(100, 21);
             this.comboBox_NumeroVenta.TabIndex = 0;
             // 
             // label_NumeroVenta
@@ -142,12 +142,14 @@
             // 
             // dataGridView_Producto
             // 
+            this.dataGridView_Producto.AllowUserToAddRows = false;
+            this.dataGridView_Producto.AllowUserToDeleteRows = false;
             this.dataGridView_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Producto.Location = new System.Drawing.Point(12, 24);
             this.dataGridView_Producto.Name = "dataGridView_Producto";
             this.dataGridView_Producto.Size = new System.Drawing.Size(360, 226);
             this.dataGridView_Producto.TabIndex = 13;
-            this.dataGridView_Producto.SelectionChanged += new System.EventHandler(this.dataGridView_Producto_SelectionChanged);
+            this.dataGridView_Producto.CurrentCellChanged += new System.EventHandler(this.dataGridView_Producto_CurrentCellChanged);
             // 
             // label_CodigoProd
             // 

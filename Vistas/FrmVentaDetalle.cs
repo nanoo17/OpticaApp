@@ -38,15 +38,6 @@ namespace Vistas
             // MessageBox.Show(dtProductos.Rows[0]["Prod_Categoria"].ToString());
         }
 
-        // Rellenar el precio del producto
-        private void dataGridView_Producto_SelectionChanged(object sender, EventArgs e)
-        {
-            var row = (sender as DataGridView).CurrentRow;
-
-            textBox_CodigoProd.Text = row.Cells[0].Value.ToString();
-            textBox_Precio.Text = row.Cells[3].Value.ToString();
-        }
-
         // Calcular el precio total segun la cantidad de elementos
         private void textBox_Cantidad_TextChanged(object sender, EventArgs e)
         {
@@ -136,8 +127,15 @@ namespace Vistas
             }
         }
 
-     
-    
+        private void dataGridView_Producto_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_Producto.CurrentRow != null)
+            {
+                DataGridViewRow currentRow = dataGridView_Producto.CurrentRow;
 
+                textBox_CodigoProd.Text = currentRow.Cells["Prod_Codigo"].Value.ToString();
+                textBox_Precio.Text = currentRow.Cells["Prod_Descripcion"].Value.ToString();
+            }
+        }
     }
 }
