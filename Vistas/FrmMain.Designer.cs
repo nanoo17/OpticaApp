@@ -37,7 +37,6 @@
             this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,24 +108,16 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargarUsuariosToolStripMenuItem,
             this.modificarUsuariosToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
-            // cargarUsuariosToolStripMenuItem
-            // 
-            this.cargarUsuariosToolStripMenuItem.Name = "cargarUsuariosToolStripMenuItem";
-            this.cargarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cargarUsuariosToolStripMenuItem.Text = "Cargar Usuario";
-            this.cargarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.cargarUsuariosToolStripMenuItem_Click);
-            // 
             // modificarUsuariosToolStripMenuItem
             // 
             this.modificarUsuariosToolStripMenuItem.Name = "modificarUsuariosToolStripMenuItem";
-            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.modificarUsuariosToolStripMenuItem.Text = "Ver Usuarios";
+            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.modificarUsuariosToolStripMenuItem.Text = "Gestionar Usuarios";
             this.modificarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuariosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
@@ -218,7 +209,6 @@
         private System.Windows.Forms.ToolStripMenuItem registrarObraSocialToolStripMenuItem;
         private System.Windows.Forms.Button button_Salir;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cargarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarClientesToolStripMenuItem;

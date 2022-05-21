@@ -57,22 +57,15 @@ namespace Vistas
             this.Close();
         }
 
-
-        private void cargarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmUsuarioCargar oFrmUsuarioCargar = new FrmUsuarioCargar();
-            oFrmUsuarioCargar.Show();
-        }
-
         private void modificarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmClienteGrid oFrmClienteGrid = new FrmClienteGrid();
+            FrmGestionClientes oFrmClienteGrid = new FrmGestionClientes();
             oFrmClienteGrid.Show();
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmUsuario oFrmUsuario = new FrmUsuario();
+            FrmGestionUsuarios oFrmUsuario = new FrmGestionUsuarios();
             oFrmUsuario.Show();
         }
 

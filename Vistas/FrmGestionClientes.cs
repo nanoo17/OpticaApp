@@ -10,9 +10,9 @@ using ClasesBase;
 
 namespace Vistas
 {
-    public partial class FrmClienteGrid : Form
+    public partial class FrmGestionClientes : Form
     {
-        public FrmClienteGrid()
+        public FrmGestionClientes()
         {
             InitializeComponent();
         }
@@ -42,6 +42,8 @@ namespace Vistas
                 button_Buscar.Enabled = false;
                 button_Eliminar.Enabled = false;
                 button_modificar.Enabled = false;
+                textBox_BuscarApellido.Enabled = false;
+                textBox_BuscarDni.Enabled = false;
             }
         }
 
@@ -165,18 +167,29 @@ namespace Vistas
             textBox_Nombre.Text = "";
             textBox_Apellido.Text = "";
             textBox_Direccion.Text = "";
-            comboBox_ObraSocial.SelectedValue = "";
             textBox_Carnet.Text = "";
 
             cargarComboObraSocial();
             // Cambiar el estado de controles
             cambiarEstadoDeControles(false);
+            button_modificar.Enabled = true;
         }
 
         // Boton que cancela la carga de un nuevo cliente
         private void button_CancelarCarga_Click(object sender, EventArgs e)
         {
-            cambiarEstadoDeControles(true);
+           cambiarEstadoDeControles(true);
+
+            // Deshabilitar controles
+            if (dataGridView_Cliente.Rows.Count == 0)
+            {
+                button_modificar.Enabled = false;
+                button_Eliminar.Enabled = false;
+                button_Buscar.Enabled = false;
+                textBox_BuscarApellido.Enabled = false;
+                textBox_BuscarDni.Enabled = false;
+            }
+
             llenarFormulario();
         }
 

@@ -46,17 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmCliente.cs">
+    <Compile Include="FrmGestionClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCliente.Designer.cs">
-      <DependentUpon>FrmCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmClienteGrid.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmClienteGrid.Designer.cs">
-      <DependentUpon>FrmClienteGrid.cs</DependentUpon>
+    <Compile Include="FrmGestionClientes.Designer.cs">
+      <DependentUpon>FrmGestionClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmListadoVentas.cs">
       <SubType>Form</SubType>
@@ -88,11 +82,11 @@
     <Compile Include="FrmProducto.Designer.cs">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuario.cs">
+    <Compile Include="FrmGestionUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    <Compile Include="FrmGestionUsuarios.Designer.cs">
+      <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarioCargar.cs">
       <SubType>Form</SubType>
@@ -121,11 +115,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmCliente.resx">
-      <DependentUpon>FrmCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmClienteGrid.resx">
-      <DependentUpon>FrmClienteGrid.cs</DependentUpon>
+    <EmbeddedResource Include="FrmGestionClientes.resx">
+      <DependentUpon>FrmGestionClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoVentas.resx">
       <DependentUpon>FrmListadoVentas.cs</DependentUpon>
@@ -142,8 +133,8 @@
     <EmbeddedResource Include="FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmGestionUsuarios.resx">
+      <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarioCargar.resx">
       <DependentUpon>FrmUsuarioCargar.cs</DependentUpon>

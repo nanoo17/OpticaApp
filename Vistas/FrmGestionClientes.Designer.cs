@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class FrmClienteGrid
+    partial class FrmGestionClientes
     {
         /// <summary>
         /// Required designer variable.
