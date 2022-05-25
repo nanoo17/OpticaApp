@@ -158,6 +158,7 @@
             // dataGridView_Usuario
             // 
             this.dataGridView_Usuario.AllowUserToAddRows = false;
+            this.dataGridView_Usuario.AllowUserToDeleteRows = false;
             this.dataGridView_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Usuario.Location = new System.Drawing.Point(26, 101);
             this.dataGridView_Usuario.Name = "dataGridView_Usuario";

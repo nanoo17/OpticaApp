@@ -19,7 +19,7 @@ namespace Vistas
 
         private void FrmClienteGrid_Load(object sender, EventArgs e)
         {
-            // Cargar usuario a la grilla
+            // Cargar clientes a la grilla
             cargarClientes();
             // Cargar ComboBox de obrasocial
             cargarComboObraSocial();
@@ -268,6 +268,24 @@ namespace Vistas
                 MessageBox.Show("Error en la modificacion del cliente", titulo);
                 MessageBox.Show(err.ToString(), titulo);
             }
+        }
+
+        private void button_Ordenar_Click(object sender, EventArgs e)
+        {
+            dataGridView_Cliente.Columns["Cli_DNI"].DisplayIndex = 0;
+            dataGridView_Cliente.Columns["Cli_Nombre"].DisplayIndex = 1;
+            dataGridView_Cliente.Columns["Cli_Apellido"].DisplayIndex = 2;
+            dataGridView_Cliente.Columns["Cli_Direccion"].DisplayIndex = 3;
+            dataGridView_Cliente.Columns["OS_CUIT"].DisplayIndex = 4;
+            dataGridView_Cliente.Columns["Cli_NroCarnet"].DisplayIndex = 5;
+        }
+
+        private void button_OrdenarApellido_Click(object sender, EventArgs e)
+        {
+            dataGridView_Cliente.Columns["Cli_Apellido"].DisplayIndex = 0;
+            dataGridView_Cliente.Columns["Cli_Nombre"].DisplayIndex = 1;
+            dataGridView_Cliente.Columns["Cli_DNI"].DisplayIndex = 2;
+            dataGridView_Cliente.Sort(dataGridView_Cliente.Columns["Cli_Apellido"], ListSortDirection.Ascending);
         }
     }
 }

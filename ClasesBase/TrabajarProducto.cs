@@ -25,5 +25,62 @@ namespace ClasesBase
 
             return dt;
         }
+        public static void insertarProducto(Producto producto)
+        {
+            SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand query = new SqlCommand();
+            query.CommandText = "INSERT INTO Producto (Prod_Codigo,Prod_Categoria,Prod_Descripcion,Prod_Precio) VALUES (@codigo,@categoria, @descripcion, @precio)";
+            query.CommandType = CommandType.Text;
+            query.Connection = db;
+
+            // Paramatros
+            query.Parameters.AddWithValue("@codigo", producto.Prod_Codigo);
+            query.Parameters.AddWithValue("@categoria", producto.Prod_Categoria);
+            query.Parameters.AddWithValue("@descripcion", producto.Prod_Descripcion);
+            query.Parameters.AddWithValue("@precio", producto.Prod_Precio);
+
+            // Ejecutar la query
+            db.Open();
+            query.ExecuteNonQuery();
+            db.Close();
+        }
+        public static void eliminarProducto(string codigo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "DELETE FROM Producto WHERE Prod_Codigo = @codigo";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            // Paramatros
+            cmd.Parameters.AddWithValue("@codigo", codigo);
+
+            // Ejecutar la query
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+        public static void modificarProducto(Producto producto)
+        {
+            SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand query = new SqlCommand();
+            query.CommandText = "UPDATE Producto SET Prod_Categoria=@categoria,Prod_Descripcion=@descripcion,Prod_Precio=@precio WHERE Prod_Codigo = @codigo";
+            query.CommandType = CommandType.Text;
+            query.Connection = db;
+
+            // Paramatros
+            query.Parameters.AddWithValue("@codigo", producto.Prod_Codigo);
+            query.Parameters.AddWithValue("@categoria", producto.Prod_Categoria);
+            query.Parameters.AddWithValue("@descripcion", producto.Prod_Descripcion);
+            query.Parameters.AddWithValue("@precio", producto.Prod_Precio);
+
+            // Ejecutar la query
+            db.Open();
+            query.ExecuteNonQuery();
+            db.Close();
+        }
     }
 }
