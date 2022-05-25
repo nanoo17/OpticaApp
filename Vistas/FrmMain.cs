@@ -22,7 +22,7 @@ namespace Vistas
             if (rol_codigo == 2)
             {
                 usuariosToolStripMenuItem.Visible = false;
-                cargarProductoToolStripMenuItem.Visible = false;
+                productosToolStripMenuItem.Visible = false;
             }
            
         }
@@ -33,7 +33,8 @@ namespace Vistas
             oFrmObraSocial.Show();
         }
 
-        private void cargarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        //sacar este form
+        private void cargarProductoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmProducto oFrmProducto = new FrmProducto();
             oFrmProducto.Show();
@@ -79,6 +80,12 @@ namespace Vistas
         {
             Form oFrmListado = new FrmListadoVentas();
             oFrmListado.Show();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form oFrmListadoProductos = new FrmListadoProductos();
+            oFrmListadoProductos.Show();
         }
         
     }
