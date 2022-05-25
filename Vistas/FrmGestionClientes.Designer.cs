@@ -51,6 +51,8 @@
             this.button_NuevoCliente = new System.Windows.Forms.Button();
             this.button_CancelarCarga = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_OrdenarApellido = new System.Windows.Forms.Button();
+            this.button_Ordenar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,17 +252,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(25, 106);
+            this.label1.Location = new System.Drawing.Point(23, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(388, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Los cambios realizados en la grilla deberán ser confirmados con el boton Guardar";
+            // 
+            // button_OrdenarApellido
+            // 
+            this.button_OrdenarApellido.Location = new System.Drawing.Point(113, 101);
+            this.button_OrdenarApellido.Name = "button_OrdenarApellido";
+            this.button_OrdenarApellido.Size = new System.Drawing.Size(111, 23);
+            this.button_OrdenarApellido.TabIndex = 24;
+            this.button_OrdenarApellido.Text = "Ordenar por apellido";
+            this.button_OrdenarApellido.UseVisualStyleBackColor = true;
+            this.button_OrdenarApellido.Click += new System.EventHandler(this.button_OrdenarApellido_Click);
+            // 
+            // button_Ordenar
+            // 
+            this.button_Ordenar.Location = new System.Drawing.Point(38, 101);
+            this.button_Ordenar.Name = "button_Ordenar";
+            this.button_Ordenar.Size = new System.Drawing.Size(60, 23);
+            this.button_Ordenar.TabIndex = 25;
+            this.button_Ordenar.Text = "Ordenar";
+            this.button_Ordenar.UseVisualStyleBackColor = true;
+            this.button_Ordenar.Click += new System.EventHandler(this.button_Ordenar_Click);
             // 
             // FrmGestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 390);
+            this.Controls.Add(this.button_Ordenar);
+            this.Controls.Add(this.button_OrdenarApellido);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_CancelarCarga);
             this.Controls.Add(this.button_NuevoCliente);
@@ -318,5 +342,7 @@
         private System.Windows.Forms.Button button_NuevoCliente;
         private System.Windows.Forms.Button button_CancelarCarga;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_OrdenarApellido;
+        private System.Windows.Forms.Button button_Ordenar;
     }
 }
