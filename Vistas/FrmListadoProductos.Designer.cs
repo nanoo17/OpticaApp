@@ -58,6 +58,7 @@
             this.dataGridView_Productos.ReadOnly = true;
             this.dataGridView_Productos.Size = new System.Drawing.Size(375, 202);
             this.dataGridView_Productos.TabIndex = 0;
+            this.dataGridView_Productos.CurrentCellChanged += new System.EventHandler(this.dataGridView_Productos_CurrentCellChanged);
             // 
             // button_CargarProducto
             // 
@@ -88,6 +89,7 @@
             this.button_Ordenar.TabIndex = 3;
             this.button_Ordenar.Text = "Ordenar";
             this.button_Ordenar.UseVisualStyleBackColor = true;
+            this.button_Ordenar.Click += new System.EventHandler(this.button_Ordenar_Click);
             // 
             // radioButton_Categoria
             // 
@@ -184,6 +186,7 @@
             this.textBox_Precio.Name = "textBox_Precio";
             this.textBox_Precio.Size = new System.Drawing.Size(100, 20);
             this.textBox_Precio.TabIndex = 14;
+            this.textBox_Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Precio_KeyPress);
             // 
             // button_Guardar
             // 
@@ -203,6 +206,7 @@
             this.button_Eliminar.TabIndex = 16;
             this.button_Eliminar.Text = "Eliminar";
             this.button_Eliminar.UseVisualStyleBackColor = true;
+            this.button_Eliminar.Click += new System.EventHandler(this.button_Eliminar_Click);
             // 
             // FrmListadoProductos
             // 

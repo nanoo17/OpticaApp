@@ -63,21 +63,13 @@ namespace Vistas
         private void button_Cancelar_Click(object sender, EventArgs e)
         {
             cambiarEstadoDeControles(true);
+            guardar = false;
+            llenarFormulario();
         }
 
         private void button_Guardar_Click(object sender, EventArgs e)
         {
-            if (guardar == true)
-            {
-                guardarProducto();
-            }
-            else
-            {
-                modificarProducto();
-            }
-        }
-        public void guardarProducto()
-        {
+
             // Parametros del messageBox
             string mensaje = "¿Quiere guardar el producto?";
             string titulo = "Guardar producto";
@@ -106,6 +98,20 @@ namespace Vistas
 
             // Creando el producto
             Producto nuevoProducto = new Producto(prodCodigo, prodCategoria, prodDescripcion, prodPrecio);
+
+
+
+            if (guardar == true)
+            {
+                guardarProducto(nuevoProducto,titulo);
+            }
+            else
+            {
+                modificarProducto(nuevoProducto,titulo);
+            }
+        }
+        public void guardarProducto(Producto nuevoProducto, string titulo)
+        {
             try
             {
                 TrabajarProducto.insertarProducto(nuevoProducto);
@@ -126,11 +132,110 @@ namespace Vistas
             }
         }
 
-        public void modificarProducto()
+        public void modificarProducto(Producto producto, string titulo)
         {
-            string titulo = "Guardar producto";
-            MessageBox.Show("Error en la creación del producto", titulo);
+            // Guardar al Usuario en la base de datos
+            try
+            {
+                TrabajarProducto.modificarProducto(producto);
+                string mensajeExito = "El producto fue modificado con exito"
+                    + "\n Codigo:" + producto.Prod_Codigo
+                    + "\n Categoria:" + producto.Prod_Categoria
+                    + "\nDescripcion:" + producto.Prod_Descripcion
+                    + "\n Precio:" + producto.Prod_Precio;
+                    
+                MessageBox.Show(mensajeExito, titulo);
+
+                cargarProductos();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error en la modificacion del cliente", titulo);
+                MessageBox.Show(err.ToString(), titulo);
+            }
             
         }
+
+        private void button_Ordenar_Click(object sender, EventArgs e)
+        {
+            if (radioButton_Descripcion.Checked == true)
+            {
+                DataTable dtProductos = TrabajarProducto.ordenarProductosDescripcion();
+                dataGridView_Productos.DataSource = dtProductos;
+                dataGridView_Productos.Columns["Prod_Descripcion"].DisplayIndex = 0;
+            }
+            else if (radioButton_Categoria.Checked == true)
+            {
+                DataTable dtProductos = TrabajarProducto.ordenarProductosCategoria();
+                dataGridView_Productos.DataSource = dtProductos;
+                dataGridView_Productos.Columns["Prod_Categoria"].DisplayIndex = 0;
+            }
+        }
+
+        private void textBox_Precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //validacion dentro del textbox de precio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+               (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        private void dataGridView_Productos_CurrentCellChanged(object sender, EventArgs e)
+        {
+            llenarFormulario();
+        }
+        private void llenarFormulario()
+        {
+            if (dataGridView_Productos.CurrentRow != null)
+            {
+                DataGridViewRow currentRow = dataGridView_Productos.CurrentRow;
+                textBox_Codigo.Text = currentRow.Cells["Prod_Codigo"].Value.ToString();
+                textBox_Categoria.Text = currentRow.Cells["Prod_Categoria"].Value.ToString();
+                textBox_Descripcion.Text = currentRow.Cells["Prod_Descripcion"].Value.ToString();
+                textBox_Precio.Text = currentRow.Cells["Prod_Precio"].Value.ToString();
+            }
+        }
+
+        private void button_Eliminar_Click(object sender, EventArgs e)
+        {
+            string mensaje = "¿Está seguro de eliminar el producto?";
+            string titulo = "Eliminar Producto";
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            MessageBoxIcon icono = MessageBoxIcon.Question;
+
+            // Mostrar messageBox de confirmación
+            DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
+
+            // Verificar el resultado del messageBox
+            if (resultado == DialogResult.No) return;
+
+            // Eliminar Producto
+            string producto_codigo = textBox_Codigo.Text;
+            try
+            {
+                TrabajarProducto.eliminarProducto(producto_codigo);
+                string mensajeExito = "El producto fue eliminado con exito";
+                MessageBox.Show(mensajeExito, titulo);
+
+                // Recargar la ventana
+                cargarProductos();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error en la eliminacion del producto", titulo);
+                MessageBox.Show(err.ToString(), titulo);
+            }
+        
+        }
+
     }
+
+       
 }
