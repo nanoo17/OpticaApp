@@ -278,6 +278,8 @@ namespace Vistas
             dataGridView_Cliente.Columns["Cli_Direccion"].DisplayIndex = 3;
             dataGridView_Cliente.Columns["OS_CUIT"].DisplayIndex = 4;
             dataGridView_Cliente.Columns["Cli_NroCarnet"].DisplayIndex = 5;
+            DataTable dtClientes = TrabajarCliente.obtenerClientes();
+            dataGridView_Cliente.DataSource = dtClientes;
         }
 
         private void button_OrdenarApellido_Click(object sender, EventArgs e)
@@ -285,7 +287,8 @@ namespace Vistas
             dataGridView_Cliente.Columns["Cli_Apellido"].DisplayIndex = 0;
             dataGridView_Cliente.Columns["Cli_Nombre"].DisplayIndex = 1;
             dataGridView_Cliente.Columns["Cli_DNI"].DisplayIndex = 2;
-            dataGridView_Cliente.Sort(dataGridView_Cliente.Columns["Cli_Apellido"], ListSortDirection.Ascending);
+            DataTable dtClientes = TrabajarCliente.ordenarClientesApellido();
+            dataGridView_Cliente.DataSource = dtClientes;
         }
     }
 }
