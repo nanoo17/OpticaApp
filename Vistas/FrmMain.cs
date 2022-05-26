@@ -33,13 +33,6 @@ namespace Vistas
             oFrmObraSocial.Show();
         }
 
-        //sacar este form
-        private void cargarProductoToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            FrmProducto oFrmProducto = new FrmProducto();
-            oFrmProducto.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             // Parametros del messageBox
