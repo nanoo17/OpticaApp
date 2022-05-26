@@ -98,9 +98,12 @@ namespace Vistas
 
             // Creando el producto
             Producto nuevoProducto = new Producto(prodCodigo, prodCategoria, prodDescripcion, prodPrecio);
-
-
-
+            DataTable dtProducto = TrabajarProducto.buscarProductoPorCodigo(nuevoProducto.Prod_Codigo);
+            if (dtProducto.Rows.Count != 0)
+            {
+                MessageBox.Show("Ya existe un producto con ese codigo", titulo);
+                return;
+            }
             if (guardar == true)
             {
                 guardarProducto(nuevoProducto,titulo);
