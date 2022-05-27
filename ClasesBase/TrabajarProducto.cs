@@ -64,8 +64,8 @@ namespace ClasesBase
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO Producto (Prod_Codigo,Prod_Categoria,Prod_Descripcion,Prod_Precio) VALUES (@codigo,@categoria, @descripcion, @precio)";
-            query.CommandType = CommandType.Text;
+            query.CommandText = "insertar_producto";
+            query.CommandType = CommandType.StoredProcedure;
             query.Connection = db;
 
             // Paramatros
@@ -84,8 +84,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM Producto WHERE Prod_Codigo = @codigo";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "eliminar_producto";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             // Paramatros
@@ -101,8 +101,8 @@ namespace ClasesBase
             SqlConnection db = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand query = new SqlCommand();
-            query.CommandText = "UPDATE Producto SET Prod_Categoria=@categoria,Prod_Descripcion=@descripcion,Prod_Precio=@precio WHERE Prod_Codigo = @codigo";
-            query.CommandType = CommandType.Text;
+            query.CommandText = "modificar_producto";
+            query.CommandType = CommandType.StoredProcedure;
             query.Connection = db;
 
             // Paramatros
