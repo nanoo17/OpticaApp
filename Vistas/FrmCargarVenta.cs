@@ -12,6 +12,7 @@ namespace Vistas
 {
     public partial class FrmCargarVenta : Form
     {
+
         public FrmCargarVenta()
         {
             InitializeComponent();
@@ -50,6 +51,18 @@ namespace Vistas
             }
         }
 
+        // Cargar los detalles al grid de detalles
+        private void cargarDetallesGrid()
+        {
+            dataGridView_DetallesVenta.DataSource = null;
+            dataGridView_DetallesVenta.DataSource = detallesCargados;
+
+            if (detallesCargados.Count == 0) 
+            {
+                button_EliminarDetalle.Enabled = false;
+            }
+        }
+
         // Guardar venta y detalleVenta
         private void button_Guardar_Click(object sender, EventArgs e)
         {
@@ -69,6 +82,13 @@ namespace Vistas
             string clienteDNI = comboBox_Cliente.SelectedValue.ToString();
             DateTime fechaVenta = dateTimePicker_FechaVenta.Value;
 
+            // Verificar que los detalles no esten vacios
+            if (detallesCargados.Count == 0)
+            {
+                MessageBox.Show("Al menos un detalle debe estar cargado", titulo);
+                return;
+            }
+
             // Crear obj venta
             Venta nuevaVenta = new Venta(fechaVenta, clienteDNI);
 
@@ -77,27 +97,27 @@ namespace Vistas
             {
                 int ventaNro = TrabajarVenta.insertarVenta(nuevaVenta);
 
-                // Guardamos los detalles de la venta
-                VentaDetalle nuevaVentaDetalle = new VentaDetalle();
+                // Loop de los detalles de las ventas
+                foreach (VentaDetalleGrid v in detallesCargados)
+                {
 
-                // Llenar el obj
-                nuevaVentaDetalle.Ven_Nro = ventaNro;
-                nuevaVentaDetalle.Prod_Codigo = textBox_CodigoProd.Text;
-                nuevaVentaDetalle.Det_Precio = Decimal.Parse(textBox_Precio.Text);
-                nuevaVentaDetalle.Det_Total = Decimal.Parse(textBox_Total.Text);
-                nuevaVentaDetalle.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+                    // Guardamos los detalles de la venta
+                    VentaDetalle nuevaVentaDetalle = new VentaDetalle();
 
-                TrabajarVenta.insertarVentaDetalle(nuevaVentaDetalle);
+                    // Llenar el obj
+                    nuevaVentaDetalle.Ven_Nro = ventaNro;
+                    nuevaVentaDetalle.Prod_Codigo = v.Prod_Codigo;
+                    nuevaVentaDetalle.Det_Precio = v.Det_Precio;
+                    nuevaVentaDetalle.Det_Total = v.Det_Total;
+                    nuevaVentaDetalle.Det_Cantidad = v.Det_Cantidad;
+
+                    TrabajarVenta.insertarVentaDetalle(nuevaVentaDetalle);
+                }
 
                 string mensajeExito = "***La venta fue guardada con exito***"
                    + "\nNro de la venta: " + ventaNro
                    + "\nFecha de Venta: " + nuevaVenta.Ven_Fecha
-                   + "\nDNI del cliente: " + nuevaVenta.Cli_DNI
-                   + "\n***DETALLES DE LA VENTA***"
-                   + "\nCodigo del producto: " + nuevaVentaDetalle.Prod_Codigo
-                   + "\nPrecio: " + nuevaVentaDetalle.Det_Precio
-                   + "\nCantidad: " + nuevaVentaDetalle.Det_Cantidad
-                   + "\nTotal: " + nuevaVentaDetalle.Det_Total;
+                   + "\nDNI del cliente: " + nuevaVenta.Cli_DNI;
                 MessageBox.Show(mensajeExito, titulo);
             }
             catch (Exception err)
@@ -114,6 +134,7 @@ namespace Vistas
             {
                 DataGridViewRow currentRow = dataGridView_Producto.CurrentRow;
 
+                textBox_IdDetalle.Text = "0";
                 textBox_CodigoProd.Text = currentRow.Cells["Prod_Codigo"].Value.ToString();
                 textBox_Precio.Text = currentRow.Cells["Prod_Precio"].Value.ToString();
             }
@@ -141,5 +162,87 @@ namespace Vistas
                 e.Handled = true;
             }
         }
+
+        List<VentaDetalleGrid> detallesCargados = new List<VentaDetalleGrid>();
+        // Agregar el detalle al grid
+        private void button_AgregarDetalle_Click(object sender, EventArgs e)
+        {
+            VentaDetalleGrid nuevaVentaDetalle = new VentaDetalleGrid();
+
+            // Si el id es 0 guardamos un detalle
+            if (textBox_IdDetalle.Text == "0")
+            {
+                Random rnd = new Random();
+                // Llenar el obj
+                nuevaVentaDetalle.Id = rnd.Next();
+                nuevaVentaDetalle.Prod_Codigo = textBox_CodigoProd.Text;
+                nuevaVentaDetalle.Det_Precio = Decimal.Parse(textBox_Precio.Text);
+                nuevaVentaDetalle.Det_Total = Decimal.Parse(textBox_Total.Text);
+                nuevaVentaDetalle.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+
+                // Agregar al array
+                detallesCargados.Add(nuevaVentaDetalle);
+
+                // Recargar el grid
+                cargarDetallesGrid();
+                return;
+            }
+
+            // Si el producto ya esta agregado solo hay que sumarle la cantidad
+            foreach (VentaDetalleGrid v in detallesCargados)
+            {
+                if (v.Id == Int32.Parse(textBox_IdDetalle.Text))
+                {
+                    v.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+                    VentaDetalleGrid vAux = new VentaDetalleGrid();
+
+                    vAux.Det_Cantidad = v.Det_Cantidad;
+                    vAux.Det_Precio = v.Det_Precio;
+                    vAux.Det_Total = v.Det_Total;
+                    vAux.Id = v.Id;
+                    vAux.Prod_Codigo = v.Prod_Codigo;
+
+                    detallesCargados.Add(vAux);
+
+                    detallesCargados.Remove(v);
+                    cargarDetallesGrid();
+                    return;
+                }
+            }
+        }
+
+        // Cargar el formulario con el elemento seleccionado
+        private void dataGridView_DetallesVenta_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_DetallesVenta.CurrentRow != null)
+            {
+                DataGridViewRow currentRow = dataGridView_DetallesVenta.CurrentRow;
+
+                textBox_IdDetalle.Text = currentRow.Cells["Id"].Value.ToString();
+                textBox_Cantidad.Text = currentRow.Cells["Det_Cantidad"].Value.ToString();
+            }
+        }
+
+        // Quitar un elemento del grid detalles
+        private void removerDetalle()
+        {
+            foreach (VentaDetalleGrid v in detallesCargados)
+            {
+                if (v.Id.ToString() == textBox_IdDetalle.Text)
+                {
+                    detallesCargados.Remove(v);
+                    return;
+                }
+            }
+        }
+
+        // Evento para eliminar un detalle
+        private void button_EliminarDetalle_Click(object sender, EventArgs e)
+        {
+            removerDetalle();
+            cargarDetallesGrid();
+            textBox_IdDetalle.Text = "";
+        }
+
     }
 }
