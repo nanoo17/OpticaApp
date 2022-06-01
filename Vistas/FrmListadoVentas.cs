@@ -20,14 +20,36 @@ namespace Vistas
         private void FrmListadoVentas_Load(object sender, EventArgs e)
         {
             // Cargar ventas
-            dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentas();
+            cargarVentas();
+            cargarComboClientes();
         }
+        private void cargarVentas() { dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentas(); }
 
-        private void dataGridView_Listado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+   
+
+
+        private void cargarComboClientes()
         {
-
+            cmbCliente.DisplayMember = "Cli_Nombre";
+            cmbCliente.ValueMember = "Cli_Nombre";
+            cmbCliente.DataSource = TrabajarVenta.obtenerNombresVentas();
+                
         }
 
-      
+        private void cmbCliente_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string cliente = cmbCliente.SelectedValue.ToString();
+            if (cliente.Trim() == "Todos") {
+                cargarVentas();
+            }
+            else if (cliente.Trim() != "")
+            {
+                dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentasCliente(cliente);
+            }
+            else
+            {
+                cargarVentas();
+            }
+        }
     }
 }
