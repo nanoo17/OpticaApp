@@ -169,6 +169,28 @@ namespace Vistas
         {
             VentaDetalleGrid nuevaVentaDetalle = new VentaDetalleGrid();
 
+            // Si el producto ya esta agregado solo hay que sumarle la cantidad
+            foreach (VentaDetalleGrid v in detallesCargados)
+            {
+                if (v.Prod_Codigo == textBox_CodigoProd.Text)
+                {
+                    v.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+                    VentaDetalleGrid vAux = new VentaDetalleGrid();
+
+                    vAux.Det_Cantidad = v.Det_Cantidad;
+                    vAux.Det_Precio = v.Det_Precio;
+                    vAux.Det_Total = v.Det_Total;
+                    vAux.Id = v.Id;
+                    vAux.Prod_Codigo = v.Prod_Codigo;
+
+                    detallesCargados.Add(vAux);
+
+                    detallesCargados.Remove(v);
+                    cargarDetallesGrid();
+                    return;
+                }
+            }
+
             // Si el id es 0 guardamos un detalle
             if (textBox_IdDetalle.Text == "0")
             {
@@ -186,28 +208,6 @@ namespace Vistas
                 // Recargar el grid
                 cargarDetallesGrid();
                 return;
-            }
-
-            // Si el producto ya esta agregado solo hay que sumarle la cantidad
-            foreach (VentaDetalleGrid v in detallesCargados)
-            {
-                if (v.Id == Int32.Parse(textBox_IdDetalle.Text))
-                {
-                    v.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
-                    VentaDetalleGrid vAux = new VentaDetalleGrid();
-
-                    vAux.Det_Cantidad = v.Det_Cantidad;
-                    vAux.Det_Precio = v.Det_Precio;
-                    vAux.Det_Total = v.Det_Total;
-                    vAux.Id = v.Id;
-                    vAux.Prod_Codigo = v.Prod_Codigo;
-
-                    detallesCargados.Add(vAux);
-
-                    detallesCargados.Remove(v);
-                    cargarDetallesGrid();
-                    return;
-                }
             }
         }
 

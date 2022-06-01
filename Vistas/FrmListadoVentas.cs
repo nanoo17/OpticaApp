@@ -51,5 +51,13 @@ namespace Vistas
                 cargarVentas();
             }
         }
+
+        private void button_FiltrarFecha_Click(object sender, EventArgs e)
+        {
+            DateTime desde = dateTimePicker_Desde.Value;
+            DateTime hasta = dateTimePicker_Hasta.Value;
+
+            dataGridView_Listado.DataSource = TrabajarVenta.obtenterVentasPorFecha(desde, hasta);
+        }
     }
 }

@@ -104,17 +104,16 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static DataTable buscarClientes(string dni, string apellido)
+        public static DataTable buscarClientes(string busqueda)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Cliente WHERE Cli_DNI LIKE @dni AND Cli_Apellido LIKE @apellido";
+            cmd.CommandText = "SELECT * FROM Cliente WHERE Cli_DNI LIKE @busqueda OR Cli_Apellido LIKE @busqueda";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@dni", "%"+dni+"%");
-            cmd.Parameters.AddWithValue("@apellido", "%"+apellido+"%");
+            cmd.Parameters.AddWithValue("@busqueda", "%"+busqueda+"%");
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 

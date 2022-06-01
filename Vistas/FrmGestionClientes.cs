@@ -43,7 +43,6 @@ namespace Vistas
                 button_Eliminar.Enabled = false;
                 button_modificar.Enabled = false;
                 textBox_BuscarApellido.Enabled = false;
-                textBox_BuscarDni.Enabled = false;
             }
         }
 
@@ -131,10 +130,9 @@ namespace Vistas
         // Busqueda con dos campos
         private void button_Buscar_Click(object sender, EventArgs e)
         {
-            string dni = textBox_BuscarDni.Text.Trim();
-            string apellido = textBox_BuscarApellido.Text.Trim();
+            string busqueda = textBox_BuscarApellido.Text.Trim();
          
-            dataGridView_Cliente.DataSource = TrabajarCliente.buscarClientes(dni, apellido);
+            dataGridView_Cliente.DataSource = TrabajarCliente.buscarClientes(busqueda);
         }
 
         // Llenar el formulario cuando seleccionamos una celda
@@ -188,7 +186,6 @@ namespace Vistas
                 button_Eliminar.Enabled = false;
                 button_Buscar.Enabled = false;
                 textBox_BuscarApellido.Enabled = false;
-                textBox_BuscarDni.Enabled = false;
             }
 
             llenarFormulario();
@@ -202,7 +199,6 @@ namespace Vistas
             button_Eliminar.Enabled = estado;
             button_NuevoCliente.Enabled = estado;
             dataGridView_Cliente.Enabled = estado;
-            textBox_BuscarDni.Enabled = estado;
             textBox_BuscarApellido.Enabled = estado;
 
             // Estado distinto
