@@ -57,8 +57,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT Ven_Nro, Ven_Fecha, Cliente.Cli_DNI, Cliente.Cli_Nombre FROM Venta INNER JOIN Cliente ON Cliente.Cli_DNI = Venta.Cli_DNI";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "listar_ventas";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -68,5 +68,45 @@ namespace ClasesBase
 
             return dt;
         }
+        public static DataTable obtenerVentasCliente(string cliente)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "listar_ventas_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@cliente", cliente);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable obtenerNombresVentas() {
+            
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "listar_nombres_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataRow dr = dt.NewRow();
+            dr[0] = "Todos";
+            dt.Rows.Add(dr);
+
+            return dt;
+
+        }
+       
     }
 }

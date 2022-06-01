@@ -120,10 +120,11 @@ namespace Vistas
                 // Recargar la ventana
                 cargarClientes();
             }
-            catch (Exception err)
+            catch 
+                //(Exception err)
             {
-                MessageBox.Show("Error en la eliminacion del cliente", titulo);
-                MessageBox.Show(err.ToString(), titulo);
+                MessageBox.Show("No se puede eliminar un cliente que tiene ventas asociadas", titulo);
+                //MessageBox.Show(err.ToString(), titulo);
             }
         }
 
