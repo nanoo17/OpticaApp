@@ -54,7 +54,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Usuario";
+            cmd.CommandText = "SELECT dbo.Usuario.Usu_ID, dbo.Usuario.Usu_NombreUsuario, dbo.Usuario.Usu_Contraseña, dbo.Usuario.Usu_ApellidoNombre, dbo.Usuario.Rol_Codigo, dbo.Roles.Rol_Descripcion FROM dbo.Roles INNER JOIN dbo.Usuario ON dbo.Roles.Rol_Codigo = dbo.Usuario.Rol_Codigo";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -130,7 +130,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario LIKE @usuario";
+            cmd.CommandText = "SELECT dbo.Usuario.Usu_ID, dbo.Usuario.Usu_NombreUsuario, dbo.Usuario.Usu_Contraseña, dbo.Usuario.Usu_ApellidoNombre, dbo.Usuario.Rol_Codigo, dbo.Roles.Rol_Descripcion FROM dbo.Roles INNER JOIN dbo.Usuario ON dbo.Roles.Rol_Codigo = dbo.Usuario.Rol_Codigo WHERE Usu_NombreUsuario LIKE @usuario";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 

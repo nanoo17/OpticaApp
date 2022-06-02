@@ -27,6 +27,10 @@ namespace Vistas
         {
              DataTable dtProductos = TrabajarProducto.obtenerProductos();
             dataGridView_Productos.DataSource = dtProductos;
+            dataGridView_Productos.Columns[0].HeaderText = "Codigo";
+            dataGridView_Productos.Columns[1].HeaderText = "Categoria";
+            dataGridView_Productos.Columns[2].HeaderText = "Descripcion";
+            dataGridView_Productos.Columns[3].HeaderText = "Precio";
             // Deshabilitar los botones de busqueda, modificar y eliminar si no hay registros
             if (dtProductos.Rows.Count == 0)
             {

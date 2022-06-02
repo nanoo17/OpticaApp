@@ -23,7 +23,13 @@ namespace Vistas
             cargarVentas();
             cargarComboClientes();
         }
-        private void cargarVentas() { dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentas(); }
+        private void cargarVentas() { 
+            dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentas();
+            dataGridView_Listado.Columns[0].HeaderText = "Número de Venta";
+            dataGridView_Listado.Columns[1].HeaderText = "Nombre del Cliente";
+            dataGridView_Listado.Columns[2].HeaderText = "Apellido del Cliente";
+            dataGridView_Listado.Columns[3].HeaderText = "Fecha de la Venta";
+        }
 
    
 

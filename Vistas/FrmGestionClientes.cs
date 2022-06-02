@@ -31,10 +31,18 @@ namespace Vistas
             DataTable dtClientes = TrabajarCliente.obtenerClientes();
 
             dataGridView_Cliente.DataSource = dtClientes;
+            //cambiar nombre de las columnas
+            dataGridView_Cliente.Columns[0].HeaderText = "DNI";
+            dataGridView_Cliente.Columns[1].HeaderText = "Nombre";
+            dataGridView_Cliente.Columns[2].HeaderText = "Apellido";
+            dataGridView_Cliente.Columns[3].HeaderText = "Direccion";
+            dataGridView_Cliente.Columns[4].HeaderText = "OS CUIT";
+            dataGridView_Cliente.Columns[5].HeaderText = "Nro de Carnet";
 
             // Deshabilitar las columnas sensibles
             dataGridView_Cliente.Columns[0].ReadOnly = true; // ID
             dataGridView_Cliente.Columns[4].ReadOnly = true; // Obra Social
+            
 
             // Deshabilitar los botones de busqueda, modificar y eliminar si no hay registros
             if (dtClientes.Rows.Count == 0)

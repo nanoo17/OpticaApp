@@ -47,6 +47,8 @@
             this.dataGridView_DetallesVenta = new System.Windows.Forms.DataGridView();
             this.textBox_IdDetalle = new System.Windows.Forms.TextBox();
             this.label_IdDetalle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Producto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetallesVenta)).BeginInit();
             this.SuspendLayout();
@@ -221,11 +223,31 @@
             this.label_IdDetalle.TabIndex = 30;
             this.label_IdDetalle.Text = "ID Detalle";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Productos:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Detalles:";
+            // 
             // FrmCargarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 432);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label_IdDetalle);
             this.Controls.Add(this.textBox_IdDetalle);
             this.Controls.Add(this.dataGridView_DetallesVenta);
@@ -276,5 +298,7 @@
         private System.Windows.Forms.DataGridView dataGridView_DetallesVenta;
         private System.Windows.Forms.TextBox textBox_IdDetalle;
         private System.Windows.Forms.Label label_IdDetalle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
