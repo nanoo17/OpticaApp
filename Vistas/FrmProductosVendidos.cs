@@ -34,6 +34,12 @@ namespace Vistas
             string dniCliente = comboBox_Clientes.SelectedValue.ToString();
 
             dataGridView_Productos.DataSource = TrabajarProducto.obtenerProductosVendidosPorCliente(dniCliente);
+            dataGridView_Productos.Columns[0].HeaderText = "Dni Cliente";
+            dataGridView_Productos.Columns[1].HeaderText = "Nombre Cliente";
+            dataGridView_Productos.Columns[2].HeaderText = "Apellido Cliente";
+            dataGridView_Productos.Columns[3].HeaderText = "Categoria Producto";
+            dataGridView_Productos.Columns[4].HeaderText = "Descripcion Producto";
+            dataGridView_Productos.Columns[5].HeaderText = "Fecha de Venta";
         }
 
         private void button_FiltrarFecha_Click(object sender, EventArgs e)
@@ -42,6 +48,12 @@ namespace Vistas
             DateTime hasta = dateTimePicker_Hasta.Value;
 
             dataGridView_Productos.DataSource = TrabajarProducto.obtenterProductosPorFecha(desde, hasta);
+            dataGridView_Productos.Columns[0].HeaderText = "Dni Cliente";
+            dataGridView_Productos.Columns[1].HeaderText = "Nombre Cliente";
+            dataGridView_Productos.Columns[2].HeaderText = "Apellido Cliente";
+            dataGridView_Productos.Columns[3].HeaderText = "Categoria Producto";
+            dataGridView_Productos.Columns[4].HeaderText = "Descripcion Producto";
+            dataGridView_Productos.Columns[5].HeaderText = "Fecha de Venta";
         }
     }
 }

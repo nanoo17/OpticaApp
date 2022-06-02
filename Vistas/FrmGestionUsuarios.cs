@@ -82,7 +82,12 @@ namespace Vistas
         {
             DataTable dtUsuario = TrabajarUsuario.obtenerUsuarios();
             dataGridView_Usuario.DataSource = dtUsuario;
-
+            dataGridView_Usuario.Columns[0].HeaderText = "ID";
+            dataGridView_Usuario.Columns[1].HeaderText = "Nombre de usuario";
+            dataGridView_Usuario.Columns[2].HeaderText = "Contraseña";
+            dataGridView_Usuario.Columns[3].HeaderText = "Apellido y Nombre";
+            dataGridView_Usuario.Columns[4].Visible = false;
+            dataGridView_Usuario.Columns[5].HeaderText = "Rol";
             // Deshabilitar las columnas sensibles
             dataGridView_Usuario.Columns[0].ReadOnly = true; // ID
             dataGridView_Usuario.Columns[4].ReadOnly = true; // Rol
@@ -140,6 +145,12 @@ namespace Vistas
             if (usu_Usuario.Trim() != "")
             {
                 dataGridView_Usuario.DataSource = TrabajarUsuario.buscarUsuarioTabla(usu_Usuario);
+                dataGridView_Usuario.Columns[0].HeaderText = "ID";
+                dataGridView_Usuario.Columns[1].HeaderText = "Nombre de usuario";
+                dataGridView_Usuario.Columns[2].HeaderText = "Contraseña";
+                dataGridView_Usuario.Columns[3].HeaderText = "Apellido y Nombre";
+                dataGridView_Usuario.Columns[4].Visible = false;
+                dataGridView_Usuario.Columns[5].HeaderText = "Rol";
             }
             else
             {
