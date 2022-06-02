@@ -75,10 +75,16 @@ namespace Vistas
             oFrmListado.Show();
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void gestionarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form oFrmListadoProductos = new FrmListadoProductos();
             oFrmListadoProductos.Show();
+        }
+
+        private void productosVendidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form FrmProductosVendidos = new FrmProductosVendidos();
+            FrmProductosVendidos.Show();
         }
         
     }

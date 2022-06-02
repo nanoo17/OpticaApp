@@ -43,6 +43,8 @@
             this.cargarUnaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_Salir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -152,10 +154,26 @@
             // 
             // productosToolStripMenuItem
             // 
+            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionarProductosToolStripMenuItem,
+            this.productosVendidosToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
-            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // gestionarProductosToolStripMenuItem
+            // 
+            this.gestionarProductosToolStripMenuItem.Name = "gestionarProductosToolStripMenuItem";
+            this.gestionarProductosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.gestionarProductosToolStripMenuItem.Text = "Gestionar Productos";
+            this.gestionarProductosToolStripMenuItem.Click += new System.EventHandler(this.gestionarProductosToolStripMenuItem_Click);
+            // 
+            // productosVendidosToolStripMenuItem
+            // 
+            this.productosVendidosToolStripMenuItem.Name = "productosVendidosToolStripMenuItem";
+            this.productosVendidosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.productosVendidosToolStripMenuItem.Text = "Productos Vendidos";
+            this.productosVendidosToolStripMenuItem.Click += new System.EventHandler(this.productosVendidosToolStripMenuItem_Click);
             // 
             // button_Salir
             // 
@@ -206,6 +224,8 @@
         private System.Windows.Forms.ToolStripMenuItem cargarUnaVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionarProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosVendidosToolStripMenuItem;
     }
 }
 

@@ -56,3 +56,4 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vi
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmGestionUsuarios.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmCargarVenta.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmListadoProductos.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\tp1\Vistas\obj\x86\Debug\Vistas.FrmProductosVendidos.resources

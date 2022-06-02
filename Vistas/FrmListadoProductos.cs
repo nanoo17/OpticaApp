@@ -22,6 +22,7 @@ namespace Vistas
             cargarProductos();
         }
 
+
         private void cargarProductos()
         {
              DataTable dtProductos = TrabajarProducto.obtenerProductos();
