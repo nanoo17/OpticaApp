@@ -36,6 +36,7 @@
             this.button_FiltrarFecha = new System.Windows.Forms.Button();
             this.dateTimePicker_Hasta = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Desde = new System.Windows.Forms.DateTimePicker();
+            this.label_ProductosVendidos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Productos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.dataGridView_Productos.AllowUserToAddRows = false;
             this.dataGridView_Productos.AllowUserToDeleteRows = false;
             this.dataGridView_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Productos.Location = new System.Drawing.Point(34, 147);
+            this.dataGridView_Productos.Location = new System.Drawing.Point(23, 102);
             this.dataGridView_Productos.Name = "dataGridView_Productos";
             this.dataGridView_Productos.ReadOnly = true;
             this.dataGridView_Productos.Size = new System.Drawing.Size(537, 233);
@@ -88,7 +89,7 @@
             // 
             // button_FiltrarFecha
             // 
-            this.button_FiltrarFecha.Location = new System.Drawing.Point(23, 82);
+            this.button_FiltrarFecha.Location = new System.Drawing.Point(23, 73);
             this.button_FiltrarFecha.Name = "button_FiltrarFecha";
             this.button_FiltrarFecha.Size = new System.Drawing.Size(108, 23);
             this.button_FiltrarFecha.TabIndex = 24;
@@ -110,11 +111,20 @@
             this.dateTimePicker_Desde.Size = new System.Drawing.Size(127, 20);
             this.dateTimePicker_Desde.TabIndex = 22;
             // 
+            // label_ProductosVendidos
+            // 
+            this.label_ProductosVendidos.AutoSize = true;
+            this.label_ProductosVendidos.Location = new System.Drawing.Point(26, 358);
+            this.label_ProductosVendidos.Name = "label_ProductosVendidos";
+            this.label_ProductosVendidos.Size = new System.Drawing.Size(0, 13);
+            this.label_ProductosVendidos.TabIndex = 27;
+            // 
             // FrmProductosVendidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 392);
+            this.ClientSize = new System.Drawing.Size(635, 413);
+            this.Controls.Add(this.label_ProductosVendidos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button_FiltrarFecha);
@@ -142,5 +152,6 @@
         private System.Windows.Forms.Button button_FiltrarFecha;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Hasta;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Desde;
+        private System.Windows.Forms.Label label_ProductosVendidos;
     }
 }

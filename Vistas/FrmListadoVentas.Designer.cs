@@ -37,6 +37,7 @@
             this.button_FiltrarFecha = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label_CantidadVentas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Listado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.dataGridView_Listado.AllowUserToAddRows = false;
             this.dataGridView_Listado.AllowUserToDeleteRows = false;
             this.dataGridView_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Listado.Location = new System.Drawing.Point(41, 152);
+            this.dataGridView_Listado.Location = new System.Drawing.Point(37, 129);
             this.dataGridView_Listado.Name = "dataGridView_Listado";
             this.dataGridView_Listado.Size = new System.Drawing.Size(568, 191);
             this.dataGridView_Listado.TabIndex = 0;
@@ -53,7 +54,7 @@
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(491, 39);
+            this.cmbCliente.Location = new System.Drawing.Point(488, 51);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(121, 21);
             this.cmbCliente.TabIndex = 1;
@@ -62,7 +63,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(443, 42);
+            this.lblCliente.Location = new System.Drawing.Point(440, 54);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(42, 13);
             this.lblCliente.TabIndex = 2;
@@ -71,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(488, 20);
+            this.label1.Location = new System.Drawing.Point(485, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 3;
@@ -79,21 +80,21 @@
             // 
             // dateTimePicker_Desde
             // 
-            this.dateTimePicker_Desde.Location = new System.Drawing.Point(41, 36);
+            this.dateTimePicker_Desde.Location = new System.Drawing.Point(37, 51);
             this.dateTimePicker_Desde.Name = "dateTimePicker_Desde";
             this.dateTimePicker_Desde.Size = new System.Drawing.Size(127, 20);
             this.dateTimePicker_Desde.TabIndex = 4;
             // 
             // dateTimePicker_Hasta
             // 
-            this.dateTimePicker_Hasta.Location = new System.Drawing.Point(200, 36);
+            this.dateTimePicker_Hasta.Location = new System.Drawing.Point(196, 51);
             this.dateTimePicker_Hasta.Name = "dateTimePicker_Hasta";
             this.dateTimePicker_Hasta.Size = new System.Drawing.Size(127, 20);
             this.dateTimePicker_Hasta.TabIndex = 5;
             // 
             // button_FiltrarFecha
             // 
-            this.button_FiltrarFecha.Location = new System.Drawing.Point(41, 83);
+            this.button_FiltrarFecha.Location = new System.Drawing.Point(37, 88);
             this.button_FiltrarFecha.Name = "button_FiltrarFecha";
             this.button_FiltrarFecha.Size = new System.Drawing.Size(108, 23);
             this.button_FiltrarFecha.TabIndex = 6;
@@ -104,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 20);
+            this.label2.Location = new System.Drawing.Point(34, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 7;
@@ -113,17 +114,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(197, 20);
+            this.label3.Location = new System.Drawing.Point(193, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Hasta:";
+            // 
+            // label_CantidadVentas
+            // 
+            this.label_CantidadVentas.AutoSize = true;
+            this.label_CantidadVentas.Location = new System.Drawing.Point(40, 357);
+            this.label_CantidadVentas.Name = "label_CantidadVentas";
+            this.label_CantidadVentas.Size = new System.Drawing.Size(0, 13);
+            this.label_CantidadVentas.TabIndex = 9;
             // 
             // FrmListadoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 396);
+            this.Controls.Add(this.label_CantidadVentas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button_FiltrarFecha);
@@ -153,5 +163,6 @@
         private System.Windows.Forms.Button button_FiltrarFecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_CantidadVentas;
     }
 }

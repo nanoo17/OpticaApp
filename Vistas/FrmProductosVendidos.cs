@@ -33,13 +33,17 @@ namespace Vistas
         {
             string dniCliente = comboBox_Clientes.SelectedValue.ToString();
 
-            dataGridView_Productos.DataSource = TrabajarProducto.obtenerProductosVendidosPorCliente(dniCliente);
+            DataTable dt = TrabajarProducto.obtenerProductosVendidosPorCliente(dniCliente);
+
+            dataGridView_Productos.DataSource = dt;
             dataGridView_Productos.Columns[0].HeaderText = "Dni Cliente";
             dataGridView_Productos.Columns[1].HeaderText = "Nombre Cliente";
             dataGridView_Productos.Columns[2].HeaderText = "Apellido Cliente";
             dataGridView_Productos.Columns[3].HeaderText = "Categoria Producto";
             dataGridView_Productos.Columns[4].HeaderText = "Descripcion Producto";
             dataGridView_Productos.Columns[5].HeaderText = "Fecha de Venta";
+
+            label_ProductosVendidos.Text = "Cantidad de productos vendidos por este cliente: " + dt.Rows.Count + " Productos";
         }
 
         private void button_FiltrarFecha_Click(object sender, EventArgs e)
@@ -47,13 +51,17 @@ namespace Vistas
             DateTime desde = dateTimePicker_Desde.Value;
             DateTime hasta = dateTimePicker_Hasta.Value;
 
-            dataGridView_Productos.DataSource = TrabajarProducto.obtenterProductosPorFecha(desde, hasta);
+            DataTable dt = TrabajarProducto.obtenterProductosPorFecha(desde, hasta);
+
+            dataGridView_Productos.DataSource = dt;
             dataGridView_Productos.Columns[0].HeaderText = "Dni Cliente";
             dataGridView_Productos.Columns[1].HeaderText = "Nombre Cliente";
             dataGridView_Productos.Columns[2].HeaderText = "Apellido Cliente";
             dataGridView_Productos.Columns[3].HeaderText = "Categoria Producto";
             dataGridView_Productos.Columns[4].HeaderText = "Descripcion Producto";
             dataGridView_Productos.Columns[5].HeaderText = "Fecha de Venta";
+
+            label_ProductosVendidos.Text = "Cantidad de productos vendidos en este rango de fechas: " + dt.Rows.Count + " Productos";
         }
     }
 }
