@@ -22,6 +22,18 @@ namespace Vistas
         {
             cargarComboClientes();
             cargarProductosGrid();
+            cargarDataGridDetallesVenta();
+        }
+
+        // cargarDataGrid detallesVenta
+        private void cargarDataGridDetallesVenta()
+        {
+            dataGridView_DetallesVenta.DataSource = new List<VentaDetalleGrid>();
+            dataGridView_DetallesVenta.Columns[0].HeaderText = "Cantidad";
+            dataGridView_DetallesVenta.Columns[1].HeaderText = "Precio";
+            dataGridView_DetallesVenta.Columns[2].HeaderText = "Total";
+            dataGridView_DetallesVenta.Columns[3].HeaderText = "Codigo del producto";
+            dataGridView_DetallesVenta.Columns[4].HeaderText = "ID";
         }
 
         // Cargar el comboBox de clientes
@@ -60,6 +72,11 @@ namespace Vistas
         {
             dataGridView_DetallesVenta.DataSource = null;
             dataGridView_DetallesVenta.DataSource = detallesCargados;
+            dataGridView_DetallesVenta.Columns[0].HeaderText = "Cantidad";
+            dataGridView_DetallesVenta.Columns[1].HeaderText = "Precio";
+            dataGridView_DetallesVenta.Columns[2].HeaderText = "Total";
+            dataGridView_DetallesVenta.Columns[3].HeaderText = "Codigo del producto";
+            dataGridView_DetallesVenta.Columns[4].HeaderText = "ID";
 
             if (detallesCargados.Count == 0) 
             {
@@ -117,6 +134,15 @@ namespace Vistas
 
                     TrabajarVenta.insertarVentaDetalle(nuevaVentaDetalle);
                 }
+
+                cargarDataGridDetallesVenta();
+
+                // resetear los valores de detalles
+                textBox_IdDetalle.Text = "0";
+                textBox_CodigoProd.Text = "";
+                textBox_Precio.Text = "";
+                textBox_Cantidad.Text = "";
+                textBox_Total.Text = "";
 
                 string mensajeExito = "***La venta fue guardada con exito***"
                    + "\nNro de la venta: " + ventaNro
