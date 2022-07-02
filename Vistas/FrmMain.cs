@@ -86,6 +86,12 @@ namespace Vistas
             Form FrmProductosVendidos = new FrmProductosVendidos();
             FrmProductosVendidos.Show();
         }
+
+        private void listadoClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form FrmListadoClientes = new FrmListadoClientes();
+            FrmListadoClientes.Show();
+        }
         
     }
 }

@@ -47,10 +47,10 @@ namespace Vistas
             // Deshabilitar los botones de busqueda, modificar y eliminar si no hay registros
             if (dtClientes.Rows.Count == 0)
             {
-                button_Buscar.Enabled = false;
+               // button_Buscar.Enabled = false;
                 button_Eliminar.Enabled = false;
                 button_modificar.Enabled = false;
-                textBox_BuscarApellido.Enabled = false;
+                //textBox_BuscarApellido.Enabled = false;
             }
         }
 
@@ -135,14 +135,6 @@ namespace Vistas
             }
         }
 
-        // Busqueda con dos campos
-        private void button_Buscar_Click(object sender, EventArgs e)
-        {
-            string busqueda = textBox_BuscarApellido.Text.Trim();
-         
-            dataGridView_Cliente.DataSource = TrabajarCliente.buscarClientes(busqueda);
-        }
-
         // Llenar el formulario cuando seleccionamos una celda
         private void dataGridView_Cliente_CurrentCellChanged(object sender, EventArgs e)
         {
@@ -192,8 +184,8 @@ namespace Vistas
             {
                 button_modificar.Enabled = false;
                 button_Eliminar.Enabled = false;
-                button_Buscar.Enabled = false;
-                textBox_BuscarApellido.Enabled = false;
+                //button_Buscar.Enabled = false;
+                //textBox_BuscarApellido.Enabled = false;
             }
 
             llenarFormulario();
@@ -203,11 +195,11 @@ namespace Vistas
         private void cambiarEstadoDeControles(bool estado)
         {
             // botones de búsqueda, eliminar, nuevo cliente y grid de clientes
-            button_Buscar.Enabled = estado;
+            //button_Buscar.Enabled = estado;
             button_Eliminar.Enabled = estado;
             button_NuevoCliente.Enabled = estado;
             dataGridView_Cliente.Enabled = estado;
-            textBox_BuscarApellido.Enabled = estado;
+           // textBox_BuscarApellido.Enabled = estado;
 
             // Estado distinto
             textBox_Dni.Enabled = !estado;
@@ -275,25 +267,6 @@ namespace Vistas
             }
         }
 
-        private void button_Ordenar_Click(object sender, EventArgs e)
-        {
-            dataGridView_Cliente.Columns["Cli_DNI"].DisplayIndex = 0;
-            dataGridView_Cliente.Columns["Cli_Nombre"].DisplayIndex = 1;
-            dataGridView_Cliente.Columns["Cli_Apellido"].DisplayIndex = 2;
-            dataGridView_Cliente.Columns["Cli_Direccion"].DisplayIndex = 3;
-            dataGridView_Cliente.Columns["OS_CUIT"].DisplayIndex = 4;
-            dataGridView_Cliente.Columns["Cli_NroCarnet"].DisplayIndex = 5;
-            DataTable dtClientes = TrabajarCliente.obtenerClientes();
-            dataGridView_Cliente.DataSource = dtClientes;
-        }
-
-        private void button_OrdenarApellido_Click(object sender, EventArgs e)
-        {
-            dataGridView_Cliente.Columns["Cli_Apellido"].DisplayIndex = 0;
-            dataGridView_Cliente.Columns["Cli_Nombre"].DisplayIndex = 1;
-            dataGridView_Cliente.Columns["Cli_DNI"].DisplayIndex = 2;
-            DataTable dtClientes = TrabajarCliente.ordenarClientesApellido();
-            dataGridView_Cliente.DataSource = dtClientes;
-        }
+        
     }
 }

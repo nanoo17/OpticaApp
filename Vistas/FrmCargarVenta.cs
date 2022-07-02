@@ -226,15 +226,25 @@ namespace Vistas
             {
                 Random rnd = new Random();
                 // Llenar el obj
-                nuevaVentaDetalle.Id = rnd.Next();
-                nuevaVentaDetalle.Prod_Codigo = textBox_CodigoProd.Text;
-                nuevaVentaDetalle.Det_Precio = Decimal.Parse(textBox_Precio.Text);
-                nuevaVentaDetalle.Det_Total = Decimal.Parse(textBox_Total.Text);
-                nuevaVentaDetalle.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+                
+                try
+                {
+                    nuevaVentaDetalle.Id = rnd.Next();
+                    nuevaVentaDetalle.Prod_Codigo = textBox_CodigoProd.Text;
+                    nuevaVentaDetalle.Det_Precio = Decimal.Parse(textBox_Precio.Text);
+                    nuevaVentaDetalle.Det_Total = Decimal.Parse(textBox_Total.Text);
+                    nuevaVentaDetalle.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+                    // Agregar al array
+                    detallesCargados.Add(nuevaVentaDetalle);
 
-                // Agregar al array
-                detallesCargados.Add(nuevaVentaDetalle);
+                }
+                catch {
+                    MessageBox.Show("Error en la carga del detalle, falta una cantidad");
+                    //MessageBox.Show(err.ToString());
+                }
+                
 
+                
                 // Recargar el grid
                 cargarDetallesGrid();
                 return;

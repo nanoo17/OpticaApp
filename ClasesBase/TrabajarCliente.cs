@@ -109,7 +109,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Cliente WHERE Cli_DNI LIKE @busqueda OR Cli_Apellido LIKE @busqueda";
+            cmd.CommandText = "SELECT * FROM Cliente WHERE Cli_DNI LIKE @busqueda OR Cli_Nombre +' ' + Cli_Apellido LIKE @busqueda";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 

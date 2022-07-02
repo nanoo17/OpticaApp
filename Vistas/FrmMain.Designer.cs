@@ -43,6 +43,7 @@
             this.gestionarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_Salir = new System.Windows.Forms.Button();
+            this.listadoClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +94,8 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarClientesToolStripMenuItem});
+            this.modificarClientesToolStripMenuItem,
+            this.listadoClientesToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -164,6 +166,13 @@
             this.button_Salir.UseVisualStyleBackColor = false;
             this.button_Salir.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listadoClientesToolStripMenuItem
+            // 
+            this.listadoClientesToolStripMenuItem.Name = "listadoClientesToolStripMenuItem";
+            this.listadoClientesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.listadoClientesToolStripMenuItem.Text = "Listado Clientes";
+            this.listadoClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoClientesToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +208,7 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosVendidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoClientesToolStripMenuItem;
     }
 }
 
