@@ -23,12 +23,15 @@ namespace Vistas
             cargarVentas();
             cargarComboClientes();
         }
-        private void cargarVentas() { 
-            dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentas();
+        private void cargarVentas() {
+            DataTable dt = TrabajarVenta.obtenerVentas();
+            dataGridView_Listado.DataSource = dt;
             dataGridView_Listado.Columns[0].HeaderText = "Número de Venta";
             dataGridView_Listado.Columns[1].HeaderText = "Nombre del Cliente";
             dataGridView_Listado.Columns[2].HeaderText = "Apellido del Cliente";
             dataGridView_Listado.Columns[3].HeaderText = "Fecha de la Venta";
+            label_CantidadVentas.Text = "Cantidad total de ventas: " + dt.Rows.Count + " Ventas";
+
         }
 
    
@@ -50,7 +53,9 @@ namespace Vistas
             }
             else if (cliente.Trim() != "")
             {
-                dataGridView_Listado.DataSource = TrabajarVenta.obtenerVentasCliente(cliente);
+                DataTable dt = TrabajarVenta.obtenerVentasCliente(cliente);
+                dataGridView_Listado.DataSource = dt;
+                label_CantidadVentas.Text = "Cantidad de ventas realizadas por este cliente: " + dt.Rows.Count + " Ventas";
             }
             else
             {
@@ -63,7 +68,11 @@ namespace Vistas
             DateTime desde = dateTimePicker_Desde.Value;
             DateTime hasta = dateTimePicker_Hasta.Value;
 
-            dataGridView_Listado.DataSource = TrabajarVenta.obtenterVentasPorFecha(desde, hasta);
+            DataTable dt = TrabajarVenta.obtenterVentasPorFecha(desde, hasta);
+
+            dataGridView_Listado.DataSource = dt;
+
+            label_CantidadVentas.Text = "Cantidad de ventas realizadas en este rango de fechas es: " + dt.Rows.Count + " Ventas";
         }
     }
 }

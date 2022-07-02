@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="Vistas.exe" version="1.0.0.0" publicKeyToken="4db1ef9ef110ca0c" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Vistas" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="Vistas.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClasesBase.dll" size="27648">
+      <assemblyIdentity name="ClasesBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ue1jYW9D7toPYwzCFXGSOehiipY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="290816">
+      <assemblyIdentity name="Vistas" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>/yBjD9yuQk9mBJu+178hLMylqvw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Vistas.exe.config" size="514">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IZ+y1KnnEsP6uVIUboRBo3nbLaA=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=admin-PC\admin" issuerKeyHash="d179502218846e0cc114c8d1d243e3106824b39b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>uYIOdab695Ny6wS4DPqBbejLoDY=</DigestValue></Reference></SignedInfo><SignatureValue>wKy24DJVSHvVka/DQncsGNacXWxKPluX3mruLeKB0Mn91RiOInxy2T6y0WEOhtEyYVE9sRLmMWg0gOuUjsEBPqn9Y+pwErsjx4M3tr7dJ67q918ejeClYKTLYHTjphsZrW4VkLpOcVFoOQFGJRjlF5O/GzjkcZZqYuCBL7m/jUU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yTs9hn7WW2zkd/vfqK7x57/2ZrfJRps+O/kf0YOaV1JUSONF13PMb0ivSyDpzByQ/E6+sqTIveBTn/5Omt5KuETiYDa4IaUQgasFIASdMcTCSa8to8v0leI5NzXQWQLegWQxwjw+SCDF6gDssPnfRQHFA6o43zHxX+oJDzs3n/k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="36a0cbe86d81fa0cb804eb7293f7faa6750e82b9" Description="" Url=""><as:assemblyIdentity name="Vistas.exe" version="1.0.0.0" publicKeyToken="4db1ef9ef110ca0c" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=admin-PC\admin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>82X0YP04rfE5mwoJ1JSChoIbJlc=</DigestValue></Reference></SignedInfo><SignatureValue>WIzUkfwHjNqqfp6986UZ765eN/l6NZx/lab5lpBVxNVvkLr4G7KfA7BgkF8FqkZ7dlw/dxIKTQwVEvBAzb6KRbbqDYRfs+DQBET/UtX7CmG9E0MDGhRRwsPS0LJoKYTJHqU7CeG35GebtPZQi1NVNR556equW+//S9mgtlc4+GU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yTs9hn7WW2zkd/vfqK7x57/2ZrfJRps+O/kf0YOaV1JUSONF13PMb0ivSyDpzByQ/E6+sqTIveBTn/5Omt5KuETiYDa4IaUQgasFIASdMcTCSa8to8v0leI5NzXQWQLegWQxwjw+SCDF6gDssPnfRQHFA6o43zHxX+oJDzs3n/k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQaFWL7wIM6ptOHroLEgHsszANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwAYQBkAG0AaQBuAC0AUABDAFwAYQBkAG0AaQBuMB4XDTIyMDYxMzAzMzA0MloXDTIzMDYxMzA5MzA0MlowJzElMCMGA1UEAx4cAGEAZABtAGkAbgAtAFAAQwBcAGEAZABtAGkAbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAyTs9hn7WW2zkd/vfqK7x57/2ZrfJRps+O/kf0YOaV1JUSONF13PMb0ivSyDpzByQ/E6+sqTIveBTn/5Omt5KuETiYDa4IaUQgasFIASdMcTCSa8to8v0leI5NzXQWQLegWQxwjw+SCDF6gDssPnfRQHFA6o43zHxX+oJDzs3n/kCAwEAATANBgkqhkiG9w0BAQUFAAOBgQBNL7zpIL1q27g6YixRAxCUkEcvD+hXRHu0p69GGZIM23KSKexE4THL4DER3vAhtnB/dSay2mLEESny6BQut0onQ2ThiUfc8yELzM6Pu5SCokwYLZ3nFYgp/zJ5r/c1m1a/WbkUrzenatlvUmoVrDlxUML5WdkLI1AgChtLJuEiUw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -29,49 +29,44 @@
         private void InitializeComponent()
         {
             this.comboBox_Clientes = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView_Productos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button_FiltrarFecha = new System.Windows.Forms.Button();
             this.dateTimePicker_Hasta = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Desde = new System.Windows.Forms.DateTimePicker();
+            this.label_ProductosVendidos = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Productos)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox_Clientes
             // 
             this.comboBox_Clientes.FormattingEnabled = true;
-            this.comboBox_Clientes.Location = new System.Drawing.Point(424, 42);
+            this.comboBox_Clientes.Location = new System.Drawing.Point(6, 19);
             this.comboBox_Clientes.Name = "comboBox_Clientes";
-            this.comboBox_Clientes.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Clientes.Size = new System.Drawing.Size(123, 21);
             this.comboBox_Clientes.TabIndex = 21;
             this.comboBox_Clientes.SelectionChangeCommitted += new System.EventHandler(this.comboBox_Clientes_SelectionChangeCommitted);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(421, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 13);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Filtrar Productos Vendidos por Cliente:";
             // 
             // dataGridView_Productos
             // 
             this.dataGridView_Productos.AllowUserToAddRows = false;
             this.dataGridView_Productos.AllowUserToDeleteRows = false;
             this.dataGridView_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Productos.Location = new System.Drawing.Point(34, 147);
+            this.dataGridView_Productos.Location = new System.Drawing.Point(32, 214);
             this.dataGridView_Productos.Name = "dataGridView_Productos";
             this.dataGridView_Productos.ReadOnly = true;
-            this.dataGridView_Productos.Size = new System.Drawing.Size(537, 233);
+            this.dataGridView_Productos.Size = new System.Drawing.Size(559, 196);
             this.dataGridView_Productos.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(179, 19);
+            this.label3.Location = new System.Drawing.Point(6, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 26;
@@ -80,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 19);
+            this.label2.Location = new System.Drawing.Point(6, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 25;
@@ -88,7 +83,7 @@
             // 
             // button_FiltrarFecha
             // 
-            this.button_FiltrarFecha.Location = new System.Drawing.Point(23, 82);
+            this.button_FiltrarFecha.Location = new System.Drawing.Point(6, 145);
             this.button_FiltrarFecha.Name = "button_FiltrarFecha";
             this.button_FiltrarFecha.Size = new System.Drawing.Size(108, 23);
             this.button_FiltrarFecha.TabIndex = 24;
@@ -98,35 +93,67 @@
             // 
             // dateTimePicker_Hasta
             // 
-            this.dateTimePicker_Hasta.Location = new System.Drawing.Point(182, 35);
+            this.dateTimePicker_Hasta.Location = new System.Drawing.Point(6, 99);
             this.dateTimePicker_Hasta.Name = "dateTimePicker_Hasta";
-            this.dateTimePicker_Hasta.Size = new System.Drawing.Size(127, 20);
+            this.dateTimePicker_Hasta.Size = new System.Drawing.Size(147, 20);
             this.dateTimePicker_Hasta.TabIndex = 23;
             // 
             // dateTimePicker_Desde
             // 
-            this.dateTimePicker_Desde.Location = new System.Drawing.Point(23, 35);
+            this.dateTimePicker_Desde.Location = new System.Drawing.Point(6, 51);
             this.dateTimePicker_Desde.Name = "dateTimePicker_Desde";
-            this.dateTimePicker_Desde.Size = new System.Drawing.Size(127, 20);
+            this.dateTimePicker_Desde.Size = new System.Drawing.Size(147, 20);
             this.dateTimePicker_Desde.TabIndex = 22;
+            // 
+            // label_ProductosVendidos
+            // 
+            this.label_ProductosVendidos.AutoSize = true;
+            this.label_ProductosVendidos.Location = new System.Drawing.Point(29, 413);
+            this.label_ProductosVendidos.Name = "label_ProductosVendidos";
+            this.label_ProductosVendidos.Size = new System.Drawing.Size(49, 13);
+            this.label_ProductosVendidos.TabIndex = 27;
+            this.label_ProductosVendidos.Text = "Cantidad";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateTimePicker_Hasta);
+            this.groupBox1.Controls.Add(this.button_FiltrarFecha);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dateTimePicker_Desde);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(32, 22);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 174);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar por fechas";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBox_Clientes);
+            this.groupBox2.Location = new System.Drawing.Point(311, 22);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(150, 85);
+            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filtrar por clientes";
             // 
             // FrmProductosVendidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 392);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button_FiltrarFecha);
-            this.Controls.Add(this.dateTimePicker_Hasta);
-            this.Controls.Add(this.dateTimePicker_Desde);
-            this.Controls.Add(this.comboBox_Clientes);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(628, 451);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label_ProductosVendidos);
             this.Controls.Add(this.dataGridView_Productos);
             this.Name = "FrmProductosVendidos";
             this.Text = "FrmProductosVendidos";
             this.Load += new System.EventHandler(this.FrmProductosVendidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Productos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,12 +162,14 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox_Clientes;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView_Productos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_FiltrarFecha;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Hasta;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Desde;
+        private System.Windows.Forms.Label label_ProductosVendidos;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
