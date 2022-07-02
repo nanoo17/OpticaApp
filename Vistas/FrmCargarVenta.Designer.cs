@@ -49,6 +49,10 @@
             this.label_IdDetalle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txt_Buscar = new System.Windows.Forms.TextBox();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_nuevoCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Producto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetallesVenta)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +60,7 @@
             // label_Cliente
             // 
             this.label_Cliente.AutoSize = true;
-            this.label_Cliente.Location = new System.Drawing.Point(585, 37);
+            this.label_Cliente.Location = new System.Drawing.Point(563, 100);
             this.label_Cliente.Name = "label_Cliente";
             this.label_Cliente.Size = new System.Drawing.Size(39, 13);
             this.label_Cliente.TabIndex = 1;
@@ -65,7 +69,7 @@
             // label_FechaVenta
             // 
             this.label_FechaVenta.AutoSize = true;
-            this.label_FechaVenta.Location = new System.Drawing.Point(584, 62);
+            this.label_FechaVenta.Location = new System.Drawing.Point(563, 136);
             this.label_FechaVenta.Name = "label_FechaVenta";
             this.label_FechaVenta.Size = new System.Drawing.Size(83, 13);
             this.label_FechaVenta.TabIndex = 2;
@@ -74,21 +78,21 @@
             // comboBox_Cliente
             // 
             this.comboBox_Cliente.FormattingEnabled = true;
-            this.comboBox_Cliente.Location = new System.Drawing.Point(679, 29);
+            this.comboBox_Cliente.Location = new System.Drawing.Point(608, 97);
             this.comboBox_Cliente.Name = "comboBox_Cliente";
-            this.comboBox_Cliente.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Cliente.Size = new System.Drawing.Size(181, 21);
             this.comboBox_Cliente.TabIndex = 3;
             // 
             // dateTimePicker_FechaVenta
             // 
-            this.dateTimePicker_FechaVenta.Location = new System.Drawing.Point(679, 56);
+            this.dateTimePicker_FechaVenta.Location = new System.Drawing.Point(669, 136);
             this.dateTimePicker_FechaVenta.Name = "dateTimePicker_FechaVenta";
             this.dateTimePicker_FechaVenta.Size = new System.Drawing.Size(120, 20);
             this.dateTimePicker_FechaVenta.TabIndex = 5;
             // 
             // button_Guardar
             // 
-            this.button_Guardar.Location = new System.Drawing.Point(696, 108);
+            this.button_Guardar.Location = new System.Drawing.Point(674, 173);
             this.button_Guardar.Name = "button_Guardar";
             this.button_Guardar.Size = new System.Drawing.Size(103, 23);
             this.button_Guardar.TabIndex = 6;
@@ -241,11 +245,51 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Detalles:";
             // 
+            // txt_Buscar
+            // 
+            this.txt_Buscar.Location = new System.Drawing.Point(566, 62);
+            this.txt_Buscar.Name = "txt_Buscar";
+            this.txt_Buscar.Size = new System.Drawing.Size(128, 20);
+            this.txt_Buscar.TabIndex = 33;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(714, 62);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.TabIndex = 34;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(568, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 13);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Buscar Cliente especifico";
+            // 
+            // btn_nuevoCliente
+            // 
+            this.btn_nuevoCliente.Location = new System.Drawing.Point(703, 9);
+            this.btn_nuevoCliente.Name = "btn_nuevoCliente";
+            this.btn_nuevoCliente.Size = new System.Drawing.Size(86, 23);
+            this.btn_nuevoCliente.TabIndex = 36;
+            this.btn_nuevoCliente.Text = "Nuevo Cliente";
+            this.btn_nuevoCliente.UseVisualStyleBackColor = true;
+            this.btn_nuevoCliente.Click += new System.EventHandler(this.btn_nuevoCliente_Click);
+            // 
             // FrmCargarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 432);
+            this.Controls.Add(this.btn_nuevoCliente);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btn_buscar);
+            this.Controls.Add(this.txt_Buscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_IdDetalle);
@@ -300,5 +344,9 @@
         private System.Windows.Forms.Label label_IdDetalle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_Buscar;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_nuevoCliente;
     }
 }

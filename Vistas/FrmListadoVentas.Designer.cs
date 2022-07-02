@@ -38,6 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label_CantidadVentas = new System.Windows.Forms.Label();
+            this.lbl_kcyo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Listado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +53,7 @@
             this.dataGridView_Listado.Name = "dataGridView_Listado";
             this.dataGridView_Listado.Size = new System.Drawing.Size(568, 191);
             this.dataGridView_Listado.TabIndex = 0;
+            this.dataGridView_Listado.CurrentCellChanged += new System.EventHandler(this.dataGridView_Listado_CurrentCellChanged);
             // 
             // cmbCliente
             // 
@@ -123,16 +127,46 @@
             // label_CantidadVentas
             // 
             this.label_CantidadVentas.AutoSize = true;
-            this.label_CantidadVentas.Location = new System.Drawing.Point(40, 357);
+            this.label_CantidadVentas.Location = new System.Drawing.Point(34, 374);
             this.label_CantidadVentas.Name = "label_CantidadVentas";
             this.label_CantidadVentas.Size = new System.Drawing.Size(0, 13);
             this.label_CantidadVentas.TabIndex = 9;
+            // 
+            // lbl_kcyo
+            // 
+            this.lbl_kcyo.AutoSize = true;
+            this.lbl_kcyo.Location = new System.Drawing.Point(129, 343);
+            this.lbl_kcyo.Name = "lbl_kcyo";
+            this.lbl_kcyo.Size = new System.Drawing.Size(0, 13);
+            this.lbl_kcyo.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 343);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Número de venta:";
+            // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.Location = new System.Drawing.Point(205, 338);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(58, 22);
+            this.btn_Eliminar.TabIndex = 12;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // FrmListadoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 396);
+            this.ClientSize = new System.Drawing.Size(658, 406);
+            this.Controls.Add(this.btn_Eliminar);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_kcyo);
             this.Controls.Add(this.label_CantidadVentas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -164,5 +198,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_CantidadVentas;
+        private System.Windows.Forms.Label lbl_kcyo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_Eliminar;
     }
 }

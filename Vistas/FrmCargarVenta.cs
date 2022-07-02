@@ -39,9 +39,9 @@ namespace Vistas
         // Cargar el comboBox de clientes
         private void cargarComboClientes()
         {
-            DataTable dt = ClasesBase.TrabajarCliente.obtenerClientes();
+            DataTable dt = ClasesBase.TrabajarCliente.llenarCombo();
             comboBox_Cliente.DataSource = dt;
-            comboBox_Cliente.DisplayMember = "Cli_Nombre";
+            comboBox_Cliente.DisplayMember = "nombreCompleto";
             comboBox_Cliente.ValueMember = "cli_DNI";
 
             if (dt.Rows.Count == 0)
@@ -226,15 +226,25 @@ namespace Vistas
             {
                 Random rnd = new Random();
                 // Llenar el obj
-                nuevaVentaDetalle.Id = rnd.Next();
-                nuevaVentaDetalle.Prod_Codigo = textBox_CodigoProd.Text;
-                nuevaVentaDetalle.Det_Precio = Decimal.Parse(textBox_Precio.Text);
-                nuevaVentaDetalle.Det_Total = Decimal.Parse(textBox_Total.Text);
-                nuevaVentaDetalle.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+                
+                try
+                {
+                    nuevaVentaDetalle.Id = rnd.Next();
+                    nuevaVentaDetalle.Prod_Codigo = textBox_CodigoProd.Text;
+                    nuevaVentaDetalle.Det_Precio = Decimal.Parse(textBox_Precio.Text);
+                    nuevaVentaDetalle.Det_Total = Decimal.Parse(textBox_Total.Text);
+                    nuevaVentaDetalle.Det_Cantidad = Decimal.Parse(textBox_Cantidad.Text);
+                    // Agregar al array
+                    detallesCargados.Add(nuevaVentaDetalle);
 
-                // Agregar al array
-                detallesCargados.Add(nuevaVentaDetalle);
+                }
+                catch {
+                    MessageBox.Show("Error en la carga del detalle, falta una cantidad");
+                    //MessageBox.Show(err.ToString());
+                }
+                
 
+                
                 // Recargar el grid
                 cargarDetallesGrid();
                 return;
@@ -272,6 +282,32 @@ namespace Vistas
             removerDetalle();
             cargarDetallesGrid();
             textBox_IdDetalle.Text = "";
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == "")
+            {
+                cargarComboClientes();
+            }
+            else {
+                DataTable dt = ClasesBase.TrabajarCliente.llenarComboClientesBusqueda(txt_Buscar.Text);
+                comboBox_Cliente.DataSource = dt;
+                comboBox_Cliente.DisplayMember = "nombreCompleto";
+                comboBox_Cliente.ValueMember = "cli_DNI";
+
+                if (dt.Rows.Count == 0)
+                {
+                    button_Guardar.Enabled = false;
+                }
+            }
+        }
+
+        private void btn_nuevoCliente_Click(object sender, EventArgs e)
+        {
+            Form frmCliente = new FrmGestionClientes();
+            frmCliente.Show();
+
         }
 
     }
