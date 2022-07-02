@@ -141,5 +141,37 @@ namespace ClasesBase
 
             return dt;
         }
+        public static DataTable llenarComboClientesBusqueda(string busqueda)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI +' '+ Cli_Nombre+' '+Cli_Apellido as nombreCompleto , cli_DNI FROM Cliente WHERE Cli_DNI LIKE @busqueda OR Cli_Nombre +' ' + Cli_Apellido LIKE @busqueda";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@busqueda", "%" + busqueda + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+        public static DataTable llenarCombo() {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI +' '+ Cli_Nombre+' '+Cli_Apellido as nombreCompleto , cli_DNI FROM Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

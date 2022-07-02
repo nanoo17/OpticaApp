@@ -39,9 +39,9 @@ namespace Vistas
         // Cargar el comboBox de clientes
         private void cargarComboClientes()
         {
-            DataTable dt = ClasesBase.TrabajarCliente.obtenerClientes();
+            DataTable dt = ClasesBase.TrabajarCliente.llenarCombo();
             comboBox_Cliente.DataSource = dt;
-            comboBox_Cliente.DisplayMember = "Cli_Nombre";
+            comboBox_Cliente.DisplayMember = "nombreCompleto";
             comboBox_Cliente.ValueMember = "cli_DNI";
 
             if (dt.Rows.Count == 0)
@@ -282,6 +282,32 @@ namespace Vistas
             removerDetalle();
             cargarDetallesGrid();
             textBox_IdDetalle.Text = "";
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == "")
+            {
+                cargarComboClientes();
+            }
+            else {
+                DataTable dt = ClasesBase.TrabajarCliente.llenarComboClientesBusqueda(txt_Buscar.Text);
+                comboBox_Cliente.DataSource = dt;
+                comboBox_Cliente.DisplayMember = "nombreCompleto";
+                comboBox_Cliente.ValueMember = "cli_DNI";
+
+                if (dt.Rows.Count == 0)
+                {
+                    button_Guardar.Enabled = false;
+                }
+            }
+        }
+
+        private void btn_nuevoCliente_Click(object sender, EventArgs e)
+        {
+            Form frmCliente = new FrmGestionClientes();
+            frmCliente.Show();
+
         }
 
     }
