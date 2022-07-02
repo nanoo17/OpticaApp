@@ -127,5 +127,25 @@ namespace ClasesBase
 
             return dt;
         }
+
+        public static void eliminarVenta(int nro)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "eliminar_venta";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            // Paramatros
+            cmd.Parameters.AddWithValue("@numero", nro);
+
+            // Ejecutar la query
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+
+
     }
 }

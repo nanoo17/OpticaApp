@@ -74,5 +74,48 @@ namespace Vistas
 
             label_CantidadVentas.Text = "Cantidad de ventas realizadas en este rango de fechas es: " + dt.Rows.Count + " Ventas";
         }
+
+        private void dataGridView_Listado_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_Listado.CurrentRow != null) {
+                DataGridViewRow currentRow = dataGridView_Listado.CurrentRow;
+                lbl_kcyo.Text = currentRow.Cells["Ven_Nro"].Value.ToString();
+            }
+            
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            if (lbl_kcyo.Text != null)
+            {
+                // Parametros del messageBox
+                string mensaje = "¿Está seguro de eliminar la venta?";
+                string titulo = "Eliminar Venta";
+                MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                MessageBoxIcon icono = MessageBoxIcon.Question;
+
+                // Mostrar messageBox de confirmación
+                DialogResult resultado = MessageBox.Show(mensaje, titulo, botones, icono);
+
+                // Verificar el resultado del messageBox
+                if (resultado == DialogResult.No) return;
+                int nro = Convert.ToInt32(lbl_kcyo.Text);
+                try
+                {
+                    TrabajarVenta.eliminarVenta(nro);
+                    string mensajeExito = "La venta fue eliminada con exito";
+                    MessageBox.Show(mensajeExito, titulo);
+
+                    // Recargar la ventana
+                    cargarVentas();
+                }
+                catch
+                //(Exception err)
+                {
+                    MessageBox.Show("No se puede eliminar la venta", titulo);
+                    //MessageBox.Show(err.ToString(), titulo);
+                }
+            }
+        }
     }
 }
