@@ -34,17 +34,34 @@ namespace Vistas
                 MessageBox.Show("La operación fue cancelada", titulo);
                 return;
             }
+            if (textBox_cuit.Text == "" || textBox_direccion.Text == "" || textBox_telefono.Text == "" || textBox_razonSocial.Text == "") {
+                MessageBox.Show("Faltan campos por completar", titulo);
+                return;
+            }
             string os_cuit = textBox_cuit.Text;
             string os_razonSocial = textBox_razonSocial.Text;
             string os_telefono = textBox_telefono.Text;
             string os_direccion = textBox_direccion.Text;
             ObraSocial obra = new ObraSocial(os_cuit,os_razonSocial,os_telefono,os_direccion);
-            string mensajeExito = "La Obra Social fue creada con exito"
+            try {
+
+                TrabajarObraSocial.cargarObraSocial(obra);
+                string mensajeExito = "La Obra Social fue creada con exito"
                 + "\n CUIT: " + obra.OS_CUIT1
                 + "\n Razon Social: " + obra.OS_RazonSocial1
                 + "\n Telefono: " + obra.OS_Telefono1
                 + "\n Direccion: " + obra.OS_Direccion1;
-            MessageBox.Show(mensajeExito, titulo);
+                MessageBox.Show(mensajeExito, titulo);
+
+                textBox_cuit.Text = "";
+                textBox_razonSocial.Text = "";
+                textBox_telefono.Text = "";
+                textBox_direccion.Text = "";
+            }
+            catch {
+                MessageBox.Show("error en la carga");
+            }
+            
         }
     }
 }

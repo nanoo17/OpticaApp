@@ -97,11 +97,11 @@
             // label_cuit
             // 
             this.label_cuit.AutoSize = true;
-            this.label_cuit.Location = new System.Drawing.Point(480, 225);
+            this.label_cuit.Location = new System.Drawing.Point(467, 228);
             this.label_cuit.Name = "label_cuit";
-            this.label_cuit.Size = new System.Drawing.Size(43, 13);
+            this.label_cuit.Size = new System.Drawing.Size(88, 13);
             this.label_cuit.TabIndex = 5;
-            this.label_cuit.Text = "OS Cuit";
+            this.label_cuit.Text = "OS Razon Social";
             // 
             // label_carnet
             // 
