@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarObraSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,8 +41,10 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_Salir = new System.Windows.Forms.Button();
+            this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarObraSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verObrasSocialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button_Salir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,22 +61,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(763, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // sistemaToolStripMenuItem
-            // 
-            this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarObraSocialToolStripMenuItem,
-            this.verObrasSocialesToolStripMenuItem});
-            this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.sistemaToolStripMenuItem.Text = "Obra Social";
-            // 
-            // registrarObraSocialToolStripMenuItem
-            // 
-            this.registrarObraSocialToolStripMenuItem.Name = "registrarObraSocialToolStripMenuItem";
-            this.registrarObraSocialToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.registrarObraSocialToolStripMenuItem.Text = "Registrar Obra Social";
-            this.registrarObraSocialToolStripMenuItem.Click += new System.EventHandler(this.registrarObraSocialToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -162,18 +146,21 @@
             this.productosVendidosToolStripMenuItem.Text = "Productos Vendidos";
             this.productosVendidosToolStripMenuItem.Click += new System.EventHandler(this.productosVendidosToolStripMenuItem_Click);
             // 
-            // button_Salir
+            // sistemaToolStripMenuItem
             // 
-            this.button_Salir.BackColor = System.Drawing.Color.Red;
-            this.button_Salir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Salir.ForeColor = System.Drawing.Color.Black;
-            this.button_Salir.Location = new System.Drawing.Point(684, 27);
-            this.button_Salir.Name = "button_Salir";
-            this.button_Salir.Size = new System.Drawing.Size(79, 31);
-            this.button_Salir.TabIndex = 1;
-            this.button_Salir.Text = "Salir";
-            this.button_Salir.UseVisualStyleBackColor = false;
-            this.button_Salir.Click += new System.EventHandler(this.button1_Click);
+            this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarObraSocialToolStripMenuItem,
+            this.verObrasSocialesToolStripMenuItem});
+            this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.sistemaToolStripMenuItem.Text = "Obra Social";
+            // 
+            // registrarObraSocialToolStripMenuItem
+            // 
+            this.registrarObraSocialToolStripMenuItem.Name = "registrarObraSocialToolStripMenuItem";
+            this.registrarObraSocialToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.registrarObraSocialToolStripMenuItem.Text = "Registrar Obra Social";
+            this.registrarObraSocialToolStripMenuItem.Click += new System.EventHandler(this.registrarObraSocialToolStripMenuItem_Click);
             // 
             // verObrasSocialesToolStripMenuItem
             // 
@@ -181,6 +168,22 @@
             this.verObrasSocialesToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.verObrasSocialesToolStripMenuItem.Text = "Ver Obras Sociales";
             this.verObrasSocialesToolStripMenuItem.Click += new System.EventHandler(this.verObrasSocialesToolStripMenuItem_Click);
+            // 
+            // button_Salir
+            // 
+            this.button_Salir.BackColor = System.Drawing.Color.Firebrick;
+            this.button_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.button_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Salir.ForeColor = System.Drawing.Color.Silver;
+            this.button_Salir.Location = new System.Drawing.Point(672, 27);
+            this.button_Salir.Name = "button_Salir";
+            this.button_Salir.Size = new System.Drawing.Size(79, 31);
+            this.button_Salir.TabIndex = 1;
+            this.button_Salir.Text = "Salir";
+            this.button_Salir.UseVisualStyleBackColor = false;
+            this.button_Salir.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMain
             // 

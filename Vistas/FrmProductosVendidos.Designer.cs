@@ -45,6 +45,7 @@
             // 
             // comboBox_Clientes
             // 
+            this.comboBox_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox_Clientes.FormattingEnabled = true;
             this.comboBox_Clientes.Location = new System.Drawing.Point(6, 19);
             this.comboBox_Clientes.Name = "comboBox_Clientes";
@@ -56,6 +57,7 @@
             // 
             this.dataGridView_Productos.AllowUserToAddRows = false;
             this.dataGridView_Productos.AllowUserToDeleteRows = false;
+            this.dataGridView_Productos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Productos.Location = new System.Drawing.Point(32, 214);
             this.dataGridView_Productos.Name = "dataGridView_Productos";
@@ -83,12 +85,16 @@
             // 
             // button_FiltrarFecha
             // 
-            this.button_FiltrarFecha.Location = new System.Drawing.Point(6, 145);
+            this.button_FiltrarFecha.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_FiltrarFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_FiltrarFecha.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_FiltrarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_FiltrarFecha.Location = new System.Drawing.Point(6, 139);
             this.button_FiltrarFecha.Name = "button_FiltrarFecha";
-            this.button_FiltrarFecha.Size = new System.Drawing.Size(108, 23);
+            this.button_FiltrarFecha.Size = new System.Drawing.Size(111, 29);
             this.button_FiltrarFecha.TabIndex = 24;
             this.button_FiltrarFecha.Text = "Filtrar por Fecha";
-            this.button_FiltrarFecha.UseVisualStyleBackColor = true;
+            this.button_FiltrarFecha.UseVisualStyleBackColor = false;
             this.button_FiltrarFecha.Click += new System.EventHandler(this.button_FiltrarFecha_Click);
             // 
             // dateTimePicker_Hasta

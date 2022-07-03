@@ -48,6 +48,7 @@
             // 
             this.dataGridView_Listado.AllowUserToAddRows = false;
             this.dataGridView_Listado.AllowUserToDeleteRows = false;
+            this.dataGridView_Listado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Listado.Location = new System.Drawing.Point(37, 129);
             this.dataGridView_Listado.Name = "dataGridView_Listado";
@@ -57,6 +58,7 @@
             // 
             // cmbCliente
             // 
+            this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(488, 51);
             this.cmbCliente.Name = "cmbCliente";
@@ -98,12 +100,16 @@
             // 
             // button_FiltrarFecha
             // 
+            this.button_FiltrarFecha.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_FiltrarFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_FiltrarFecha.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_FiltrarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_FiltrarFecha.Location = new System.Drawing.Point(37, 88);
             this.button_FiltrarFecha.Name = "button_FiltrarFecha";
-            this.button_FiltrarFecha.Size = new System.Drawing.Size(108, 23);
+            this.button_FiltrarFecha.Size = new System.Drawing.Size(111, 29);
             this.button_FiltrarFecha.TabIndex = 6;
             this.button_FiltrarFecha.Text = "Filtrar por Fecha";
-            this.button_FiltrarFecha.UseVisualStyleBackColor = true;
+            this.button_FiltrarFecha.UseVisualStyleBackColor = false;
             this.button_FiltrarFecha.Click += new System.EventHandler(this.button_FiltrarFecha_Click);
             // 
             // label2
@@ -151,12 +157,16 @@
             // 
             // btn_Eliminar
             // 
+            this.btn_Eliminar.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Eliminar.Location = new System.Drawing.Point(205, 338);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(58, 22);
+            this.btn_Eliminar.Size = new System.Drawing.Size(111, 29);
             this.btn_Eliminar.TabIndex = 12;
             this.btn_Eliminar.Text = "Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // FrmListadoVentas

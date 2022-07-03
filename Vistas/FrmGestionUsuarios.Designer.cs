@@ -58,12 +58,16 @@
             // 
             // button1_Guardar
             // 
+            this.button1_Guardar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1_Guardar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button1_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1_Guardar.Location = new System.Drawing.Point(571, 315);
             this.button1_Guardar.Name = "button1_Guardar";
-            this.button1_Guardar.Size = new System.Drawing.Size(75, 23);
+            this.button1_Guardar.Size = new System.Drawing.Size(111, 29);
             this.button1_Guardar.TabIndex = 0;
             this.button1_Guardar.Text = "Guardar";
-            this.button1_Guardar.UseVisualStyleBackColor = true;
+            this.button1_Guardar.UseVisualStyleBackColor = false;
             this.button1_Guardar.Click += new System.EventHandler(this.button1_Guardar_Click);
             // 
             // label1_Rol
@@ -104,6 +108,7 @@
             // 
             // textBox1_ApellidoNombre
             // 
+            this.textBox1_ApellidoNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1_ApellidoNombre.Location = new System.Drawing.Point(545, 180);
             this.textBox1_ApellidoNombre.Name = "textBox1_ApellidoNombre";
             this.textBox1_ApellidoNombre.Size = new System.Drawing.Size(101, 20);
@@ -111,6 +116,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(525, 135);
             this.comboBox1.Name = "comboBox1";
@@ -119,6 +125,7 @@
             // 
             // textBox4_Usuario
             // 
+            this.textBox4_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4_Usuario.Location = new System.Drawing.Point(525, 227);
             this.textBox4_Usuario.Name = "textBox4_Usuario";
             this.textBox4_Usuario.Size = new System.Drawing.Size(121, 20);
@@ -126,6 +133,7 @@
             // 
             // textBox5_Contraseña
             // 
+            this.textBox5_Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5_Contraseña.Location = new System.Drawing.Point(525, 267);
             this.textBox5_Contraseña.Name = "textBox5_Contraseña";
             this.textBox5_Contraseña.Size = new System.Drawing.Size(121, 20);
@@ -133,12 +141,16 @@
             // 
             // button2_Eliminar
             // 
+            this.button2_Eliminar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button2_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2_Eliminar.Location = new System.Drawing.Point(12, 336);
             this.button2_Eliminar.Name = "button2_Eliminar";
-            this.button2_Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.button2_Eliminar.Size = new System.Drawing.Size(111, 29);
             this.button2_Eliminar.TabIndex = 13;
             this.button2_Eliminar.Text = "Eliminar";
-            this.button2_Eliminar.UseVisualStyleBackColor = true;
+            this.button2_Eliminar.UseVisualStyleBackColor = false;
             this.button2_Eliminar.Click += new System.EventHandler(this.button2_Eliminar_Click);
             // 
             // usuarioBindingSource
@@ -159,6 +171,7 @@
             // 
             this.dataGridView_Usuario.AllowUserToAddRows = false;
             this.dataGridView_Usuario.AllowUserToDeleteRows = false;
+            this.dataGridView_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Usuario.Location = new System.Drawing.Point(26, 101);
             this.dataGridView_Usuario.Name = "dataGridView_Usuario";
@@ -168,6 +181,7 @@
             // 
             // textBox1_id
             // 
+            this.textBox1_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1_id.Location = new System.Drawing.Point(525, 105);
             this.textBox1_id.Name = "textBox1_id";
             this.textBox1_id.ReadOnly = true;
@@ -180,12 +194,13 @@
             this.label1_id.Enabled = false;
             this.label1_id.Location = new System.Drawing.Point(484, 105);
             this.label1_id.Name = "label1_id";
-            this.label1_id.Size = new System.Drawing.Size(15, 13);
+            this.label1_id.Size = new System.Drawing.Size(18, 13);
             this.label1_id.TabIndex = 16;
-            this.label1_id.Text = "id";
+            this.label1_id.Text = "ID";
             // 
             // textBox1_UsuarioBuscar
             // 
+            this.textBox1_UsuarioBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1_UsuarioBuscar.Location = new System.Drawing.Point(80, 21);
             this.textBox1_UsuarioBuscar.Name = "textBox1_UsuarioBuscar";
             this.textBox1_UsuarioBuscar.Size = new System.Drawing.Size(100, 20);
@@ -202,32 +217,44 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(200, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(111, 29);
             this.button1.TabIndex = 19;
             this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_NuevoUsuario
             // 
+            this.button_NuevoUsuario.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_NuevoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_NuevoUsuario.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_NuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_NuevoUsuario.Location = new System.Drawing.Point(545, 21);
             this.button_NuevoUsuario.Name = "button_NuevoUsuario";
-            this.button_NuevoUsuario.Size = new System.Drawing.Size(101, 23);
+            this.button_NuevoUsuario.Size = new System.Drawing.Size(111, 29);
             this.button_NuevoUsuario.TabIndex = 20;
             this.button_NuevoUsuario.Text = "Nuevo Usuario";
-            this.button_NuevoUsuario.UseVisualStyleBackColor = true;
+            this.button_NuevoUsuario.UseVisualStyleBackColor = false;
             this.button_NuevoUsuario.Click += new System.EventHandler(this.button_NuevoUsuario_Click);
             // 
             // button_CancelarCarga
             // 
-            this.button_CancelarCarga.Location = new System.Drawing.Point(545, 50);
+            this.button_CancelarCarga.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_CancelarCarga.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_CancelarCarga.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_CancelarCarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_CancelarCarga.Location = new System.Drawing.Point(545, 56);
             this.button_CancelarCarga.Name = "button_CancelarCarga";
-            this.button_CancelarCarga.Size = new System.Drawing.Size(101, 23);
+            this.button_CancelarCarga.Size = new System.Drawing.Size(111, 29);
             this.button_CancelarCarga.TabIndex = 21;
             this.button_CancelarCarga.Text = "Cancelar Carga";
-            this.button_CancelarCarga.UseVisualStyleBackColor = true;
+            this.button_CancelarCarga.UseVisualStyleBackColor = false;
             this.button_CancelarCarga.Visible = false;
             this.button_CancelarCarga.Click += new System.EventHandler(this.button_CancelarCarga_Click);
             // 
@@ -245,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 371);
+            this.ClientSize = new System.Drawing.Size(704, 371);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button_CancelarCarga);
             this.Controls.Add(this.button_NuevoUsuario);
