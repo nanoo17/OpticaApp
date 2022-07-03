@@ -92,6 +92,12 @@ namespace Vistas
             Form FrmListadoClientes = new FrmListadoClientes();
             FrmListadoClientes.Show();
         }
+
+        private void verObrasSocialesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmObraSocial = new FrmListadoObraSocial();
+            frmObraSocial.Show();
+        }
         
     }
 }
