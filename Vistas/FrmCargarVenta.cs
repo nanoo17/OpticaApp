@@ -144,7 +144,7 @@ namespace Vistas
                 textBox_Cantidad.Text = "";
                 textBox_Total.Text = "";
 
-                string mensajeExito = "***La venta fue guardada con exito***"
+                string mensajeExito = "La venta fue guardada con exito"
                    + "\nNro de la venta: " + ventaNro
                    + "\nFecha de Venta: " + nuevaVenta.Ven_Fecha
                    + "\nDNI del cliente: " + nuevaVenta.Cli_DNI;

@@ -46,11 +46,7 @@ namespace Vistas
             try {
 
                 TrabajarObraSocial.cargarObraSocial(obra);
-                string mensajeExito = "La Obra Social fue creada con exito"
-                + "\n CUIT: " + obra.OS_CUIT1
-                + "\n Razon Social: " + obra.OS_RazonSocial1
-                + "\n Telefono: " + obra.OS_Telefono1
-                + "\n Direccion: " + obra.OS_Direccion1;
+                string mensajeExito = "La obra social fue creada con exito";
                 MessageBox.Show(mensajeExito, titulo);
 
                 textBox_cuit.Text = "";

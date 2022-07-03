@@ -96,10 +96,24 @@ namespace Vistas
             string prodCodigo = textBox_Codigo.Text;
             string prodCategoria = textBox_Categoria.Text;
             string prodDescripcion = textBox_Descripcion.Text;
-            // TODO: Manejo de errores en el decimal
-            decimal prodPrecio = Convert.ToDecimal(textBox_Precio.Text);
+            decimal prodPrecio = 0;
+            try
+            {
+                prodPrecio = Decimal.Parse(textBox_Precio.Text);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("El precio no es un valor aceptado", "Precio");
+                return;
+            }
 
-            // TODO: Validaciones de los campos ingresados
+            // Validaciones de los campos ingresados
+
+            if (prodCodigo == "" || prodCategoria == "" || prodDescripcion == "" || textBox_Precio.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos del formulario", "Algunos campos estan vacios");
+                return;
+            }
 
             // Creando el producto
             Producto nuevoProducto = new Producto(prodCodigo, prodCategoria, prodDescripcion, prodPrecio);
@@ -186,13 +200,13 @@ namespace Vistas
         {
             //validacion dentro del textbox de precio
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-               (e.KeyChar != '.'))
+               (e.KeyChar != ','))
             {
                 e.Handled = true;
             }
 
             // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
             {
                 e.Handled = true;
             }

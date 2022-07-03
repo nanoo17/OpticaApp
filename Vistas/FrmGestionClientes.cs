@@ -86,6 +86,12 @@ namespace Vistas
             string cli_Direccion = textBox_Direccion.Text;
             string cli_NroCarnet = textBox_Carnet.Text;
 
+            if (textBox_Dni.Text == "" || textBox_Nombre.Text == "" || textBox_Apellido.Text == "" || textBox_Direccion.Text == "" || textBox_Carnet.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos", "Algunos campos estan vacios");
+                return;
+            }
+
             Cliente cli = new Cliente(cli_DNI,cli_Apellido, cli_Nombre,OS_CUIT,cli_Direccion,cli_NroCarnet);
 
             // Verificar si se esta modificando o creando un nuevo cliente
@@ -221,7 +227,7 @@ namespace Vistas
                     return;
                 }
                 if(textBox_Dni.Text == ""|| textBox_Nombre.Text == ""|| textBox_Apellido.Text == ""||textBox_Direccion.Text == ""|| textBox_Carnet.Text == ""){
-                    MessageBox.Show("Debe completar todos los campos");
+                    MessageBox.Show("Debe completar todos los campos", "Algunos campos estan vacios");
                     return;
                 }
 
