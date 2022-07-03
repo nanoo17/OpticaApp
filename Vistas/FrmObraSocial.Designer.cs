@@ -148,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(361, 326);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmObraSocial";
-            this.Text = "FrmObraSocial";
+            this.Text = "Cargar Obra Social";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

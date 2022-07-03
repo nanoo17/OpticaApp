@@ -220,6 +220,10 @@ namespace Vistas
                     MessageBox.Show("Un cliente con ese DNI ya está registrado", titulo);
                     return;
                 }
+                if(textBox_Dni.Text == ""|| textBox_Nombre.Text == ""|| textBox_Apellido.Text == ""||textBox_Direccion.Text == ""|| textBox_Carnet.Text == ""){
+                    MessageBox.Show("Debe completar todos los campos");
+                    return;
+                }
 
                 TrabajarCliente.insertarCliente(cli);
                 string mensajeExito = "El cliente fue creado con exito"

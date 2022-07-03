@@ -140,7 +140,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Aceptar);
             this.Name = "FrmLogin";
-            this.Text = "FrmLogin";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

@@ -54,20 +54,20 @@
             this.btn_nuevoCliente = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Producto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetallesVenta)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_Cliente
@@ -90,6 +90,7 @@
             // 
             // comboBox_Cliente
             // 
+            this.comboBox_Cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Cliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox_Cliente.FormattingEnabled = true;
             this.comboBox_Cliente.Location = new System.Drawing.Point(51, 30);
@@ -340,6 +341,41 @@
             this.tabPage1.Text = "Crear una venta";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label_Cliente);
+            this.groupBox4.Controls.Add(this.dateTimePicker_FechaVenta);
+            this.groupBox4.Controls.Add(this.comboBox_Cliente);
+            this.groupBox4.Controls.Add(this.button_Guardar);
+            this.groupBox4.Controls.Add(this.label_FechaVenta);
+            this.groupBox4.Location = new System.Drawing.Point(8, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(286, 410);
+            this.groupBox4.TabIndex = 39;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Confirmar venta";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btn_nuevoCliente);
+            this.groupBox3.Location = new System.Drawing.Point(647, 159);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 82);
+            this.groupBox3.TabIndex = 38;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Crear un nuevo cliente";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txt_Buscar);
+            this.groupBox2.Controls.Add(this.btn_buscar);
+            this.groupBox2.Location = new System.Drawing.Point(647, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(199, 117);
+            this.groupBox2.TabIndex = 37;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Buscar un cliente";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
@@ -376,41 +412,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles de la venta";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txt_Buscar);
-            this.groupBox2.Controls.Add(this.btn_buscar);
-            this.groupBox2.Location = new System.Drawing.Point(647, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(199, 117);
-            this.groupBox2.TabIndex = 37;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscar un cliente";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btn_nuevoCliente);
-            this.groupBox3.Location = new System.Drawing.Point(647, 159);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 82);
-            this.groupBox3.TabIndex = 38;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Crear un nuevo cliente";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label_Cliente);
-            this.groupBox4.Controls.Add(this.dateTimePicker_FechaVenta);
-            this.groupBox4.Controls.Add(this.comboBox_Cliente);
-            this.groupBox4.Controls.Add(this.button_Guardar);
-            this.groupBox4.Controls.Add(this.label_FechaVenta);
-            this.groupBox4.Location = new System.Drawing.Point(8, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(286, 410);
-            this.groupBox4.TabIndex = 39;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Confirmar venta";
-            // 
             // FrmCargarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,21 +419,21 @@
             this.ClientSize = new System.Drawing.Size(860, 456);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmCargarVenta";
-            this.Text = "FrmVenta";
+            this.Text = "Gestion de Venta";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Producto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetallesVenta)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -53,12 +53,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.error_Completar = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Usuario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error_Completar)).BeginInit();
             this.SuspendLayout();
             // 
             // button1_Guardar
@@ -121,6 +123,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(121, 64);
@@ -177,6 +180,8 @@
             // 
             this.dataGridView_Usuario.AllowUserToAddRows = false;
             this.dataGridView_Usuario.AllowUserToDeleteRows = false;
+            this.dataGridView_Usuario.AllowUserToResizeColumns = false;
+            this.dataGridView_Usuario.AllowUserToResizeRows = false;
             this.dataGridView_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Usuario.Location = new System.Drawing.Point(12, 24);
@@ -222,7 +227,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 29);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Buscar Cliente";
+            this.button1.Text = "Buscar Usuario";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -295,7 +300,7 @@
             this.groupBox2.Size = new System.Drawing.Size(189, 116);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscar Cliente";
+            this.groupBox2.Text = "Buscar Usuario";
             // 
             // groupBox3
             // 
@@ -306,6 +311,10 @@
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Crear un nuevo usuario";
+            // 
+            // error_Completar
+            // 
+            this.error_Completar.ContainerControl = this;
             // 
             // FrmGestionUsuarios
             // 
@@ -319,7 +328,7 @@
             this.Controls.Add(this.button_CancelarCarga);
             this.Controls.Add(this.dataGridView_Usuario);
             this.Name = "FrmGestionUsuarios";
-            this.Text = "FrmUsuario";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
@@ -329,6 +338,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.error_Completar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +370,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ErrorProvider error_Completar;
     }
 }

@@ -148,6 +148,7 @@
             // 
             // cmbCliente
             // 
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(9, 27);
@@ -203,7 +204,7 @@
             this.Controls.Add(this.label_CantidadVentas);
             this.Controls.Add(this.dataGridView_Listado);
             this.Name = "FrmListadoVentas";
-            this.Text = "FrmListadoVentas";
+            this.Text = "Listado de Ventas";
             this.Load += new System.EventHandler(this.FrmListadoVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Listado)).EndInit();
             this.groupBox1.ResumeLayout(false);
