@@ -191,6 +191,7 @@
             // 
             // comboBox_ObraSocial
             // 
+            this.comboBox_ObraSocial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ObraSocial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox_ObraSocial.FormattingEnabled = true;
             this.comboBox_ObraSocial.Location = new System.Drawing.Point(112, 150);

@@ -121,6 +121,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(121, 64);
@@ -222,7 +223,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 29);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Buscar Cliente";
+            this.button1.Text = "Buscar Usuario";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -295,7 +296,7 @@
             this.groupBox2.Size = new System.Drawing.Size(189, 116);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscar Cliente";
+            this.groupBox2.Text = "Buscar Usuario";
             // 
             // groupBox3
             // 

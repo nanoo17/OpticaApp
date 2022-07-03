@@ -45,6 +45,7 @@
             // 
             // comboBox_Clientes
             // 
+            this.comboBox_Clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox_Clientes.FormattingEnabled = true;
             this.comboBox_Clientes.Location = new System.Drawing.Point(6, 19);
