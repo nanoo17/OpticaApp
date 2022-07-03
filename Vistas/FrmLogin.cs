@@ -55,7 +55,7 @@ namespace Vistas
         // Evento "mouseLeave"
         private void Aceptar_MouseLeave(object sender, EventArgs e)
         {
-            Aceptar.BackColor = SystemColors.ControlLightLight;
+            Aceptar.BackColor = Color.LightGreen;
             Aceptar.Cursor = Cursors.Arrow;
         }
     }

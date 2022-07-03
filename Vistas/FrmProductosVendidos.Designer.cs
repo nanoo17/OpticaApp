@@ -49,7 +49,7 @@
             this.comboBox_Clientes.FormattingEnabled = true;
             this.comboBox_Clientes.Location = new System.Drawing.Point(6, 19);
             this.comboBox_Clientes.Name = "comboBox_Clientes";
-            this.comboBox_Clientes.Size = new System.Drawing.Size(123, 21);
+            this.comboBox_Clientes.Size = new System.Drawing.Size(188, 21);
             this.comboBox_Clientes.TabIndex = 21;
             this.comboBox_Clientes.SelectionChangeCommitted += new System.EventHandler(this.comboBox_Clientes_SelectionChangeCommitted);
             // 
@@ -59,16 +59,16 @@
             this.dataGridView_Productos.AllowUserToDeleteRows = false;
             this.dataGridView_Productos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Productos.Location = new System.Drawing.Point(32, 214);
+            this.dataGridView_Productos.Location = new System.Drawing.Point(12, 28);
             this.dataGridView_Productos.Name = "dataGridView_Productos";
             this.dataGridView_Productos.ReadOnly = true;
-            this.dataGridView_Productos.Size = new System.Drawing.Size(559, 196);
+            this.dataGridView_Productos.Size = new System.Drawing.Size(466, 260);
             this.dataGridView_Productos.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 83);
+            this.label3.Location = new System.Drawing.Point(6, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 26;
@@ -77,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 35);
+            this.label2.Location = new System.Drawing.Point(6, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 25;
@@ -89,9 +89,9 @@
             this.button_FiltrarFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_FiltrarFecha.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.button_FiltrarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_FiltrarFecha.Location = new System.Drawing.Point(6, 139);
+            this.button_FiltrarFecha.Location = new System.Drawing.Point(6, 131);
             this.button_FiltrarFecha.Name = "button_FiltrarFecha";
-            this.button_FiltrarFecha.Size = new System.Drawing.Size(111, 29);
+            this.button_FiltrarFecha.Size = new System.Drawing.Size(188, 29);
             this.button_FiltrarFecha.TabIndex = 24;
             this.button_FiltrarFecha.Text = "Filtrar por Fecha";
             this.button_FiltrarFecha.UseVisualStyleBackColor = false;
@@ -99,22 +99,22 @@
             // 
             // dateTimePicker_Hasta
             // 
-            this.dateTimePicker_Hasta.Location = new System.Drawing.Point(6, 99);
+            this.dateTimePicker_Hasta.Location = new System.Drawing.Point(6, 91);
             this.dateTimePicker_Hasta.Name = "dateTimePicker_Hasta";
-            this.dateTimePicker_Hasta.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker_Hasta.Size = new System.Drawing.Size(188, 20);
             this.dateTimePicker_Hasta.TabIndex = 23;
             // 
             // dateTimePicker_Desde
             // 
-            this.dateTimePicker_Desde.Location = new System.Drawing.Point(6, 51);
+            this.dateTimePicker_Desde.Location = new System.Drawing.Point(6, 43);
             this.dateTimePicker_Desde.Name = "dateTimePicker_Desde";
-            this.dateTimePicker_Desde.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker_Desde.Size = new System.Drawing.Size(188, 20);
             this.dateTimePicker_Desde.TabIndex = 22;
             // 
             // label_ProductosVendidos
             // 
             this.label_ProductosVendidos.AutoSize = true;
-            this.label_ProductosVendidos.Location = new System.Drawing.Point(29, 413);
+            this.label_ProductosVendidos.Location = new System.Drawing.Point(12, 311);
             this.label_ProductosVendidos.Name = "label_ProductosVendidos";
             this.label_ProductosVendidos.Size = new System.Drawing.Size(49, 13);
             this.label_ProductosVendidos.TabIndex = 27;
@@ -127,7 +127,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePicker_Desde);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(32, 22);
+            this.groupBox1.Location = new System.Drawing.Point(612, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 174);
             this.groupBox1.TabIndex = 28;
@@ -137,9 +137,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBox_Clientes);
-            this.groupBox2.Location = new System.Drawing.Point(311, 22);
+            this.groupBox2.Location = new System.Drawing.Point(612, 232);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(150, 85);
+            this.groupBox2.Size = new System.Drawing.Size(200, 56);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar por clientes";
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 451);
+            this.ClientSize = new System.Drawing.Size(839, 355);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label_ProductosVendidos);
