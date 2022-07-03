@@ -53,6 +53,7 @@
             // 
             this.dataGridView_Cliente.AllowUserToAddRows = false;
             this.dataGridView_Cliente.AllowUserToDeleteRows = false;
+            this.dataGridView_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Cliente.Location = new System.Drawing.Point(26, 109);
             this.dataGridView_Cliente.Name = "dataGridView_Cliente";
@@ -62,6 +63,7 @@
             // 
             // textBox_Apellido
             // 
+            this.textBox_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Apellido.Location = new System.Drawing.Point(561, 134);
             this.textBox_Apellido.Name = "textBox_Apellido";
             this.textBox_Apellido.Size = new System.Drawing.Size(100, 20);
@@ -114,6 +116,7 @@
             // 
             // textBox_Nombre
             // 
+            this.textBox_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Nombre.Location = new System.Drawing.Point(561, 162);
             this.textBox_Nombre.Name = "textBox_Nombre";
             this.textBox_Nombre.Size = new System.Drawing.Size(100, 20);
@@ -121,6 +124,7 @@
             // 
             // textBox_Direccion
             // 
+            this.textBox_Direccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Direccion.Location = new System.Drawing.Point(561, 190);
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(100, 20);
@@ -128,6 +132,7 @@
             // 
             // textBox_Carnet
             // 
+            this.textBox_Carnet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Carnet.Location = new System.Drawing.Point(561, 251);
             this.textBox_Carnet.Name = "textBox_Carnet";
             this.textBox_Carnet.Size = new System.Drawing.Size(100, 20);
@@ -135,12 +140,16 @@
             // 
             // button_modificar
             // 
+            this.button_modificar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_modificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_modificar.Location = new System.Drawing.Point(528, 313);
             this.button_modificar.Name = "button_modificar";
-            this.button_modificar.Size = new System.Drawing.Size(116, 38);
+            this.button_modificar.Size = new System.Drawing.Size(111, 29);
             this.button_modificar.TabIndex = 11;
             this.button_modificar.Text = "Guardar";
-            this.button_modificar.UseVisualStyleBackColor = true;
+            this.button_modificar.UseVisualStyleBackColor = false;
             this.button_modificar.Click += new System.EventHandler(this.button_modificar_Click);
             // 
             // label_Dni
@@ -154,6 +163,7 @@
             // 
             // textBox_Dni
             // 
+            this.textBox_Dni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Dni.Enabled = false;
             this.textBox_Dni.Location = new System.Drawing.Point(561, 109);
             this.textBox_Dni.Name = "textBox_Dni";
@@ -162,16 +172,21 @@
             // 
             // button_Eliminar
             // 
+            this.button_Eliminar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Eliminar.Location = new System.Drawing.Point(345, 313);
             this.button_Eliminar.Name = "button_Eliminar";
-            this.button_Eliminar.Size = new System.Drawing.Size(138, 38);
+            this.button_Eliminar.Size = new System.Drawing.Size(111, 29);
             this.button_Eliminar.TabIndex = 14;
             this.button_Eliminar.Text = "Eliminar Cliente";
-            this.button_Eliminar.UseVisualStyleBackColor = true;
+            this.button_Eliminar.UseVisualStyleBackColor = false;
             this.button_Eliminar.Click += new System.EventHandler(this.button_Eliminar_Click);
             // 
             // comboBox_ObraSocial
             // 
+            this.comboBox_ObraSocial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox_ObraSocial.FormattingEnabled = true;
             this.comboBox_ObraSocial.Location = new System.Drawing.Point(561, 225);
             this.comboBox_ObraSocial.Name = "comboBox_ObraSocial";
@@ -180,22 +195,30 @@
             // 
             // button_NuevoCliente
             // 
+            this.button_NuevoCliente.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_NuevoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_NuevoCliente.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_NuevoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_NuevoCliente.Location = new System.Drawing.Point(550, 12);
             this.button_NuevoCliente.Name = "button_NuevoCliente";
-            this.button_NuevoCliente.Size = new System.Drawing.Size(111, 23);
+            this.button_NuevoCliente.Size = new System.Drawing.Size(111, 29);
             this.button_NuevoCliente.TabIndex = 21;
             this.button_NuevoCliente.Text = "Nuevo Cliente";
-            this.button_NuevoCliente.UseVisualStyleBackColor = true;
+            this.button_NuevoCliente.UseVisualStyleBackColor = false;
             this.button_NuevoCliente.Click += new System.EventHandler(this.button_NuevoCliente_Click);
             // 
             // button_CancelarCarga
             // 
-            this.button_CancelarCarga.Location = new System.Drawing.Point(551, 41);
+            this.button_CancelarCarga.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_CancelarCarga.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_CancelarCarga.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_CancelarCarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_CancelarCarga.Location = new System.Drawing.Point(550, 47);
             this.button_CancelarCarga.Name = "button_CancelarCarga";
-            this.button_CancelarCarga.Size = new System.Drawing.Size(110, 23);
+            this.button_CancelarCarga.Size = new System.Drawing.Size(111, 29);
             this.button_CancelarCarga.TabIndex = 22;
             this.button_CancelarCarga.Text = "Cancelar Carga";
-            this.button_CancelarCarga.UseVisualStyleBackColor = true;
+            this.button_CancelarCarga.UseVisualStyleBackColor = false;
             this.button_CancelarCarga.Visible = false;
             this.button_CancelarCarga.Click += new System.EventHandler(this.button_CancelarCarga_Click);
             // 

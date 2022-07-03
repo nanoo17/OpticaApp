@@ -50,41 +50,54 @@
             // 
             // button_CargarProducto
             // 
+            this.button_CargarProducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_CargarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_CargarProducto.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_CargarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_CargarProducto.Location = new System.Drawing.Point(634, 18);
             this.button_CargarProducto.Name = "button_CargarProducto";
-            this.button_CargarProducto.Size = new System.Drawing.Size(95, 26);
+            this.button_CargarProducto.Size = new System.Drawing.Size(111, 29);
             this.button_CargarProducto.TabIndex = 1;
             this.button_CargarProducto.Text = "Nuevo Producto";
-            this.button_CargarProducto.UseVisualStyleBackColor = true;
+            this.button_CargarProducto.UseVisualStyleBackColor = false;
             this.button_CargarProducto.Click += new System.EventHandler(this.button_CargarProducto_Click);
             // 
             // button_Cancelar
             // 
+            this.button_Cancelar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Cancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancelar.Location = new System.Drawing.Point(634, 50);
             this.button_Cancelar.Name = "button_Cancelar";
-            this.button_Cancelar.Size = new System.Drawing.Size(95, 24);
+            this.button_Cancelar.Size = new System.Drawing.Size(111, 29);
             this.button_Cancelar.TabIndex = 2;
             this.button_Cancelar.Text = "Cancelar Carga";
-            this.button_Cancelar.UseVisualStyleBackColor = true;
+            this.button_Cancelar.UseVisualStyleBackColor = false;
             this.button_Cancelar.Visible = false;
             this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
             // 
             // button_Ordenar
             // 
+            this.button_Ordenar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Ordenar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Ordenar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Ordenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Ordenar.Location = new System.Drawing.Point(190, 37);
             this.button_Ordenar.Name = "button_Ordenar";
-            this.button_Ordenar.Size = new System.Drawing.Size(75, 23);
+            this.button_Ordenar.Size = new System.Drawing.Size(111, 29);
             this.button_Ordenar.TabIndex = 3;
             this.button_Ordenar.Text = "Ordenar";
-            this.button_Ordenar.UseVisualStyleBackColor = true;
+            this.button_Ordenar.UseVisualStyleBackColor = false;
             this.button_Ordenar.Click += new System.EventHandler(this.button_Ordenar_Click);
             // 
             // radioButton_Categoria
             // 
             this.radioButton_Categoria.AutoSize = true;
+            this.radioButton_Categoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.radioButton_Categoria.Location = new System.Drawing.Point(99, 37);
             this.radioButton_Categoria.Name = "radioButton_Categoria";
-            this.radioButton_Categoria.Size = new System.Drawing.Size(72, 17);
+            this.radioButton_Categoria.Size = new System.Drawing.Size(71, 17);
             this.radioButton_Categoria.TabIndex = 4;
             this.radioButton_Categoria.TabStop = true;
             this.radioButton_Categoria.Text = "Categoría";
@@ -93,9 +106,10 @@
             // radioButton_Descripcion
             // 
             this.radioButton_Descripcion.AutoSize = true;
+            this.radioButton_Descripcion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.radioButton_Descripcion.Location = new System.Drawing.Point(17, 37);
             this.radioButton_Descripcion.Name = "radioButton_Descripcion";
-            this.radioButton_Descripcion.Size = new System.Drawing.Size(81, 17);
+            this.radioButton_Descripcion.Size = new System.Drawing.Size(80, 17);
             this.radioButton_Descripcion.TabIndex = 5;
             this.radioButton_Descripcion.TabStop = true;
             this.radioButton_Descripcion.Text = "Descripcion";
@@ -148,6 +162,7 @@
             // 
             // textBox_Codigo
             // 
+            this.textBox_Codigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Codigo.Enabled = false;
             this.textBox_Codigo.Location = new System.Drawing.Point(629, 186);
             this.textBox_Codigo.Name = "textBox_Codigo";
@@ -156,6 +171,7 @@
             // 
             // textBox_Categoria
             // 
+            this.textBox_Categoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Categoria.Location = new System.Drawing.Point(629, 219);
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(100, 20);
@@ -163,6 +179,7 @@
             // 
             // textBox_Descripcion
             // 
+            this.textBox_Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Descripcion.Location = new System.Drawing.Point(629, 260);
             this.textBox_Descripcion.Name = "textBox_Descripcion";
             this.textBox_Descripcion.Size = new System.Drawing.Size(100, 20);
@@ -170,6 +187,7 @@
             // 
             // textBox_Precio
             // 
+            this.textBox_Precio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Precio.Location = new System.Drawing.Point(629, 293);
             this.textBox_Precio.Name = "textBox_Precio";
             this.textBox_Precio.Size = new System.Drawing.Size(100, 20);
@@ -178,28 +196,37 @@
             // 
             // button_Guardar
             // 
-            this.button_Guardar.Location = new System.Drawing.Point(654, 365);
+            this.button_Guardar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Guardar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Guardar.Location = new System.Drawing.Point(671, 362);
             this.button_Guardar.Name = "button_Guardar";
-            this.button_Guardar.Size = new System.Drawing.Size(75, 23);
+            this.button_Guardar.Size = new System.Drawing.Size(111, 29);
             this.button_Guardar.TabIndex = 15;
             this.button_Guardar.Text = "Guardar";
-            this.button_Guardar.UseVisualStyleBackColor = true;
+            this.button_Guardar.UseVisualStyleBackColor = false;
             this.button_Guardar.Click += new System.EventHandler(this.button_Guardar_Click);
             // 
             // button_Eliminar
             // 
-            this.button_Eliminar.Location = new System.Drawing.Point(558, 365);
+            this.button_Eliminar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Eliminar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Eliminar.Location = new System.Drawing.Point(537, 362);
             this.button_Eliminar.Name = "button_Eliminar";
-            this.button_Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.button_Eliminar.Size = new System.Drawing.Size(111, 29);
             this.button_Eliminar.TabIndex = 16;
             this.button_Eliminar.Text = "Eliminar";
-            this.button_Eliminar.UseVisualStyleBackColor = true;
+            this.button_Eliminar.UseVisualStyleBackColor = false;
             this.button_Eliminar.Click += new System.EventHandler(this.button_Eliminar_Click);
             // 
             // dataGridView_Productos
             // 
             this.dataGridView_Productos.AllowUserToAddRows = false;
             this.dataGridView_Productos.AllowUserToDeleteRows = false;
+            this.dataGridView_Productos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Productos.Location = new System.Drawing.Point(12, 158);
             this.dataGridView_Productos.Name = "dataGridView_Productos";
@@ -212,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 403);
+            this.ClientSize = new System.Drawing.Size(794, 403);
             this.Controls.Add(this.button_Eliminar);
             this.Controls.Add(this.button_Guardar);
             this.Controls.Add(this.textBox_Precio);

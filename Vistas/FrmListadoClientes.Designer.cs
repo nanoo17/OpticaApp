@@ -39,36 +39,49 @@
             // 
             // button_Ordenar
             // 
+            this.button_Ordenar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Ordenar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Ordenar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Ordenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Ordenar.Location = new System.Drawing.Point(29, 82);
             this.button_Ordenar.Name = "button_Ordenar";
-            this.button_Ordenar.Size = new System.Drawing.Size(120, 42);
+            this.button_Ordenar.Size = new System.Drawing.Size(111, 29);
             this.button_Ordenar.TabIndex = 30;
             this.button_Ordenar.Text = "Ordenar Todos";
-            this.button_Ordenar.UseVisualStyleBackColor = true;
+            this.button_Ordenar.UseVisualStyleBackColor = false;
             this.button_Ordenar.Click += new System.EventHandler(this.button_Ordenar_Click_1);
             // 
             // button_OrdenarApellido
             // 
+            this.button_OrdenarApellido.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_OrdenarApellido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_OrdenarApellido.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_OrdenarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_OrdenarApellido.Location = new System.Drawing.Point(155, 82);
             this.button_OrdenarApellido.Name = "button_OrdenarApellido";
-            this.button_OrdenarApellido.Size = new System.Drawing.Size(127, 42);
+            this.button_OrdenarApellido.Size = new System.Drawing.Size(136, 29);
             this.button_OrdenarApellido.TabIndex = 29;
             this.button_OrdenarApellido.Text = "Ordenar por Apellido";
-            this.button_OrdenarApellido.UseVisualStyleBackColor = true;
+            this.button_OrdenarApellido.UseVisualStyleBackColor = false;
             this.button_OrdenarApellido.Click += new System.EventHandler(this.button_OrdenarApellido_Click_1);
             // 
             // button_Buscar
             // 
+            this.button_Buscar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Buscar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Buscar.Location = new System.Drawing.Point(285, 11);
             this.button_Buscar.Name = "button_Buscar";
-            this.button_Buscar.Size = new System.Drawing.Size(75, 23);
+            this.button_Buscar.Size = new System.Drawing.Size(111, 29);
             this.button_Buscar.TabIndex = 28;
             this.button_Buscar.Text = "Buscar";
-            this.button_Buscar.UseVisualStyleBackColor = true;
+            this.button_Buscar.UseVisualStyleBackColor = false;
             this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click);
             // 
             // textBox_BuscarApellido
             // 
+            this.textBox_BuscarApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_BuscarApellido.Location = new System.Drawing.Point(155, 11);
             this.textBox_BuscarApellido.Name = "textBox_BuscarApellido";
             this.textBox_BuscarApellido.Size = new System.Drawing.Size(124, 20);
@@ -89,6 +102,7 @@
             this.dataGridView_Cliente.AllowUserToDeleteRows = false;
             this.dataGridView_Cliente.AllowUserToResizeColumns = false;
             this.dataGridView_Cliente.AllowUserToResizeRows = false;
+            this.dataGridView_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Cliente.Location = new System.Drawing.Point(29, 130);
             this.dataGridView_Cliente.Name = "dataGridView_Cliente";

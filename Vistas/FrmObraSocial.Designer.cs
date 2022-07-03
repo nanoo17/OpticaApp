@@ -77,16 +77,21 @@
             // 
             // button_confirmar
             // 
+            this.button_confirmar.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_confirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_confirmar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.button_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_confirmar.Location = new System.Drawing.Point(101, 211);
             this.button_confirmar.Name = "button_confirmar";
-            this.button_confirmar.Size = new System.Drawing.Size(75, 23);
+            this.button_confirmar.Size = new System.Drawing.Size(111, 29);
             this.button_confirmar.TabIndex = 4;
             this.button_confirmar.Text = "Confirmar";
-            this.button_confirmar.UseVisualStyleBackColor = true;
+            this.button_confirmar.UseVisualStyleBackColor = false;
             this.button_confirmar.Click += new System.EventHandler(this.button_confirmar_Click);
             // 
             // textBox_cuit
             // 
+            this.textBox_cuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_cuit.Location = new System.Drawing.Point(136, 56);
             this.textBox_cuit.Name = "textBox_cuit";
             this.textBox_cuit.Size = new System.Drawing.Size(100, 20);
@@ -94,6 +99,7 @@
             // 
             // textBox_razonSocial
             // 
+            this.textBox_razonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_razonSocial.Location = new System.Drawing.Point(136, 90);
             this.textBox_razonSocial.Name = "textBox_razonSocial";
             this.textBox_razonSocial.Size = new System.Drawing.Size(100, 20);
@@ -101,6 +107,7 @@
             // 
             // textBox_telefono
             // 
+            this.textBox_telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_telefono.Location = new System.Drawing.Point(136, 131);
             this.textBox_telefono.Name = "textBox_telefono";
             this.textBox_telefono.Size = new System.Drawing.Size(100, 20);
@@ -108,6 +115,7 @@
             // 
             // textBox_direccion
             // 
+            this.textBox_direccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_direccion.Location = new System.Drawing.Point(136, 165);
             this.textBox_direccion.Name = "textBox_direccion";
             this.textBox_direccion.Size = new System.Drawing.Size(100, 20);

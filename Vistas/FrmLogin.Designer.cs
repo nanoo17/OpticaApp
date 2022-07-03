@@ -43,9 +43,11 @@
             // 
             // Aceptar
             // 
-            this.Aceptar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Aceptar.BackColor = System.Drawing.Color.Gainsboro;
+            this.Aceptar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aceptar.Location = new System.Drawing.Point(126, 162);
+            this.Aceptar.Location = new System.Drawing.Point(145, 164);
             this.Aceptar.Name = "Aceptar";
             this.Aceptar.Size = new System.Drawing.Size(81, 31);
             this.Aceptar.TabIndex = 0;
@@ -77,6 +79,7 @@
             // 
             // txtUserName
             // 
+            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserName.Location = new System.Drawing.Point(156, 72);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(156, 20);
@@ -84,6 +87,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(156, 105);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
