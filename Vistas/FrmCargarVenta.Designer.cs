@@ -419,7 +419,7 @@
             this.ClientSize = new System.Drawing.Size(860, 456);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmCargarVenta";
-            this.Text = "FrmVenta";
+            this.Text = "Gestion de Venta";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Producto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DetallesVenta)).EndInit();

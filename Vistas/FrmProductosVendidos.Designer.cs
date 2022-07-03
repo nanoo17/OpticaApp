@@ -155,7 +155,7 @@
             this.Controls.Add(this.label_ProductosVendidos);
             this.Controls.Add(this.dataGridView_Productos);
             this.Name = "FrmProductosVendidos";
-            this.Text = "FrmProductosVendidos";
+            this.Text = "Listado Productos Vendidos";
             this.Load += new System.EventHandler(this.FrmProductosVendidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Productos)).EndInit();
             this.groupBox1.ResumeLayout(false);

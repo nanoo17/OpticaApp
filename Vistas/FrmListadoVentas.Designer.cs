@@ -204,7 +204,7 @@
             this.Controls.Add(this.label_CantidadVentas);
             this.Controls.Add(this.dataGridView_Listado);
             this.Name = "FrmListadoVentas";
-            this.Text = "FrmListadoVentas";
+            this.Text = "Listado de Ventas";
             this.Load += new System.EventHandler(this.FrmListadoVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Listado)).EndInit();
             this.groupBox1.ResumeLayout(false);

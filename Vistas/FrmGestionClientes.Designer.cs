@@ -283,7 +283,7 @@
             this.Controls.Add(this.button_CancelarCarga);
             this.Controls.Add(this.dataGridView_Cliente);
             this.Name = "FrmGestionClientes";
-            this.Text = "FrmClienteGrid";
+            this.Text = "Gestion de Clientes";
             this.Load += new System.EventHandler(this.FrmClienteGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cliente)).EndInit();
             this.groupBox1.ResumeLayout(false);

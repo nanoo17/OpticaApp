@@ -240,6 +240,11 @@ namespace Vistas
                     return;
                 }
 
+                if (textBox1_ApellidoNombre.Text == "" || textBox4_Usuario.Text == "" || textBox5_Contraseña.Text == "") {
+                    MessageBox.Show("Algunos campos están incompletos");
+                    return;
+                }
+
                 TrabajarUsuario.insertarUsuario(usu);
                 string mensajeExito = "El usuario fue creado con exito"
                      + "\nUsuario: " + usu.Usu_NombreUsuario

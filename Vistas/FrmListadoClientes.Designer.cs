@@ -145,7 +145,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView_Cliente);
             this.Name = "FrmListadoClientes";
-            this.Text = "FrmListadoClientes";
+            this.Text = "Listado De Clientes";
             this.Load += new System.EventHandler(this.FrmListadoClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cliente)).EndInit();
             this.groupBox1.ResumeLayout(false);

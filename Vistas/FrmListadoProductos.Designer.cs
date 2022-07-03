@@ -284,7 +284,7 @@
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.dataGridView_Productos);
             this.Name = "FrmListadoProductos";
-            this.Text = "FrmListadoProductos";
+            this.Text = "Listado de Productos";
             this.Load += new System.EventHandler(this.FrmListadoProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Productos)).EndInit();
             this.groupBox1.ResumeLayout(false);

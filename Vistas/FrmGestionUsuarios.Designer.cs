@@ -53,12 +53,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.error_Completar = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Usuario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error_Completar)).BeginInit();
             this.SuspendLayout();
             // 
             // button1_Guardar
@@ -178,6 +180,8 @@
             // 
             this.dataGridView_Usuario.AllowUserToAddRows = false;
             this.dataGridView_Usuario.AllowUserToDeleteRows = false;
+            this.dataGridView_Usuario.AllowUserToResizeColumns = false;
+            this.dataGridView_Usuario.AllowUserToResizeRows = false;
             this.dataGridView_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Usuario.Location = new System.Drawing.Point(12, 24);
@@ -308,6 +312,10 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Crear un nuevo usuario";
             // 
+            // error_Completar
+            // 
+            this.error_Completar.ContainerControl = this;
+            // 
             // FrmGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,7 +328,7 @@
             this.Controls.Add(this.button_CancelarCarga);
             this.Controls.Add(this.dataGridView_Usuario);
             this.Name = "FrmGestionUsuarios";
-            this.Text = "FrmUsuario";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
@@ -330,6 +338,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.error_Completar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +370,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ErrorProvider error_Completar;
     }
 }
