@@ -38,6 +38,7 @@
             this.label_ProductosVendidos = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Productos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -48,7 +49,7 @@
             this.comboBox_Clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox_Clientes.FormattingEnabled = true;
-            this.comboBox_Clientes.Location = new System.Drawing.Point(6, 19);
+            this.comboBox_Clientes.Location = new System.Drawing.Point(6, 21);
             this.comboBox_Clientes.Name = "comboBox_Clientes";
             this.comboBox_Clientes.Size = new System.Drawing.Size(188, 21);
             this.comboBox_Clientes.TabIndex = 21;
@@ -63,7 +64,7 @@
             this.dataGridView_Productos.Location = new System.Drawing.Point(12, 28);
             this.dataGridView_Productos.Name = "dataGridView_Productos";
             this.dataGridView_Productos.ReadOnly = true;
-            this.dataGridView_Productos.Size = new System.Drawing.Size(466, 260);
+            this.dataGridView_Productos.Size = new System.Drawing.Size(505, 260);
             this.dataGridView_Productos.TabIndex = 19;
             // 
             // label3
@@ -138,18 +139,33 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBox_Clientes);
-            this.groupBox2.Location = new System.Drawing.Point(612, 232);
+            this.groupBox2.Location = new System.Drawing.Point(612, 215);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 56);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar por clientes";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(618, 292);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 23);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Todos los productos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmProductosVendidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 355);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label_ProductosVendidos);
@@ -178,5 +194,6 @@
         private System.Windows.Forms.Label label_ProductosVendidos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
