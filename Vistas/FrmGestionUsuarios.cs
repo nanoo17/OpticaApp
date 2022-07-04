@@ -63,6 +63,12 @@ namespace Vistas
 
             Usuario usu = new Usuario(usu_NombreUsuario, usu_Contraseña, usu_ApellidoNombre, usu_Rol);
 
+            if (textBox1_ApellidoNombre.Text == "" || textBox4_Usuario.Text == "" || textBox5_Contraseña.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos del formulario", "Algunos campos estan vacios");
+                return;
+            }
+
             // Verificamos si se está creando un usuario o modificando
             // Si el ID = 0 se esta creando un usuario
             if (usu_id == 0)
@@ -237,11 +243,6 @@ namespace Vistas
                 if (dtNombreUsuario.Rows.Count != 0)
                 {
                     MessageBox.Show("Ese nombre de usuario ya está registrado", titulo);
-                    return;
-                }
-
-                if (textBox1_ApellidoNombre.Text == "" || textBox4_Usuario.Text == "" || textBox5_Contraseña.Text == "") {
-                    MessageBox.Show("Algunos campos están incompletos");
                     return;
                 }
 

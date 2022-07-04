@@ -20,6 +20,7 @@ namespace Vistas
         private void FrmProductosVendidos_Load(object sender, EventArgs e)
         {
             cargarComboClientes();
+            cargarProductosVendidos();
         }
 
         private void cargarComboClientes()
@@ -62,6 +63,26 @@ namespace Vistas
             dataGridView_Productos.Columns[5].HeaderText = "Fecha de Venta";
 
             label_ProductosVendidos.Text = "Cantidad de productos vendidos en este rango de fechas: " + dt.Rows.Count + " Productos";
+        }
+
+        private void cargarProductosVendidos()
+        {
+            DataTable dt = TrabajarProducto.obtenerProductosVendidos();
+
+            dataGridView_Productos.DataSource = dt;
+            dataGridView_Productos.Columns[0].HeaderText = "Dni Cliente";
+            dataGridView_Productos.Columns[1].HeaderText = "Nombre Cliente";
+            dataGridView_Productos.Columns[2].HeaderText = "Apellido Cliente";
+            dataGridView_Productos.Columns[3].HeaderText = "Categoria Producto";
+            dataGridView_Productos.Columns[4].HeaderText = "Descripcion Producto";
+            dataGridView_Productos.Columns[5].HeaderText = "Fecha de Venta";
+
+            label_ProductosVendidos.Text = "Cantidad total de productos vendidos: " + dt.Rows.Count + " Productos";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cargarProductosVendidos();
         }
     }
 }
