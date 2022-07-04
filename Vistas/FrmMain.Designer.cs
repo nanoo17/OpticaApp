@@ -45,6 +45,7 @@
             this.registrarObraSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verObrasSocialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_Salir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,6 +186,19 @@
             this.button_Salir.UseVisualStyleBackColor = false;
             this.button_Salir.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(672, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 32);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Cerrar Sesion";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +206,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(763, 383);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_Salir);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -222,6 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem productosVendidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verObrasSocialesToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -98,6 +98,13 @@ namespace Vistas
             Form frmObraSocial = new FrmListadoObraSocial();
             frmObraSocial.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form frmLogin = new FrmLogin();
+            frmLogin.Show();
+            this.Close();
+        }
         
     }
 }
